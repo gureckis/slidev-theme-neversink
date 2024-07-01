@@ -1,0 +1,41 @@
+{
+    "name": "slidev-theme-neversink",
+    "version": "0.1.0",
+    "author": "gureckis",
+    "type": "module",
+    "keywords": [
+      "slidev-theme",
+      "slidev"
+    ],
+    "engines": {
+      "node": ">=18.0.0",
+      "slidev": ">=0.49.13"
+    },
+    "scripts": {
+      "build": "slidev build example.md",
+      "dev": "slidev example.md --open",
+      "export": "slidev export example.md",
+      "screenshot": "slidev export example.md --format png"
+    },
+    "devDependencies": {
+      "@slidev/cli": "^0.49.13",
+      "@slidev/types": "^0.49.13",
+      "@mdit/plugin-alert": "^0.12.0",
+      "@mdit/plugin-sub": "^0.12.0",
+      "markdown-it-mark": "^4.0.0",
+      "qrcode.vue": "^3.4.1",
+      "playwright-chromium": "^1.45.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/gureckis/slidev-theme-neversink.git"
+    },
+    "bugs": {
+      "url": "https://github.com/gureckis/slidev-theme-neversink/issues"
+    },
+    "homepage": "https://github.com/gureckis/slidev-theme-neversink#readme",
+    "slidev": {
+      "colorSchema": "light",
+      "highlighter": "all"
+    }
+  }
