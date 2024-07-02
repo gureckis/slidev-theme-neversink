@@ -42,10 +42,10 @@ Slidev Theme Neversink
 - [x] top title
 - [x] top title two cols
 - [x] two cols no header
+- [x] credits layout
 - [ ] default (with color)
 - [ ] new section
 - [ ] quote (better style)
-- [ ] credits layout
 - [ ] dynamic colors
 - [ ] sort out the global-top/slide-top thing (waiting for new slidev release)
 
@@ -62,7 +62,7 @@ Slidev Theme Neversink
   - [x] scrolling credits slide
     - [ ] auto adjust height
     - [ ] if in export mode then don't start scrolled down
-    - [ ] create as a layout also
+    - [x] create as a layout also
     - [ ] add keyboard commands to pause speed up and step forward/backwards in scrolling
     - [ ] add links and icons
 
