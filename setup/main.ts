@@ -3,7 +3,7 @@ import { defineAppSetup } from '@slidev/types'
 // import Cite from '../../src/components/Cite.vue'
 //import Bibliography from '../../src/components/Bibliography'
 import NYUlogo from '../components/nyulogo.vue'
-//import Credits from '../components/credits.vue'
+import Credits from '../components/credits.vue'
 import QrcodeVue from 'qrcode.vue'
 import Bubble from '../components/bubble.vue'
 import StickyNote from '../components/stickynote.vue'
@@ -24,7 +24,7 @@ import SpeechBubble from '../components/vue3-kawaii/components/speechBubble/Spee
 
 export default defineAppSetup(({ app, router }) => {
   app.component('NYUlogo', NYUlogo)
-  //app.component('Credits', Credits)
+  app.component('Credits', Credits)
   app.component('qrcode', QrcodeVue)
   app.component('bubble', Bubble)
   app.component('stickynote', StickyNote)
