@@ -86,8 +86,8 @@ function checkvars() {
 
   // process left
   // set default
-  if (frontmatter.value.brand_lr === undefined) {
-    frontmatter.value.brand_lr = 'auto_false'
+  if (frontmatter.value.brand_tl === undefined) {
+    frontmatter.value.brand_tl = 'auto_false'
   }
 
   brand_tl_color.value = default_tl_color
