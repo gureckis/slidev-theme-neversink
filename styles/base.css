@@ -1,20 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@50;100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+  --neversink-title-font: 'Inter', sans-serif;
+  --neversink-main-font: 'Inter', sans-serif;
+  --neversink-mono-font: 'Inter', monospace;
+  --neversink-quote-font: 'Fire Code', monospace;
+  @apply neversink-white-scheme;  /* apply the default white scheme everywhere */
+}
+
+
 
 #page-root {
-  font-family: 'Fira Sans Light', sans-serif;
-  /*font-family: 'Inter', sans-serif;*/ /* Use Inter as a backup font */
-  /*font-family: 'Geist', sans-serif;*/ /* Use Inter as a backup font */
-  letter-spacing: 0.023em;
+  font-family: var(--neversink-main-font);
+  font-weight: 400;
+  letter-spacing: 0.015em;
 }
 
-strong {
-  font-family: 'Fira Sans', sans-serif;
-  letter-spacing: 0.023em;
+/* binds variable to the color of a slide*/
+.slidecolor {
+  background-color: var(--neversink-bg-color);
+  color: var(--neversink-text-color);
 }
 
-.slidev-layout strong {
-  font-weight: 500;
+
+/* adjust default bullets */
+.slidev-layout li {
+  margin-bottom: 1em;
+  line-height: 1.5em;
 }
+
+/* adds a modifier class which reduces the space between bullets */
+.tight li {
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+
+
+.slidev-layout strong, .slidev-layout b {
+  font-family: var(--neversink-main-font);
+  font-weight: 700;
+}
+
+/* the highlighted terms from markdown highlighter == == */
+.slidev-layout mark {
+  @apply bg-amber-200;
+  @apply text-amber-600;
+  font-weight: 300;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 0.4em;
+}
+
+/* inlight code blocks */
+.slidev-layout :not(pre) > code {
+  font-size: 0.9em;
+  background: var(--neversink-bg-code-color);
+  border-radius: var(--slidev-code-radius);
+  color: var(--neversink-fg-code-color);
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+  font-weight: 300;
+}
+
+/* for links that are icons.  removes underlining which is default for links in markdown parser */
+.iconlink a {
+  border-style: none !important;
+  border-bottom: none !important;
+}
+
+
 .bg-navy-900 {
   background: #2a373a;
 }
@@ -27,48 +89,35 @@ strong {
   color: #2a373a;
 }
 
-.quote_author {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 400;
-  text-align: right;
-}
 
+/* cover slide type */
 .slidev-layout.cover h1 {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: var(--neversink-title-font);
   font-weight: 500;
   font-size: 3em;
 }
 
 .slidev-layout.cover h2 {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: var(--neversink-title-font);
   font-weight: 300;
   font-size: 2.5em;
 }
 
 .slidev-layout.cover h3 {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: var(--neversink-title-font);
   font-weight: 300;
   font-size: 1.9em;
 }
 
-.cover {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 100;
+.slidev-layout.cover {
+  font-family: var(--neversink-main-font);
+  font-weight: 300;
 }
 
-.cover strong {
+.slidev-layout.cover strong {
   font-weight: 500;
 }
-/*
 
-#page-root {
-  font-family: 'Fira Sans', sans-serif;
-}
-
-.cover {
-  font-family: 'Fira Sans', sans-serif;
-}
-*/
 
 .cover h1 + p {
   padding: 0;
@@ -76,27 +125,32 @@ strong {
   opacity: 1;
 }
 
+.cover h3 {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
 .my-auto p {
   margin: 0;
   padding: 0;
 }
 
-.lectureno {
-  font-size: 0.7em;
-  font-family: 'Fira Code', monospace;
-  margin: 0;
-  padding: 0.25em;
-}
-
 .slidev-layout h1 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.7em;
-  padding-bottom: 0.3em;
-  font-family: 'Fira Sans', sans-serif;
+  padding-bottom: 0;
+  font-family: var(--neversink-title-font);
+  margin-bottom: 0;
 }
 
 .slidev-layout h1 + p {
   opacity: 0.9;
+  margin-top: 1.5em;
+}
+
+.slidev-layout h1 + ul {
+  margin-top: 1.5em;
 }
 
 .slidev-layout h3 {
@@ -107,16 +161,17 @@ strong {
   max-height: 20%;
 }
 
-.cover h3 {
-  font-size: 1em;
-  margin: 0;
-  padding: 0;
+
+
+
+
+.quote_author {
+  font-family: var(--neversink-title-font);
+  font-weight: 400;
+  text-align: right;
 }
 
-.slidev-layout li {
-  margin-bottom: 1em;
-  line-height: 1.5em;
-}
+
 
 .slidev-layout .quote {
   margin-top: 2em;
@@ -125,7 +180,7 @@ strong {
 }
 .slidev-layout .quote p {
   font-size: 1.5em;
-  font-family: 'Fire Code', monospace;
+  font-family: var(--neversink-quote-font);
   line-height: 1.2em;
   font-weight: 400;
   text-align: left;
@@ -136,10 +191,7 @@ strong {
   margin-top: 1em;
 } */
 
-.tight li {
-  line-height: 1em;
-  margin-bottom: 0.5em;
-}
+
 
 .two-cols-header {
   grid-template-rows: 20% 80%;
@@ -154,15 +206,76 @@ img {
   display: inline;
 }
 
-.slidev-layout mark {
-  @apply bg-amber-200;
-  @apply text-amber-700;
-  padding-left: 0.4em;
-  padding-right: 0.4em;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  border-radius: 0.4em;
+
+
+
+.toptitle {
+  font-size: 1em;
+  font-family: var(--neversink-title-font);
+  font-weight: 300;
+  padding-left: 16px;
 }
+.toptitle h1 {
+  font-size: 1.8em;
+  font-family: var(--neversink-title-font);
+  font-weight: 500;
+  padding-left: 25px;
+  letter-spacing: 0.07em;
+}
+
+.toptitle h2 {
+  font-size: 1.5em;
+  font-family: var(--neversink-title-font);
+  font-weight: 300;
+  padding-left: 25px;
+  letter-spacing: 0.07em;
+}
+
+.toptitle h3 {
+  font-size: 1.1em;
+  font-family: var(--neversink-title-font);
+  font-weight: 300;
+  padding-left: 25px;
+  letter-spacing: 0.07em;
+}
+
+.slidev-layout.title {
+  height: fit-content;
+}
+
+.slidev-layout.title code {
+  background: none;
+}
+.slidev-layout.title h1 {
+  margin-bottom: 5;
+}
+.slidev-layout.sidecontent {
+  height: fit-content;
+}
+
+
+/* customize the v-clicks */
+.slidev-vclick-target {
+  transition: opacity 100ms ease;
+}
+
+.slidev-vclick-hidden {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.fader .slidev-vclick-prior {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
 
 html.dark {
   /* dark mode css here */
@@ -188,67 +301,4 @@ html:not(.dark) {
     color: #000;
     opacity: 1;
   }
-}
-
-.toptitle {
-  font-size: 1em;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  padding-left: 16px;
-}
-.toptitle h1 {
-  font-size: 1.8em;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  padding-left: 25px;
-  letter-spacing: 0.07em;
-}
-
-.toptitle h2 {
-  font-size: 1.5em;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  padding-left: 25px;
-  letter-spacing: 0.07em;
-}
-
-.toptitle h3 {
-  font-size: 1.1em;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  padding-left: 25px;
-  letter-spacing: 0.07em;
-}
-
-.slidev-vclick-target {
-  transition: opacity 100ms ease;
-}
-
-.slidev-vclick-hidden {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.fader .slidev-vclick-prior {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.slidev-layout.title {
-  height: fit-content;
-}
-
-.slidev-layout.title code {
-  background: none;
-}
-.slidev-layout.title h1 {
-  margin-bottom: 5;
-}
-.slidev-layout.sidecontent {
-  height: fit-content;
-}
-
-.slidev-layout {
-  background: none;
-  font-weight: 400;
 }
