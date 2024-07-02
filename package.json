@@ -17,7 +17,12 @@
       "export": "slidev export example.md",
       "screenshot": "slidev export example.md --format png"
     },
-    "devDependencies": {
+    "dependencies": {
+      "@iconify-json/logos": "^1.1.42",
+      "@iconify-json/mdi": "^1.1.66",
+      "@iconify-json/twemoji": "^1.1.15",
+      "@iconify-json/uim": "^1.1.9",
+      "@iconify/json": "^2.2.221",
       "@slidev/cli": "^0.49.13",
       "@slidev/types": "^0.49.13",
       "@mdit/plugin-alert": "^0.12.0",

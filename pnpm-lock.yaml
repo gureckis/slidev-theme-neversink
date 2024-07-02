@@ -7,7 +7,22 @@ settings:
 importers:
 
   .:
-    devDependencies:
+    dependencies:
+      '@iconify-json/logos':
+        specifier: ^1.1.42
+        version: 1.1.43
+      '@iconify-json/mdi':
+        specifier: ^1.1.66
+        version: 1.1.67
+      '@iconify-json/twemoji':
+        specifier: ^1.1.15
+        version: 1.1.15
+      '@iconify-json/uim':
+        specifier: ^1.1.9
+        version: 1.1.9
+      '@iconify/json':
+        specifier: ^2.2.221
+        version: 2.2.224
       '@mdit/plugin-alert':
         specifier: ^0.12.0
         version: 0.12.0(markdown-it@14.1.0)
@@ -362,11 +377,26 @@ packages:
   '@iconify-json/carbon@1.1.36':
     resolution: {integrity: sha512-NC3VcqLtwLZpi7+LeXj+99/byv+asrnCQxiDNCZV6hKr9WcNh6C25kJguJYfN+dV54kOkw78e+6PitQi2Bppnw==}
 
+  '@iconify-json/logos@1.1.43':
+    resolution: {integrity: sha512-UtvL1yDHUr9dl1Tqihh6K9m5dmbYKOYyLf3i9aKhymSW76QjOCGjpgQc0PQ4GJCAdU1cAMu+WO61TgPxdonrlg==}
+
+  '@iconify-json/mdi@1.1.67':
+    resolution: {integrity: sha512-00nllHES8hyACwIfgySlQgAE6MKgpr2wsKfpifMiZWZ9aXC5l4Jb0lR3lJSWwXgOW6kzAOdzC3T+2VOfBBZ13A==}
+
   '@iconify-json/ph@1.1.13':
     resolution: {integrity: sha512-xtM4JJ63HCKj09WRqrBswXiHrpliBlqboWSZH8odcmqYXbvIFceU9/Til4V+MQr6+MoUC+KB72cxhky2+A6r/g==}
 
   '@iconify-json/svg-spinners@1.1.2':
     resolution: {integrity: sha512-Aab6SqkORaTJ1W+ooufn6C8BsBitrn3uk8iRQLPA6pjhyvQAhkKCGMctyXIL5ZjrycnoFVsZ4mx7KnwEMra8qg==}
+
+  '@iconify-json/twemoji@1.1.15':
+    resolution: {integrity: sha512-ze2CAOwIWBKIP6ih6qMDItasVjRicktl2Qr3/ohZSMToAHm9z3Q6HCwE48eT0+D+uFpGBlNRQ22HHyE5izyhDg==}
+
+  '@iconify-json/uim@1.1.9':
+    resolution: {integrity: sha512-mV9Ps5WkLbPsk/Nztxye2TBCpEDIkeMtXXgYRgtfQve8kY0DkMF/je+YCvfd59IzXACZ6JwNAsPeF7fCYzPP+w==}
+
+  '@iconify/json@2.2.224':
+    resolution: {integrity: sha512-VK7nFjtxUeyp+K311SbbeU8cxlZifiUWh0yYaXks4Sj0DTzubKTDMzRCuTcO/QdEQ/0qwDE8m2nn5+wQjS66gQ==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -3105,6 +3135,14 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/logos@1.1.43':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/mdi@1.1.67':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/ph@1.1.13':
     dependencies:
       '@iconify/types': 2.0.0
@@ -3112,6 +3150,19 @@ snapshots:
   '@iconify-json/svg-spinners@1.1.2':
     dependencies:
       '@iconify/types': 2.0.0
+
+  '@iconify-json/twemoji@1.1.15':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/uim@1.1.9':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/json@2.2.224':
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.2
 
   '@iconify/types@2.0.0': {}
 
