@@ -6,7 +6,7 @@ const { $slidev, $frontmatter, $page } = useSlideContext()
 const frontmatter = ref('')
 const fg_default = 'text-neutral-800'
 const bg_default = 'bg-neutral-100'
-
+const label = ref('')
 const fg = ref(fg_default)
 const bg = ref(bg_default)
 
@@ -65,14 +65,22 @@ function checkvars() {
         fg.value = fg_default
         bg.value = bg_default
       }
-    } else if (frontmatter.value.layout == 'cover' || frontmatter.value.layout == 'coverr') {
+    } else if (frontmatter.value.layout == 'cover') {
       process_colors()
     }
   }
 }
+
+function getlabel() {
+  frontmatter.value = $slidev.nav.slides[0].meta.slide.frontmatter
+  label.value = frontmatter.value.neversink_string
+}
 watch($slidev.nav, () => checkvars())
 
-onMounted(() => checkvars())
+onMounted(() => {
+  getlabel()
+  checkvars()
+})
 </script>
 
 <!-- an example footer for pages -->
@@ -80,11 +88,13 @@ onMounted(() => checkvars())
   <footer v-if="frontmatter.slide_info !== false" class="absolute bottom-1 right-1 left-0 p-2 pr-3 full-width z-10">
     <div class="absolute bottom-0 right-0 p-2 pr-2">
       <span class="pl-3 pr-3 p-2 font-mono font-size-2" :class="fg + ' ' + bg">
-        <mdi-orbit />&nbsp;<span class="fw-bold">2024/06/22</span> | {{ $slidev.nav.currentPage }} of
-        {{ $slidev.nav.total }}</span
-      >
+        <mdi-orbit />&nbsp;<span class="fw-bold">{{ label }}</span> | {{ $slidev.nav.currentPage }} of
+        {{ $slidev.nav.total }}
+      </span>
     </div>
   </footer>
 </template>
 
-<style></style>
+<style scoped>
+
+</style>
