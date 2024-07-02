@@ -2,7 +2,6 @@ import { defineAppSetup } from '@slidev/types'
 // import courseInfoPlugin from '../plugins/courseInfoPlugin'
 // import Cite from '../../src/components/Cite.vue'
 //import Bibliography from '../../src/components/Bibliography'
-import NYUlogo from '../components/nyulogo.vue'
 import Credits from '../components/credits.vue'
 import QrcodeVue from 'qrcode.vue'
 import Bubble from '../components/bubble.vue'
@@ -23,7 +22,6 @@ import SpeechBubble from '../components/vue3-kawaii/components/speechBubble/Spee
 // import { GeistMono } from 'geist/font/mono'
 
 export default defineAppSetup(({ app, router }) => {
-  app.component('NYUlogo', NYUlogo)
   app.component('Credits', Credits)
   app.component('qrcode', QrcodeVue)
   app.component('bubble', Bubble)
