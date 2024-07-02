@@ -39,7 +39,7 @@ const props = defineProps({
 })
 
 const colorscheme = computed(() => {
-  return `nyu-${props.color}-scheme`
+  return `neversink-${props.color}-scheme`
 })
 
 const bubbleClasses = computed(() => {
@@ -47,9 +47,9 @@ const bubbleClasses = computed(() => {
 })
 
 const bubbleStyles = computed(() => ({
-  '--bubble-color': 'var(--nyu-bg-color)',
-  '--border-color': 'var(--nyu-fg-color)',
-  '--text-color': 'var(--nyu-text-color)',
+  '--bubble-color': 'var(--neversink-bg-color)',
+  '--border-color': 'var(--neversink-fg-color)',
+  '--text-color': 'var(--neversink-text-color)',
   '--text-align': props.textAlign,
 }))
 </script>

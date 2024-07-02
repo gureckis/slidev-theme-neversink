@@ -54,7 +54,7 @@ const alignment = computed(() => {
 })
 
 const colorscheme = computed(() => {
-  return `nyu-${props.color}-scheme`
+  return `neversink-${props.color}-scheme`
 })
 </script>
 <template>
@@ -94,7 +94,7 @@ const colorscheme = computed(() => {
   </div>
   <template v-else>
     <div v-if="props.side === 'left'" class="flex h-full w-full">
-      <div class="column-title" :class="colorscheme">
+      <div class="slidecolor column-title" :class="colorscheme">
         <div class="slidev-layout title w-full p-6" :class="alignment.l"><slot name="default" /></div>
       </div>
       <div class="column-content">
@@ -109,7 +109,7 @@ const colorscheme = computed(() => {
           <slot name="content" />
         </div>
       </div>
-      <div class="column-title" :class="colorscheme">
+      <div class="slidecolor column-title" :class="colorscheme">
         <div class="slidev-layout title w-full p-6" :class="alignment.r"><slot name="default" /></div>
       </div>
     </div>
@@ -120,8 +120,6 @@ const colorscheme = computed(() => {
 .column-title {
   flex: v-bind(colwidth.l); /* although this is mapped to 'left' it is reversed when needed in the template*/
   display: flex;
-  background-color: var(--nyu-bg-color);
-  color: var(--nyu-text-color);
 }
 
 .column-content {

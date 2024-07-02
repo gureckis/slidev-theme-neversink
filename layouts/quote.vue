@@ -22,7 +22,7 @@ const props = defineProps({
 })
 
 const colorscheme = computed(() => {
-  return `nyu-${props.color}-scheme`
+  return `neversink-${props.color}-scheme`
 })
 </script>
 <template>
@@ -40,8 +40,8 @@ const colorscheme = computed(() => {
 
 <style scoped>
 .quote {
-  background-color: var(--nyu-bg-color);
-  color: var(--nyu-text-color);
-  border-color: var(--nyu-border-color);
+  background-color: var(--neversink-bg-color);
+  color: var(--neversink-text-color);
+  border-color: var(--neversink-border-color);
 }
 </style>

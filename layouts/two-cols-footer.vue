@@ -11,6 +11,9 @@ const props = defineProps({
   align: {
     default: 'l-lt-lt',
   },
+  color: {
+    default: 'white',
+  },
 })
 
 const alignment = computed(() => {
@@ -20,19 +23,25 @@ const alignment = computed(() => {
 
 const colwidth = computed(() => compute_column_size(props.columns))
 
+const colorscheme = computed(() => {
+  return `neversink-${props.color}-scheme`
+})
+
 const flexclass = computed(() => {
   if (slots.footer != undefined) {
-    return 'slidev-layout default two-cols-footer'
+    return 'slidev-layout default two-cols-footer' 
   } else {
-    return 'slidev-layout default two-cols'
+    return 'slidev-layout default two-cols' 
   }
 })
+
+
 </script>
 
 <!-- default.vue -->
 <template>
   <div
-    v-if="colwidth == 'error' || alignment.h == 'error' || alignment.l == 'error' || alignment.r == 'error'"
+    v-if="colwidth == 'error' || alignment.f == 'error' || alignment.l == 'error' || alignment.r == 'error'"
     class="slidev-layout default error"
   >
     <span class="warning"><b>Error</b>: invalid layout params.</span>
@@ -68,7 +77,7 @@ const flexclass = computed(() => {
       alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom).
     </p>
   </div>
-  <div v-else :class="flexclass">
+  <div v-else class="slidecolor" :class="flexclass + ' ' + colorscheme">
     <div v-if="$slots.left" class="left-col" :class="alignment.l">
       <slot name="left" />
     </div>

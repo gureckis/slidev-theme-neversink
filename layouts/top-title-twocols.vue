@@ -45,7 +45,7 @@ const alignment = computed(() => {
 })
 
 const colorscheme = computed(() => {
-  return `nyu-${props.color}-scheme`
+  return `neversink-${props.color}-scheme`
 })
 </script>
 <template>
@@ -68,7 +68,7 @@ const colorscheme = computed(() => {
   </div>
   <template v-else>
     <div class="flex flex-col h-full w-full">
-      <div class="top-title w-full h-fit row-title pt-2 pb-2" :class="colorscheme">
+      <div class="slidecolor top-title w-full h-fit row-title pt-2 pb-2" :class="colorscheme">
         <div class="toptitle w-full p-0 pt-0 ml-2 mt-auto mb-auto" :class="alignment">
           <slot name="default" />
         </div>
@@ -93,8 +93,6 @@ const colorscheme = computed(() => {
 .top-title {
   font-size: 1.5em;
   font-weight: bold;
-  background-color: var(--nyu-bg-color);
-  color: var(--nyu-text-color);
 }
 
 .col-left {

@@ -5,14 +5,11 @@ import { compute_alignment, compute_column_size } from '../layoutHelper'
 const slots = useSlots()
 
 const props = defineProps({
-  layout: {
-    default: 'two-cols-header',
-  },
   columns: {
     default: 'is-one-half',
   },
   align: {
-    default: 'l-lt-lt',
+    default: 'lt-lt',
   },
   color: {
     default: 'white',
@@ -21,7 +18,8 @@ const props = defineProps({
 
 const alignment = computed(() => {
   const parts = props.align.split('-')
-  return { h: compute_alignment(parts[0]), l: compute_alignment(parts[1]), r: compute_alignment(parts[2]) }
+  
+  return { l: compute_alignment(parts[0]), r: compute_alignment(parts[1]) }
 })
 
 const colwidth = computed(() => compute_column_size(props.columns))
@@ -30,22 +28,15 @@ const colorscheme = computed(() => {
   return `neversink-${props.color}-scheme`
 })
 
-const flexclass = computed(() => {
-  if (slots.header != undefined) {
-    return 'slidev-layout default two-cols-header'
-  } else {
-    return 'slidev-layout default two-cols'
-  }
-})
 </script>
 
 <!-- default.vue -->
 <template>
   <div
-    v-if="colwidth == 'error' || alignment.h == 'error' || alignment.l == 'error' || alignment.r == 'error'"
+    v-if="colwidth == 'error' || alignment.l == 'error' || alignment.r == 'error'"
     class="slidev-layout default error"
   >
-    <span class="warning"><b>Error</b>: invalid layout params.</span>
+    <span class="warning"><b>Error</b>: invalid layout params.</span> 
     <hr />
     <p>
       There are two parameters: <code>columns</code> and <code>align</code>. Currently:
@@ -67,21 +58,18 @@ const flexclass = computed(() => {
       </code>
     </p>
     <p>
-      In addition you can specify "slots" of the page with <code>:: header ::</code>, <code>:: left ::</code>, and
-      <code>:: right::</code>. Header is optional.
+      In addition you can specify "slots" of the page with  <code>:: left ::</code>, and
+      <code>:: right::</code>. 
     </p>
     <p>
       The <code>align</code> parameter determines how the columns look. The notation is for example
-      <code>align: c-cm-cm</code>. The first part is for the header, the second for the left column, and the third part
+      <code>align: cm-cm</code>. The first part is for the left column, and the second part
       is for the right column. The first letter is (<code>c</code> for center, <code>l</code> for left,
-      <code>r</code> for right). This applies to all three second. For the columns the second letter is vertical
+      <code>r</code> for right). The second letter is vertical
       alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom).
     </p>
   </div>
-  <div v-else class="slidecolor" :class="flexclass + ' ' + colorscheme">
-    <div v-if="$slots.header" class="header" :class="alignment.h">
-      <slot name="header" />
-    </div>
+  <div v-else class="slidev-layout default two-cols slidecolor" :class="colorscheme">
     <div v-if="$slots.left" class="left-col" :class="alignment.l">
       <slot name="left" />
     </div>
@@ -90,7 +78,7 @@ const flexclass = computed(() => {
       <slot name="right" />
     </div>
 
-    <div v-if="$slots.default" class="footer">
+    <div v-if="$slots.default" class="end-footer">
       <slot name="default" />
     </div>
   </div>
@@ -104,30 +92,29 @@ const flexclass = computed(() => {
   font-size: 0.9em;
 }
 
-.two-cols-header {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12 columns */
-  grid-template-rows: auto 1fr; /* top header and content */
-}
-
 .two-cols {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12 columns */
-  grid-template-rows: 1fr; /* top header and content */
+  grid-template-rows: 1fr; /* no footer and content */
 }
 
-.header {
-  grid-area: 1 / 1 / 2 / span 12; /* full width */
+.end-footer {
+  grid-area: 4 / 1 / 5 / span 12; /* full width */
   margin-bottom: 1rem;
 }
 
-.two-cols-header .left-col {
+.footer {
+  grid-area: 3 / 1 / 4 / span 12; /* full width */
+  margin-bottom: 1rem;
+}
+
+.two-cols-footer .left-col {
   margin-right: 2rem;
   display: flex;
   flex-direction: column;
 }
 
-.two-cols-header .right-col {
+.two-cols-footer .right-col {
   display: flex;
   flex-direction: column;
 }
@@ -144,11 +131,11 @@ const flexclass = computed(() => {
 }
 
 /* 1-11 */
-.two-cols-header .left-col {
+.two-cols-footer .left-col {
   grid-area: 2 / 1 / 3 / span v-bind(colwidth.l);
 }
 
-.two-cols-header .right-col {
+.two-cols-footer .right-col {
   grid-area: 2 / v-bind(colwidth.l + 1) / 3 / span v-bind(colwidth.r);
 }
 
@@ -186,10 +173,6 @@ const flexclass = computed(() => {
 }
 .bottom {
   align-self: end; /* Vertically align the content to the bottom */
-}
-
-.footer {
-  font-size: 0.6em;
 }
 
 .footnotes-sep {

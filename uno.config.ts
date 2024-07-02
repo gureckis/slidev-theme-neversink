@@ -53,90 +53,117 @@ const generate_color_schemes = (colors) => {
   const classes = []
 
   schemes.push([
-    `nyu-black-scheme`,
+    `neversink-black-scheme`,
     {
-      '--nyu-bg-color': colors['black'],
-      '--nyu-fg-color': colors['white'],
-      '--nyu-text-color': colors['white'],
+      '--neversink-bg-color': colors['black'],
+      '--neversink-bg-code-color': colors['gray'][600],
+      '--neversink-fg-code-color': colors['white'],
+      '--neversink-fg-color': colors['white'],
+      '--neversink-text-color': colors['white'],
+      '--neversink-border-color': colors['white'],
+      '--neversink-highlight-color': '#FFA500'
     },
   ])
-  classes.push('nyu-black-scheme')
+  classes.push('neversink-black-scheme')
 
   schemes.push([
-    `nyu-white-scheme`,
+    `neversink-white-scheme`,
     {
-      '--nyu-bg-color': colors['white'],
-      '--nyu-fg-color': colors['black'],
-      '--nyu-text-color': colors['black'],
-      '--nyu-border-color': colors['gray'][950],
+      '--neversink-bg-color': colors['white'],
+      '--neversink-bg-code-color': colors['gray'][100],
+      '--neversink-fg-code-color': colors['black'],
+      '--neversink-fg-color': colors['black'],
+      '--neversink-text-color': colors['black'],
+      '--neversink-border-color': colors['gray'][950],
+      '--neversink-highlight-color': '#FFA500'
     },
   ])
-  classes.push('nyu-white-scheme')
+  classes.push('neversink-white-scheme')
 
   schemes.push([
-    `nyu-dark-scheme`,
+    `neversink-dark-scheme`,
     {
-      '--nyu-bg-color': colors['gray'][800],
-      '--nyu-fg-color': colors['gray'][100],
-      '--nyu-text-color': colors['gray'][100],
+      '--neversink-bg-color': colors['gray'][800],
+      '--neversink-bg-code-color': colors['gray'][600],
+      '--neversink-fg-code-color': colors['white'],
+      '--neversink-fg-color': colors['gray'][100],
+      '--neversink-text-color': colors['gray'][100],
+      '--neversink-border-color': colors['gray'][100],
+      '--neversink-highlight-color': '#FFA500'
     },
   ])
-  classes.push('nyu-dark-scheme')
+  classes.push('neversink-dark-scheme')
 
   schemes.push([
-    `nyu-light-scheme`,
+    `neversink-light-scheme`,
     {
-      '--nyu-bg-color': colors['gray'][100],
-      '--nyu-fg-color': colors['gray'][800],
-      '--nyu-text-color': colors['gray'][800],
-      '--nyu-border-color': colors['gray'][950],
+      '--neversink-bg-color': colors['gray'][100],
+      '--neversink-bg-code-color': colors['gray'][200],
+      '--neversink-fg-color': colors['gray'][800],
+      '--neversink-text-color': colors['gray'][800],
+      '--neversink-border-color': colors['gray'][800],
+      '--neversink-highlight-color': '#FFA500'
     },
   ])
-  classes.push('nyu-light-scheme')
+  classes.push('neversink-light-scheme')
 
   for (const color of colornames) {
     if (color == 'navy') {
       schemes.push([
-        `nyu-navy-scheme`,
+        `neversink-navy-scheme`,
         {
-          '--nyu-bg-color': '#2a373a',
-          '--nyu-fg-color': colors['gray'][300],
-          '--nyu-text-color': colors['gray'][300],
+          '--neversink-bg-color': '#2a373a',
+          '--neversink-bg-code-color': colors['gray'][200],
+          '--neversink-fg-color': colors['gray'][300],
+          '--neversink-text-color': colors['gray'][300],
+          '--neversink-border-color': colors['gray'][300],
+          '--neversink-highlight-color': '#FFA500'
         },
       ])
-      classes.push('nyu-navy-scheme')
+      classes.push('neversink-navy-scheme')
 
       schemes.push([
-        `nyu-navy-light-scheme`,
+        `neversink-navy-light-scheme`,
         {
-          '--nyu-bg-color': colors['gray'][50],
-          '--nyu-fg-color': '#2a373a',
-          '--nyu-text-color': '#2a373a',
+          '--neversink-bg-color': colors['gray'][50],
+          '--neversink-bg-code-color': colors['gray'][400],
+          '--neversink-fg-color': '#2a373a',
+          '--neversink-text-color': '#2a373a',
+          '--neversink-border-color': '#2a373a',
+          '--neversink-highlight-color': '#FFA500'
         },
       ])
-      classes.push('nyu-navy-light-scheme')
+      classes.push('neversink-navy-light-scheme')
     } else {
       // push the normal theme
       schemes.push([
-        `nyu-${color}-scheme`,
+        `neversink-${color}-scheme`,
         {
-          '--nyu-bg-color': colors[color][500],
-          '--nyu-fg-color': colors[color][100],
-          '--nyu-text-color': colors[color][100],
+          '--neversink-bg-color': colors[color][500],
+          '--neversink-bg-code-color': colors[color][600],
+          '--neversink-fg-code-color': colors[color][100],
+          '--neversink-fg-color': colors[color][100],
+          '--neversink-text-color': colors[color][100],
+          '--neversink-border-color': colors[color][100],
+          '--neversink-highlight-color': colors[color][100]
         },
       ])
-      classes.push(`nyu-${color}-scheme`)
+      classes.push(`neversink-${color}-scheme`)
 
       // push the light theme
       schemes.push([
-        `nyu-${color}-light-scheme`,
+        `neversink-${color}-light-scheme`,
         {
-          '--nyu-bg-color': colors[color][100],
-          '--nyu-fg-color': colors[color][600],
-          '--nyu-text-color': colors[color][500],
+          '--neversink-bg-color': colors[color][100],
+          '--neversink-bg-code-color': colors[color][200],
+          '--neversink-fg-code-color': colors[color][500],
+          '--neversink-fg-color': colors[color][600],
+          '--neversink-text-color': colors[color][500],
+          '--neversink-border-color': colors[color][500],
+          '--neversink-highlight-color': colors[color][500]
         },
       ])
-      classes.push(`nyu-${color}-light-scheme`)
+      classes.push(`neversink-${color}-light-scheme`)
     }
   }
   return { classes: classes, schemes: schemes }
