@@ -3,9 +3,11 @@ import { defineAppSetup } from '@slidev/types'
 // import Cite from '../../src/components/Cite.vue'
 //import Bibliography from '../../src/components/Bibliography'
 import CreditScroll from '../components/CreditScroll.vue'
+import Admonition from '../components/Admonition.vue'
+import AdmonitionType from '../components/AdmonitionType.vue'
 import QrcodeVue from 'qrcode.vue'
-import Bubble from '../components/bubble.vue'
-import StickyNote from '../components/stickynote.vue'
+import Bubble from '../components/Bubble.vue'
+import StickyNote from '../components/StickyNote.vue'
 
 // Vue3 Kawaii
 import Backpack from '../components/vue3-kawaii/components/backpack/Backpack.vue'
@@ -23,9 +25,11 @@ import SpeechBubble from '../components/vue3-kawaii/components/speechBubble/Spee
 
 export default defineAppSetup(({ app, router }) => {
   app.component('CreditScroll', CreditScroll)
-  app.component('qrcode', QrcodeVue)
-  app.component('bubble', Bubble)
-  app.component('stickynote', StickyNote)
+  app.component('Admonition', Admonition)
+  app.component('AdmonitionType', AdmonitionType)
+  app.component('QRCode', QrcodeVue)
+  app.component('Bubble', Bubble)
+  app.component('StickyNote', StickyNote)
   app.component('BackPack', Backpack)
   app.component('Browser', Browser)
   app.component('Cat', Cat)

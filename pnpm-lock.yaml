@@ -23,6 +23,9 @@ importers:
       '@iconify/json':
         specifier: ^2.2.221
         version: 2.2.224
+      '@iconify/vue':
+        specifier: ^4.1.2
+        version: 4.1.2(vue@3.4.31(typescript@5.5.2))
       '@mdit/plugin-alert':
         specifier: ^0.12.0
         version: 0.12.0(markdown-it@14.1.0)
@@ -403,6 +406,11 @@ packages:
 
   '@iconify/utils@2.1.25':
     resolution: {integrity: sha512-Y+iGko8uv/Fz5bQLLJyNSZGOdMW0G7cnlEX1CiNcKsRXX9cq/y/vwxrIAtLCZhKHr3m0VJmsjVPsvnM4uX8YLg==}
+
+  '@iconify/vue@4.1.2':
+    resolution: {integrity: sha512-CQnYqLiQD5LOAaXhBrmj1mdL2/NCJvwcC4jtW2Z8ukhThiFkLDkutarTOV2trfc9EXqUqRs0KqXOL9pZ/IyysA==}
+    peerDependencies:
+      vue: '>=3'
 
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
@@ -3177,6 +3185,11 @@ snapshots:
       mlly: 1.7.1
     transitivePeerDependencies:
       - supports-color
+
+  '@iconify/vue@4.1.2(vue@3.4.31(typescript@5.5.2))':
+    dependencies:
+      '@iconify/types': 2.0.0
+      vue: 3.4.31(typescript@5.5.2)
 
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:

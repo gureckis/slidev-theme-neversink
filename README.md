@@ -1,6 +1,6 @@
 # slidev-theme-neversink
-Slidev Theme Neversink
 
+Slidev Theme Neversink
 
 ## Todo list
 
@@ -24,7 +24,6 @@ Slidev Theme Neversink
 - [x] add a configuration option to global-bottom/slide-bottom for the date or whatever field
 - [ ] publish as a theme
 
-
 ### Layouts
 
 - [x] add a 100% full slide slide
@@ -44,38 +43,37 @@ Slidev Theme Neversink
 - [x] two cols no header
 - [x] credits layout
 - [ ] default (with color)
-- [ ] new section
+- [ ] new section (with color)
 - [ ] quote (better style)
-- [ ] dynamic colors
 - [ ] sort out the global-top/slide-top thing (waiting for new slidev release)
 
 ### components
-  - [x] markdown admonitions
-  - [ ] draggable, custom admonition
-    - [ ] make admonition class be what the markdown processes uses
-  - [x] speech bubble
-    - [~x] corner tails (good enough)
-    - [x] text-align
-    - [x] animations
-  - [x] post-it note
-    - [ ] prop to toggle if only visible in dev mode (waiting for new slidev release)
-  - [x] scrolling credits slide
-    - [ ] auto adjust height
-    - [ ] if in export mode then don't start scrolled down
-    - [x] create as a layout also
-    - [ ] add keyboard commands to pause speed up and step forward/backwards in scrolling
-    - [ ] add links and icons
+
+- [x] markdown admonitions
+- [x] draggable, custom admonition
+  - [ ] make admonition class be what the markdown processes uses
+  - [ ] adminition colors for dark/navy/etc...
+- [x] speech bubble
+  - [~x] corner tails (good enough)
+  - [x] text-align
+  - [x] animations
+- [x] post-it note
+  - [ ] prop to toggle if only visible in dev mode (waiting for new slidev release)
+- [x] scrolling credits slide
+  - [ ] auto adjust height
+  - [ ] if in export mode then don't start scrolled down
+  - [x] create as a layout also
+  - [ ] add keyboard commands to pause speed up and step forward/backwards in scrolling
+  - [x] add links and icons
 
 ### Future ideas
-  - [ ] thought bubble/comic style
-  - [ ] tooltip that appears on hover or with a click
+
+- [ ] dynamic color themes
+- [ ] thought bubble/comic style
+- [ ] tooltip that appears on hover or with a click
   - [ ] spoilers with clicks
 - [ ] animations/layouts
   - [ ] kawaii waving hands
   - [ ] kawaii raising hands
   - [ ] spring loaded word cloud
-
-
-
-
-
+- [ ] quiz live polls

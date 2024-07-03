@@ -61,7 +61,7 @@ const generate_color_schemes = (colors) => {
       '--neversink-fg-color': colors['white'],
       '--neversink-text-color': colors['white'],
       '--neversink-border-color': colors['white'],
-      '--neversink-highlight-color': '#FFA500'
+      '--neversink-highlight-color': '#FFA500',
     },
   ])
   classes.push('neversink-black-scheme')
@@ -75,7 +75,7 @@ const generate_color_schemes = (colors) => {
       '--neversink-fg-color': colors['black'],
       '--neversink-text-color': colors['black'],
       '--neversink-border-color': colors['gray'][950],
-      '--neversink-highlight-color': '#FFA500'
+      '--neversink-highlight-color': '#FFA500',
     },
   ])
   classes.push('neversink-white-scheme')
@@ -89,7 +89,7 @@ const generate_color_schemes = (colors) => {
       '--neversink-fg-color': colors['gray'][100],
       '--neversink-text-color': colors['gray'][100],
       '--neversink-border-color': colors['gray'][100],
-      '--neversink-highlight-color': '#FFA500'
+      '--neversink-highlight-color': '#FFA500',
     },
   ])
   classes.push('neversink-dark-scheme')
@@ -102,7 +102,7 @@ const generate_color_schemes = (colors) => {
       '--neversink-fg-color': colors['gray'][800],
       '--neversink-text-color': colors['gray'][800],
       '--neversink-border-color': colors['gray'][800],
-      '--neversink-highlight-color': '#FFA500'
+      '--neversink-highlight-color': '#FFA500',
     },
   ])
   classes.push('neversink-light-scheme')
@@ -117,7 +117,7 @@ const generate_color_schemes = (colors) => {
           '--neversink-fg-color': colors['gray'][300],
           '--neversink-text-color': colors['gray'][300],
           '--neversink-border-color': colors['gray'][300],
-          '--neversink-highlight-color': '#FFA500'
+          '--neversink-highlight-color': '#FFA500',
         },
       ])
       classes.push('neversink-navy-scheme')
@@ -130,7 +130,7 @@ const generate_color_schemes = (colors) => {
           '--neversink-fg-color': '#2a373a',
           '--neversink-text-color': '#2a373a',
           '--neversink-border-color': '#2a373a',
-          '--neversink-highlight-color': '#FFA500'
+          '--neversink-highlight-color': '#FFA500',
         },
       ])
       classes.push('neversink-navy-light-scheme')
@@ -145,7 +145,10 @@ const generate_color_schemes = (colors) => {
           '--neversink-fg-color': colors[color][100],
           '--neversink-text-color': colors[color][100],
           '--neversink-border-color': colors[color][100],
-          '--neversink-highlight-color': colors[color][100]
+          '--neversink-highlight-color': colors[color][100],
+          '--neversink-admon-bg-color': colors[color][500],
+          '--neversink-admon-border-color': colors[color][300],
+          '--neversink-admon-text-color': colors[color][100],
         },
       ])
       classes.push(`neversink-${color}-scheme`)
@@ -160,7 +163,10 @@ const generate_color_schemes = (colors) => {
           '--neversink-fg-color': colors[color][600],
           '--neversink-text-color': colors[color][500],
           '--neversink-border-color': colors[color][500],
-          '--neversink-highlight-color': colors[color][500]
+          '--neversink-highlight-color': colors[color][500],
+          '--neversink-admon-bg-color': colors[color][100],
+          '--neversink-admon-border-color': colors[color][300],
+          '--neversink-admon-text-color': colors[color][600],
         },
       ])
       classes.push(`neversink-${color}-light-scheme`)
