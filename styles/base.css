@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@50;100;200;300;400;500;600;700;800;900&display=swap');
 
-
 :root {
   --neversink-title-font: 'Inter', sans-serif;
   --neversink-main-font: 'Inter', sans-serif;
   --neversink-mono-font: 'Inter', monospace;
   --neversink-quote-font: 'Fire Code', monospace;
-  @apply neversink-white-scheme;  /* apply the default white scheme everywhere */
+  @apply neversink-white-scheme; /* apply the default white scheme everywhere */
 }
 
+/* layout specific customizations are shared in the layout file (e.g., layouts/cover.vue) */
 
-
+/* sets the default font */
 #page-root {
   font-family: var(--neversink-main-font);
   font-weight: 400;
@@ -24,7 +24,6 @@
   background-color: var(--neversink-bg-color);
   color: var(--neversink-text-color);
 }
-
 
 /* adjust default bullets */
 .slidev-layout li {
@@ -38,9 +37,9 @@
   margin-bottom: 0.5em;
 }
 
-
-
-.slidev-layout strong, .slidev-layout b {
+/* change the bold and strong fonts */
+.slidev-layout strong,
+.slidev-layout b {
   font-family: var(--neversink-main-font);
   font-weight: 700;
 }
@@ -76,7 +75,7 @@
   border-bottom: none !important;
 }
 
-
+/* used just to bring the unocss colos styles forward.  probably can replace with var and @apply */
 .bg-navy-900 {
   background: #2a373a;
 }
@@ -89,47 +88,7 @@
   color: #2a373a;
 }
 
-
-/* cover slide type */
-.slidev-layout.cover h1 {
-  font-family: var(--neversink-title-font);
-  font-weight: 500;
-  font-size: 3em;
-}
-
-.slidev-layout.cover h2 {
-  font-family: var(--neversink-title-font);
-  font-weight: 300;
-  font-size: 2.5em;
-}
-
-.slidev-layout.cover h3 {
-  font-family: var(--neversink-title-font);
-  font-weight: 300;
-  font-size: 1.9em;
-}
-
-.slidev-layout.cover {
-  font-family: var(--neversink-main-font);
-  font-weight: 300;
-}
-
-.slidev-layout.cover strong {
-  font-weight: 500;
-}
-
-
-.cover h1 + p {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-}
-
-.cover h3 {
-  font-size: 1em;
-  margin: 0;
-  padding: 0;
-}
+/* default layout */
 
 .my-auto p {
   margin: 0;
@@ -137,41 +96,35 @@
 }
 
 .slidev-layout h1 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.7em;
   padding-bottom: 0;
   font-family: var(--neversink-title-font);
   margin-bottom: 0;
 }
 
-.slidev-layout h1 + p {
+.slidev-layout h1 + p,
+.slidev-layout h2 + p,
+.slidev-layout h3 + p {
   opacity: 0.9;
   margin-top: 1.5em;
 }
 
-.slidev-layout h1 + ul {
+.slidev-layout h1 + ul,
+.slidev-layout h2 + ul,
+.slidev-layout h3 + ul {
   margin-top: 1.5em;
-}
-
-.slidev-layout h3 {
-  margin-bottom: 0.5em;
 }
 
 .col-header {
   max-height: 20%;
 }
 
-
-
-
-
 .quote_author {
   font-family: var(--neversink-title-font);
   font-weight: 400;
   text-align: right;
 }
-
-
 
 .slidev-layout .quote {
   margin-top: 2em;
@@ -191,8 +144,6 @@
   margin-top: 1em;
 } */
 
-
-
 .two-cols-header {
   grid-template-rows: 20% 80%;
 }
@@ -205,9 +156,6 @@
 img {
   display: inline;
 }
-
-
-
 
 .toptitle {
   font-size: 1em;
@@ -253,7 +201,6 @@ img {
   height: fit-content;
 }
 
-
 /* customize the v-clicks */
 .slidev-vclick-target {
   transition: opacity 100ms ease;
@@ -268,14 +215,6 @@ img {
   opacity: 0.3;
   pointer-events: none;
 }
-
-
-
-
-
-
-
-
 
 html.dark {
   /* dark mode css here */
