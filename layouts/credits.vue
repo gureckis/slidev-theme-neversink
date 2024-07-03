@@ -15,10 +15,10 @@ const colorscheme = computed(() => {
 </script>
 <template>
   <div class="slidecolor slidev-layout full" :class="colorscheme">
-    <div class="my-auto w-full h-full" >
-        <Credits>
-            <slot name="default"></slot>
-        </Credits>
+    <div class="my-auto w-full h-full">
+      <CreditScroll :speed="2.0" loop="false">
+        <slot name="default"></slot>
+      </CreditScroll>
     </div>
   </div>
 </template>

@@ -1,9 +1,18 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { onSlideEnter } from '@slidev/client'
+
+const props = defineProps({
+  speed: {
+    default: 0.5,
+  },
+  loop: {
+    default: true,
+  },
+})
+
 const containerRef = ref(null)
 const scrollPosition = ref(0)
-const scrollSpeed = 0.5 // Adjust this value to change scroll speed
 const isScrolling = ref(false)
 
 let animationFrameId = null
@@ -14,20 +23,34 @@ const scroll = () => {
   const container = containerRef.value
   const content = container.firstElementChild
 
-  scrollPosition.value -= scrollSpeed
+  scrollPosition.value -= props.speed
 
   if (Math.abs(scrollPosition.value) >= 520) {
-    //scrollPosition.value = container.offsetHeight * 1.5
-    resetScroll()
+    if (props.loop) {
+      console.log('resetting loop', props.loop)
+      resetScroll()
+      scroll()
+      animationFrameId = requestAnimationFrame(scroll)
+    } else {
+      stopScrolling()
+      return
+    }
+  } else {
+    animationFrameId = requestAnimationFrame(scroll)
   }
-
-  animationFrameId = requestAnimationFrame(scroll)
 }
 
 const startScrolling = () => {
   if (!isScrolling.value) {
     isScrolling.value = true
     animationFrameId = requestAnimationFrame(scroll)
+  }
+}
+
+const stopScrolling = () => {
+  if (isScrolling.value) {
+    isScrolling.value = false
+    cancelAnimationFrame(animationFrameId)
   }
 }
 
@@ -53,6 +76,7 @@ onUnmounted(() => {
 
 // Reset scrolling when entering the slide
 onSlideEnter(() => {
+  console.log('onSlideEnter')
   resetScroll()
   console.log('starting scrolling')
   startScrolling()
@@ -60,7 +84,7 @@ onSlideEnter(() => {
 </script>
 
 <template>
-  <div class="scroll-container" ref="containerRef" @click="startScrolling">
+  <div class="scroll-container" ref="containerRef">
     <div class="scroll-content" :style="{ transform: `translateY(${scrollPosition}px)` }">
       <slot></slot>
     </div>
