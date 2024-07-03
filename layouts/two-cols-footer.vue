@@ -29,13 +29,11 @@ const colorscheme = computed(() => {
 
 const flexclass = computed(() => {
   if (slots.footer != undefined) {
-    return 'slidev-layout default two-cols-footer' 
+    return 'slidev-layout default two-cols-footer'
   } else {
-    return 'slidev-layout default two-cols' 
+    return 'slidev-layout default two-cols'
   }
 })
-
-
 </script>
 
 <!-- default.vue -->

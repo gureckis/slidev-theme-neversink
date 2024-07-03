@@ -18,7 +18,7 @@ const props = defineProps({
 
 const alignment = computed(() => {
   const parts = props.align.split('-')
-  
+
   return { l: compute_alignment(parts[0]), r: compute_alignment(parts[1]) }
 })
 
@@ -27,7 +27,6 @@ const colwidth = computed(() => compute_column_size(props.columns))
 const colorscheme = computed(() => {
   return `neversink-${props.color}-scheme`
 })
-
 </script>
 
 <!-- default.vue -->
@@ -36,7 +35,7 @@ const colorscheme = computed(() => {
     v-if="colwidth == 'error' || alignment.l == 'error' || alignment.r == 'error'"
     class="slidev-layout default error"
   >
-    <span class="warning"><b>Error</b>: invalid layout params.</span> 
+    <span class="warning"><b>Error</b>: invalid layout params.</span>
     <hr />
     <p>
       There are two parameters: <code>columns</code> and <code>align</code>. Currently:
@@ -57,16 +56,12 @@ const colorscheme = computed(() => {
         is-three-quarters
       </code>
     </p>
-    <p>
-      In addition you can specify "slots" of the page with  <code>:: left ::</code>, and
-      <code>:: right::</code>. 
-    </p>
+    <p>In addition you can specify "slots" of the page with <code>:: left ::</code>, and <code>:: right::</code>.</p>
     <p>
       The <code>align</code> parameter determines how the columns look. The notation is for example
-      <code>align: cm-cm</code>. The first part is for the left column, and the second part
-      is for the right column. The first letter is (<code>c</code> for center, <code>l</code> for left,
-      <code>r</code> for right). The second letter is vertical
-      alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom).
+      <code>align: cm-cm</code>. The first part is for the left column, and the second part is for the right column. The
+      first letter is (<code>c</code> for center, <code>l</code> for left, <code>r</code> for right). The second letter
+      is vertical alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom).
     </p>
   </div>
   <div v-else class="slidev-layout default two-cols slidecolor" :class="colorscheme">

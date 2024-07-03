@@ -13,7 +13,6 @@ const props = defineProps({
 
 const style = computed(() => handleBackground(props.background, true))
 
-
 const colorscheme = computed(() => {
   return `neversink-${props.color}-scheme`
 })
@@ -21,8 +20,8 @@ const colorscheme = computed(() => {
 
 <template>
   <div class="h-full slidecolor" :class="colorscheme">
-    <div class="slidev-layout cover" :style="style" >
-      <div class="my-auto w-full coverr">
+    <div class="slidev-layout cover" :style="style">
+      <div class="my-auto w-full">
         <slot />
       </div>
       <div class="absolute bottom-10">
@@ -33,31 +32,61 @@ const colorscheme = computed(() => {
 </template>
 
 <style>
-.coverr h1,
-.coverr h2,
-.coverr h3 {
-  margin-bottom: 0.25em;
-  margin-top: 0.2em;
-  padding-top: 0;
+/* cover slide type */
+.slidev-layout.cover h1 {
+  font-family: var(--neversink-title-font);
+  font-weight: 500;
+  font-size: 3em;
+  line-height: 5rem;
+  margin-bottom: 0.4em;
 }
 
-.coverr h1 {
-  padding-bottom: 0.2em;
+.slidev-layout.cover h2 {
+  font-family: var(--neversink-title-font);
+  font-weight: 500;
+  font-size: 2.5em;
+  line-height: 5rem;
+  margin-bottom: 0.4em;
 }
 
-.coverr h2 {
-  padding-bottom: 0.5em;
+.slidev-layout.cover h3 {
+  font-family: var(--neversink-title-font);
+  font-weight: 500;
+  font-size: 1.9em;
+  line-height: 5rem;
+  margin-bottom: 0.4em;
 }
 
-.coverr h3 {
-  padding-bottom: 0.5em;
-  margin-bottom: 1rem;
+.slidev-layout.cover {
+  font-family: var(--neversink-main-font);
+  font-weight: 300;
 }
 
-.coverr h1,
-.coverr h2,
-.coverr h3 {
-  /*@apply border-b-1 v-bind(linecolor);*/
+.slidev-layout.cover strong {
+  font-weight: 500;
+}
+
+.slidev-layout.cover h1 + p {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+}
+
+.slidev-layout.cover h2 + p {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+}
+
+.slidev-layout.cover h3 + p {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+}
+
+.slidev-layout.cover h1,
+.slidev-layout.cover h2,
+.slidev-layout.cover h3 {
   border-bottom: 1px solid var(--neversink-highlight-color);
 }
 </style>
