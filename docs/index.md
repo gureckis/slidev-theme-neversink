@@ -3,9 +3,8 @@
 layout: home
 
 hero:
-  name: "Slidev Theme Neversink"
-  text: "An education/academia oriented Slidev theme with whimsical elements"
-  tagline: My great project tagline
+  name: 'Neversink'
+  tagline: An education/academia oriented Slidev theme with whimsical elements
   actions:
     - theme: brand
       text: Markdown Examples
@@ -22,4 +21,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-

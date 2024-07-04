@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Slidev Theme Neversink",
-  description: "An education/academia oriented Slidev theme with whimsical elements",
+  title: 'Slidev Neversink Theme',
+  description: 'An education/academia oriented Slidev theme with whimsical elements',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/markdown-examples' },
     ],
 
     sidebar: [
@@ -16,13 +16,11 @@ export default defineConfig({
         text: 'Examples',
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: 'Runtime API Examples', link: '/api-examples' },
+        ],
+      },
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
+    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+  },
 })
