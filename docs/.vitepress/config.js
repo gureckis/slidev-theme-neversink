@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Slidev Neversink Theme',
   description: 'An education/academia oriented Slidev theme with whimsical elements',
-  base: '/slidev-neversink-theme/',
+  base: '/slidev-theme-neversink/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
