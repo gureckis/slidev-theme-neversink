@@ -15,7 +15,10 @@
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png"
+    "screenshot": "slidev export example.md --format png",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "@iconify-json/logos": "^1.1.42",
@@ -42,5 +45,8 @@
   "slidev": {
     "colorSchema": "light",
     "highlighter": "all"
+  },
+  "devDependencies": {
+    "vitepress": "^1.2.3"
   }
 }
