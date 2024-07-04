@@ -45,6 +45,9 @@ importers:
         specifier: ^3.4.1
         version: 3.4.1(vue@3.4.31(typescript@5.5.2))
     devDependencies:
+      pnpm:
+        specifier: ^9.4.0
+        version: 9.4.0
       vitepress:
         specifier: ^1.2.3
         version: 1.2.3(@algolia/client-search@4.24.0)(@types/node@18.19.39)(axios@1.7.2)(postcss@8.4.39)(search-insights@2.14.0)(typescript@5.5.2)
@@ -2361,6 +2364,11 @@ packages:
   playwright-core@1.45.0:
     resolution: {integrity: sha512-lZmHlFQ0VYSpAs43dRq1/nJ9G/6SiTI7VPqidld9TDefL9tX87bTKExWZZUF5PeRyqtXqd8fQi2qmfIedkwsNQ==}
     engines: {node: '>=18'}
+    hasBin: true
+
+  pnpm@9.4.0:
+    resolution: {integrity: sha512-9Um4pSydK4U2di+ZwHIiBe/Fr5E+d4NdvMw7CwssqefcgCK3gGLBcpHEjoh0nHDOiOtadPH6jEv14Yu0bIvYOg==}
+    engines: {node: '>=18.12'}
     hasBin: true
 
   points-on-curve@0.2.0:
@@ -5942,6 +5950,8 @@ snapshots:
       playwright-core: 1.45.0
 
   playwright-core@1.45.0: {}
+
+  pnpm@9.4.0: {}
 
   points-on-curve@0.2.0: {}
 
