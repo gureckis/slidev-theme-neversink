@@ -49,5 +49,6 @@
   "devDependencies": {
     "pnpm": "^9.4.0",
     "vitepress": "^1.2.3"
-  }
+  },
+  "packageManager": "pnpm@9.4.0"
 }
