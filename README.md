@@ -1,6 +1,26 @@
-# slidev-theme-neversink
+# Slidev Theme Neversink
 
-Slidev Theme Neversink
+An education/academia oriented [Slidev](https://sli.dev/) theme with some whimsical elements.
+
+Documentation [here](https://gureckis.github.io/slidev-theme-neversink/)
+
+## Installation
+
+```bash
+npm install slidev-theme-neversink
+```
+
+## Usage
+
+Add the theme to the frontmatter of your first slide in `slides.md`:
+
+```md
+---
+theme: neversink
+---
+```
+
+## Features
 
 ## Todo list
 
@@ -17,12 +37,15 @@ Slidev Theme Neversink
   - [x] cover
 - [x] fix <code> bg colors on colored slides
 - [x] add variables to configure things
-  - [ ] add docs on how to customize variables/fonts
-- [ ] clean up css classes
-- [ ] dark mode support
 - [x] make global-top be a feature of my talks not the theme
 - [x] add a configuration option to global-bottom/slide-bottom for the date or whatever field
+- [ ] clean up css classes
+- [ ] dark mode support
 - [ ] publish as a theme
+- add docs
+  - [ ] vitepress setup published to github pages
+  - [ ] slide types
+  - [ ] add docs on how to customize variables/fonts
 
 ### Layouts
 
@@ -72,8 +95,9 @@ Slidev Theme Neversink
 - [ ] thought bubble/comic style
 - [ ] tooltip that appears on hover or with a click
   - [ ] spoilers with clicks
+- [ ] spring loaded word cloud
+- [ ] quiz live polls
+
 - [ ] animations/layouts
   - [ ] kawaii waving hands
   - [ ] kawaii raising hands
-  - [ ] spring loaded word cloud
-- [ ] quiz live polls
