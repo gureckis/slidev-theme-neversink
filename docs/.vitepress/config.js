@@ -2,14 +2,15 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Slidev Neversink Theme',
+  title: 'Slidev Theme Neversink',
   description: 'An education/academia oriented Slidev theme with whimsical elements',
   base: '/slidev-theme-neversink/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Getting started', link: '/getting-started' },
+      { text: 'Example Deck', link: '/example/' },
     ],
 
     sidebar: [
