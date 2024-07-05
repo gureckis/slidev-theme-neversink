@@ -241,3 +241,10 @@ html:not(.dark) {
     opacity: 1;
   }
 }
+
+/* credits */
+
+.fullpage {
+  height: 100vh;
+  display: flex;
+}

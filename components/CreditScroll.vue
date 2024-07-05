@@ -1,7 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { onSlideEnter } from '@slidev/client'
+import { onSlideEnter, useSlideContext } from '@slidev/client'
 
+const { $renderContext } = useSlideContext()
 const props = defineProps({
   speed: {
     default: 0.5,
@@ -18,19 +19,11 @@ const isScrolling = ref(false)
 let animationFrameId = null
 
 const scroll = () => {
-  if (!isScrolling.value) return
-
-  const container = containerRef.value
-  const content = container.firstElementChild
-
   scrollPosition.value -= props.speed
-
-  if (Math.abs(scrollPosition.value) >= 520) {
-    if (props.loop) {
-      console.log('resetting loop', props.loop)
+  if (Math.abs(scrollPosition.value) >= 550) {
+    if (props.loop.value) {
+      console.log('resetting loop', props.loop.value)
       resetScroll()
-      scroll()
-      animationFrameId = requestAnimationFrame(scroll)
     } else {
       stopScrolling()
       return
@@ -41,45 +34,40 @@ const scroll = () => {
 }
 
 const startScrolling = () => {
-  if (!isScrolling.value) {
-    isScrolling.value = true
-    animationFrameId = requestAnimationFrame(scroll)
-  }
+  animationFrameId = requestAnimationFrame(scroll)
 }
 
 const stopScrolling = () => {
-  if (isScrolling.value) {
-    isScrolling.value = false
+  if (animationFrameId) {
     cancelAnimationFrame(animationFrameId)
   }
 }
 
 const resetScroll = () => {
-  isScrolling.value = false
-  if (containerRef.value) {
-    scrollPosition.value = 520 //containerRef.value.offsetHeight * 2.5
-  }
+  scrollPosition.value = 480 //containerRef.value.offsetHeight * 2.5
   if (animationFrameId) {
     cancelAnimationFrame(animationFrameId)
   }
 }
 
 onMounted(() => {
-  resetScroll()
+  console.log('mounted')
+  // Reset scrolling when entering the slide
+  onSlideEnter(() => {
+    console.log('context ', $renderContext.value)
+    if (['slide', 'presenter'].includes($renderContext.value)) {
+      console.log('onSlideEnter')
+      resetScroll()
+      console.log('starting scrolling')
+      startScrolling()
+    }
+  })
 })
 
 onUnmounted(() => {
   if (animationFrameId) {
     cancelAnimationFrame(animationFrameId)
   }
-})
-
-// Reset scrolling when entering the slide
-onSlideEnter(() => {
-  console.log('onSlideEnter')
-  resetScroll()
-  console.log('starting scrolling')
-  startScrolling()
 })
 </script>
 

@@ -16,7 +16,7 @@ const colorscheme = computed(() => {
 <template>
   <div class="slidecolor slidev-layout full" :class="colorscheme">
     <div class="my-auto w-full h-full">
-      <CreditScroll :speed="2.0" loop="false">
+      <CreditScroll :speed="1.0" loop="false">
         <slot name="default"></slot>
       </CreditScroll>
     </div>
