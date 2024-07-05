@@ -11,7 +11,7 @@ hero:
       link: /getting-started
     - theme: alt
       text: Example deck
-      link: /example/
+      link: https://gureckis.github.io/slidev-theme-neversink/example/
     - theme: alt
       text: GitHub
       link: https://github.com/gureckis/slidev-theme-neversink
