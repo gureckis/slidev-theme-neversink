@@ -10,7 +10,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Getting started', link: '/getting-started' },
-      { text: 'Example Deck', link: '/example/' },
+      { text: 'Example Deck', link: 'https://gureckis.github.io/slidev-theme-neversink/example/#1', target: '_self' },
     ],
 
     sidebar: [
