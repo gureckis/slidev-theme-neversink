@@ -69,17 +69,17 @@ const colorscheme = computed(() => {
   <template v-else>
     <div class="flex flex-col h-full w-full">
       <div class="slidecolor top-title w-full h-fit row-title pt-2 pb-2" :class="colorscheme">
-        <div class="toptitle w-full p-0 pt-0 ml-2 mt-auto mb-auto" :class="alignment">
+        <div class="slidev-layout w-full p-0 pt-0 ml-6 mt-auto mb-auto" :class="alignment">
           <slot name="default" />
         </div>
       </div>
       <div class="row-content">
         <div class="slidev-layout w-full">
           <div class="flex flex-row h-full w-full">
-            <div class="h-full flex-auto col-left">
+            <div class="col-left">
               <slot name="left" />
             </div>
-            <div class="h-full flex-auto col-right">
+            <div class="col-right">
               <slot name="right" />
             </div>
           </div>
@@ -90,19 +90,14 @@ const colorscheme = computed(() => {
 </template>
 
 <style scoped>
-.top-title {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
 .col-left {
   flex: v-bind(colwidth.l); /* Makes each column take up equal space */
-  display: flex;
+  margin-right: 30px;
 }
 
 .col-right {
   flex: v-bind(colwidth.r); /*Makes each column take up equal space */
-  display: flex;
+  margin-left: 30px;
 }
 
 .warning {

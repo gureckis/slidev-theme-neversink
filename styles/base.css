@@ -157,36 +157,6 @@ img {
   display: inline;
 }
 
-.toptitle {
-  font-size: 1em;
-  font-family: var(--neversink-title-font);
-  font-weight: 300;
-  padding-left: 16px;
-}
-.toptitle h1 {
-  font-size: 1.8em;
-  font-family: var(--neversink-title-font);
-  font-weight: 500;
-  padding-left: 25px;
-  letter-spacing: 0.07em;
-}
-
-.toptitle h2 {
-  font-size: 1.5em;
-  font-family: var(--neversink-title-font);
-  font-weight: 300;
-  padding-left: 25px;
-  letter-spacing: 0.07em;
-}
-
-.toptitle h3 {
-  font-size: 1.1em;
-  font-family: var(--neversink-title-font);
-  font-weight: 300;
-  padding-left: 25px;
-  letter-spacing: 0.07em;
-}
-
 .slidev-layout.title {
   height: fit-content;
 }

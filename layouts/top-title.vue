@@ -65,8 +65,8 @@ const colorscheme = computed(() => {
   </div>
   <template v-else>
     <div class="flex flex-col h-full w-full">
-      <div class="slidecolor top-title w-full h-fit pt-2 pb-2" :class="colorscheme">
-        <div class="toptitle w-full p-0 pt-0 ml-2 mt-auto mb-auto" :class="alignment">
+      <div class="slidecolor w-full h-fit pt-2 pb-2" :class="colorscheme">
+        <div class="slidev-layout w-full p-0 pt-0 ml-6 mt-auto mb-auto" :class="alignment">
           <slot name="default" />
         </div>
       </div>
@@ -80,11 +80,6 @@ const colorscheme = computed(() => {
 </template>
 
 <style scoped>
-.top-title {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
 .warning {
   color: red;
 }
