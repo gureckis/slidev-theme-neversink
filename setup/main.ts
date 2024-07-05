@@ -6,7 +6,7 @@ import CreditScroll from '../components/CreditScroll.vue'
 import Admonition from '../components/Admonition.vue'
 import AdmonitionType from '../components/AdmonitionType.vue'
 import QrcodeVue from 'qrcode.vue'
-import Bubble from '../components/Bubble.vue'
+import SpeechBubble from '../components/SpeechBubble.vue'
 import StickyNote from '../components/StickyNote.vue'
 
 // Vue3 Kawaii
@@ -28,7 +28,7 @@ export default defineAppSetup(({ app, router }) => {
   app.component('Admonition', Admonition)
   app.component('AdmonitionType', AdmonitionType)
   app.component('QRCode', QrcodeVue)
-  app.component('Bubble', Bubble)
+  app.component('SpeechBubble', SpeechBubble)
   app.component('StickyNote', StickyNote)
   app.component('BackPack', Backpack)
   app.component('Browser', Browser)
