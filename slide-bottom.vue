@@ -38,7 +38,6 @@ function process_colors() {
   }
 }
 function checkvars() {
-  console.log('bottom check', $frontmatter)
   if ($frontmatter.slide_info_color === undefined) {
     // default
     fg.value = fg_default
@@ -51,7 +50,6 @@ function checkvars() {
     fg.value = parts[0]
     bg.value = parts[1]
   } else {
-    console.log('else')
     // slide specific things
     if ($frontmatter.layout == 'end') {
       fg.value = `text-neutral-100`
