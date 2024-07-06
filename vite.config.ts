@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import { sub } from '@mdit/plugin-sub'
 import Mark from 'markdown-it-mark'
 
-console.log('loading theme vite.config.ts')
+console.log('Loading Neversink theme vite.config.ts...')
 export default defineConfig({
   slidev: {
     markdown: {

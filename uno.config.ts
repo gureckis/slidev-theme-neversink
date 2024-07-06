@@ -194,7 +194,7 @@ const generateRows = (max) => {
 
 const schemes = generate_color_schemes(colors)
 
-console.log('loading theme uno.config.ts')
+console.log('Loading Neversink theme uno.config.ts...')
 export default defineConfig({
   // ...UnoCSS options
   presets: [presetUno()],
