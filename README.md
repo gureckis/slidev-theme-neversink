@@ -43,7 +43,7 @@ theme: neversink
 - [ ] dark mode support
 - [ ] publish as a theme
 - add docs
-  - [ ] vitepress setup published to github pages
+  - [x] vitepress setup published to github pages
   - [ ] slide types
   - [ ] add docs on how to customize variables/fonts
 
@@ -65,8 +65,8 @@ theme: neversink
 - [x] top title two cols
 - [x] two cols no header
 - [x] credits layout
-- [ ] default (with color)
-- [ ] new section (with color)
+- [x] default (with color)
+- [x] new section (with color)
 - [ ] quote (better style)
 - [ ] sort out the global-top/slide-top thing (waiting for new slidev release)
 
@@ -83,11 +83,11 @@ theme: neversink
 - [x] post-it note
   - [ ] prop to toggle if only visible in dev mode (waiting for new slidev release)
 - [x] scrolling credits slide
+  - [x] create as a layout also
+  - [x] add links and icons
   - [ ] auto adjust height
   - [ ] if in export mode then don't start scrolled down
-  - [x] create as a layout also
   - [ ] add keyboard commands to pause speed up and step forward/backwards in scrolling
-  - [x] add links and icons
 
 ### Future ideas
 

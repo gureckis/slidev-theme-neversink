@@ -37,24 +37,24 @@ const colorscheme = computed(() => {
   font-family: var(--neversink-title-font);
   font-weight: 500;
   font-size: 3em;
-  line-height: 5rem;
-  margin-bottom: 0.4em;
+  line-height: normal;
+  margin-bottom: 0.9rem;
 }
 
 .slidev-layout.cover h2 {
   font-family: var(--neversink-title-font);
   font-weight: 500;
   font-size: 2.5em;
-  line-height: 5rem;
-  margin-bottom: 0.4em;
+  line-height: normal;
+  margin-bottom: 0.9rem;
 }
 
 .slidev-layout.cover h3 {
   font-family: var(--neversink-title-font);
   font-weight: 500;
   font-size: 1.9em;
-  line-height: 5rem;
-  margin-bottom: 0.4em;
+  line-height: normal;
+  margin-bottom: 0.9rem;
 }
 
 .slidev-layout.cover {
@@ -87,6 +87,7 @@ const colorscheme = computed(() => {
 .slidev-layout.cover h1,
 .slidev-layout.cover h2,
 .slidev-layout.cover h3 {
+  padding-bottom: 0.3em;
   border-bottom: 1px solid var(--neversink-highlight-color);
 }
 </style>

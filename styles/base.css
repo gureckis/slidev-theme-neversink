@@ -120,23 +120,12 @@
   max-height: 20%;
 }
 
-.quote_author {
-  font-family: var(--neversink-title-font);
-  font-weight: 400;
-  text-align: right;
-}
-
-.slidev-layout .quote {
-  margin-top: 2em;
-  border-left: 3px solid orange;
-  padding-left: 1em;
-}
-.slidev-layout .quote p {
-  font-size: 1.5em;
-  font-family: var(--neversink-quote-font);
-  line-height: 1.2em;
-  font-weight: 400;
-  text-align: left;
+.slidev-layout.toptitle {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 2.5rem;
+  font-size: 1.1rem;
 }
 
 /* a new tight bullet list */
@@ -157,18 +146,53 @@ img {
   display: inline;
 }
 
-.slidev-layout.title {
+.toptitle {
+  font-size: 1em;
+  font-family: var(--neversink-title-font);
+  font-weight: 300;
+  padding-left: 16px;
+}
+.toptitle h1 {
+  font-size: 1.8em;
+  font-family: var(--neversink-title-font);
+  font-weight: 500;
+  padding-left: 25px;
+  letter-spacing: 0.07em;
+}
+
+.toptitle h2 {
+  font-size: 1.5em;
+  font-family: var(--neversink-title-font);
+  font-weight: 300;
+  padding-left: 25px;
+  letter-spacing: 0.07em;
+}
+
+.toptitle h3 {
+  font-size: 1.1em;
+  font-family: var(--neversink-title-font);
+  font-weight: 300;
+  padding-left: 25px;
+  letter-spacing: 0.07em;
+}
+
+.slidev-layout.sidetitle {
   height: fit-content;
 }
 
-.slidev-layout.title code {
+.slidev-layout.sidetitle hr {
+  border: 0;
+  border-top: 1px solid var(--neversink-border-color);
+  margin: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.slidev-layout.sidetitle code {
   background: none;
 }
-.slidev-layout.title h1 {
+.slidev-layout.sidetitle h1 {
   margin-bottom: 5;
-}
-.slidev-layout.sidecontent {
-  height: fit-content;
 }
 
 /* customize the v-clicks */

@@ -71,7 +71,7 @@ const colorscheme = computed(() => {
         </div>
       </div>
       <div class="row-content">
-        <div class="slidev-layout sidecontent w-full">
+        <div class="slidev-layout toptitle h-fit w-full">
           <slot name="content" />
         </div>
       </div>

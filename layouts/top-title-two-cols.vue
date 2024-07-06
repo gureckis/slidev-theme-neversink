@@ -74,7 +74,7 @@ const colorscheme = computed(() => {
         </div>
       </div>
       <div class="row-content">
-        <div class="slidev-layout w-full">
+        <div class="slidev-layout toptitle w-full">
           <div class="flex flex-row h-full w-full">
             <div class="col-left">
               <slot name="left" />

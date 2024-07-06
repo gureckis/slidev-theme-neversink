@@ -4,12 +4,12 @@ layout: cover
 routerMode: hash
 title: Base Template
 theme: ./
-neversink_string: "Example Deck"
+neversink_string: "Neversink Example Deck"
 ---
 
-# Slidev Neversink Theme
+# Neversink
 
-Designed by **Todd Gureckis**   
+A [Slidev](https://sli.dev) theme designed by **Todd Gureckis**   
 <div class="iconlink">
 
 _New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
@@ -34,10 +34,10 @@ Neversink is a theme for education and academic presentations.  It is designed t
 
 - It's not to hard to customize things.
 
-- It strives to be well documented and easy to use.  It is also open source and free!  You can find the source code on [GitHub](http://github.com/gureckis/slidev-theme-neversink).
+- It strives to be well documented and easy to use! 
 
 
-Ultimately, it was designed based on observations of common layout used in my ~15 years as a academic researcher.
+Ultimately, it was designed based on observations of common slide layouts used in my years as a academic researcher and educator. You can find the source code on [GitHub](http://github.com/gureckis/slidev-theme-neversink).
 
 ---
 layout: default
@@ -168,6 +168,11 @@ titlewidth: is-3
 
 # Color themes
 
+<StickyNote color="emerald-light" textAlign="left" width="180px"  v-drag="[719,291,180,180,16]">
+
+Don't worry if you don't understand all the details, yet we are still talking about **color schemes**.
+</StickyNote>
+
 :: content ::
 
 Or we can use the `emerald-light` scheme in a slide layout to set the overall color and style of a slide:
@@ -181,25 +186,22 @@ titlewidth: is-3
 ---
 ```
 
-Don't worry if you don't understand all the details, yet we are still talking about **color schemes**.
-
-
 ---
 layout: top-title
-color: sky
+color: amber
 align: lt
 ---
 
-### Layouts
+# Layouts
 
 :: content ::
 
-The theme includes many layouts. Layouts set the overall structure of the page.  For example this slide is using the `top-title` layout with the `sky` color scheme.  You can see the frontmatter for this slide below:
+The theme includes many layouts. Layouts set the overall structure of the page.  For example this slide is using the `top-title` layout with the `amber` color scheme.  You can see the frontmatter for this slide below:
 
 ```md
 ---
 layout: top-title
-color: sky
+color: amber
 align: lt
 ---
 ```
@@ -215,34 +217,343 @@ titlewidth: is-3
 ---
 ```
 
+
 ---
-layout: top-title-twocols
-color: navy
+layout: top-title-two-cols
+color: amber-light
 align: lt
 ---
 
-### Layouts
+# Two important things about layouts
 
 :: left ::
 
-- Layouts are configured using the `frontmatter` of a slide.  
+There are two important parts of slides to know about.
 
-- This is the text that appears between the `---` at the top of a slide.
+First is **frontmatter**, which are configuration options
+that appear at the start of each slide (see [Slidev docs](https://sli.dev/guide/syntax#frontmatter-layouts)).  These configure things like
+alignment, color, and spacing:
+
+```md
+---
+layout: top-title
+color: sky
+align: lt
+---
+```
 
 :: right ::
 
-The available layouts are:  
+The other aspect is **slots**.  Slots are a basic part of [Vue.js](https://vuejs.org/guide/components/slots.html).  In Slidev slots can be marked using `:: slotname ::` and then filled in with content.  For example, the `:: left ::` and `:: right ::` slots on this slide are filled with content.
+
+Slots effectively help you map parts of your slide to different parts of a layout.  The most common case is to say which content appears in the left column and which appears in the right column. But different layouts can have different slots and different content.
+
+
+---
+layout: top-title
+color: amber-light
+align: lt
+---
+
+# Available Layouts
+
+:: content ::
+
+The available layouts in **Neversink** currently are:  
+
 
 <div class="tight">
 
+<div class='flex flex-wrap'>
+
+<div class='w-1/3'>
+
 - `cover`
+- `intro`
+- `default`
+- `section`
+- `quote`
+- `credits`
+- `full`
+</div>
+
+<div class='w-1/3'>
+
+
+- `full`
+- `image-right`
+- `image-left`
+- `image-full`
+- `iframe-right`
+- `iframe-left`
+- `iframe-full`
+</div>
+
+<div class='w-1/3'>
+
+- `two-cols`
+- `two-cols-header`
+- `two-cols-footer`
 - `top-title`
 - `top-title-two-cols`
 - `side-title`
-- `quote`
-- `intro`
-- `two-cols-header`
-- `two-cols-footer`
-- `two-cols`
-- `four-cell-grid`
+
 </div>
+</div>
+</div>
+
+
+We will step through these one by one showing several examples
+and how to configure the frontmatter for each.
+
+
+---
+layout: cover
+---
+
+# This is the `cover` layout
+
+**Todd Gureckis**   
+<div class="iconlink">
+
+_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
+</div>
+
+:: note ::
+
+<div class="fw-200" >
+
+\* Optional `:: note ::` slot for mentioning ==notes== at the bottom.
+
+</div>
+
+
+---
+layout: cover
+color: dark
+---
+
+# This is the `cover` layout
+
+**Todd Gureckis**   
+<div class="iconlink">
+
+_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
+</div>
+
+:: note ::
+
+<div class="fw-200" >
+
+\* Here we set `color: dark` in the frontmatter.
+
+</div>
+
+
+---
+layout: cover
+color: amber
+---
+
+# This is the `cover` layout
+
+**Todd Gureckis**   
+<div class="iconlink">
+
+_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
+</div>
+
+:: note ::
+
+<div class="fw-200" >
+
+\* Here we set `color: amber` in the frontmatter.
+
+</div>
+
+
+---
+layout: cover
+color: amber-light
+---
+
+# This is the `cover` layout
+
+**Todd Gureckis**   
+<div class="iconlink">
+
+_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
+</div>
+
+:: note ::
+
+<div class="fw-200" >
+
+\* Here we set `color: amber-light` in the frontmatter.  Notice how the color scheme brings along many of the elements on the page.
+
+</div>
+
+
+---
+layout: cover
+color: pink
+---
+
+### This is the `cover` layout with a longer title for your talk you just use more `#`s
+
+**Todd Gureckis**   
+<div class="iconlink">
+
+_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
+</div>
+
+:: note ::
+
+<div class="fw-200" >
+
+\* Here we set `color: pink` in the frontmatter.  Different choices convey a different vibe for the intro of your talk.  There's lots of choices available, but not so many you are overwhelmed by choice!
+
+</div>
+
+
+---
+layout: intro
+color: emerald-light
+---
+
+# This is the `intro` layout
+
+**Todd Gureckis**   
+<div class="iconlink">
+
+_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
+</div>
+
+<br />
+
+This is like the cover slide but with a little less decoration.
+It also has a frontmatter option of `color: emerald-light`.
+
+---
+layout: default
+---
+
+# This is the `default` layout
+
+This is kind of the basic slide.  The main content is interpreted as markdown and rendered in the center of the slide.  
+
+Speaking of markdown, you can use markdown to make things **bold** or *italic* or even `code` like `this`.  In **neversink** you can also ==highlight things using the double equals signs like this==
+thanks to the `markdown-it-mark` plugin.
+
+Of course you can make bullet lists:
+
+- Hi
+- There
+
+Also there's a little helper class you can add to make the bullet spacing a bit tighter:
+
+<div class="tight">
+
+- Hi
+- There
+- I need space
+</div>
+
+
+---
+layout: default
+color: sky
+---
+
+# The `default` layout 
+
+The default layout also has an optional `color` option in the frontmatter.
+For example this is
+
+```md
+---
+layout: default
+color: sky
+---
+```
+
+
+---
+layout: default
+color: light
+---
+
+# The `default` layout 
+
+Things don't have to be so dramatic.  For more conservative presentations you can use color schemes like `light`:
+
+```md
+---
+layout: default
+color: light
+---
+```
+
+And of course you don't have to change the colorscheme every slide! 
+
+
+---
+layout: section
+---
+
+# The `section` layout
+
+This is a section slide.  It can be use to make a noticable point or break between sections.
+
+
+---
+layout: section
+color: navy
+---
+
+# The `section` layout
+<hr>
+It has a `hr` which is color matched to the color scheme.  For example, this slide is using the `navy` color scheme and the line is white.
+
+
+---
+layout: section
+color: indigo
+---
+
+# The `section` layout
+<hr>
+
+This is `color: indigo` and the line and font is a light indigo shade.
+
+
+---
+layout: section
+color: navy
+---
+
+<div class="w-1/2 ml-30">
+
+# The `section` layout
+<hr>
+
+<span class='text-amber-300'>
+You can use HTML and inline CSS to modify the look and feel.
+</span>
+
+</div>
+
+
+
+---
+layout: quote
+color: amber-light
+---
+
+
+---
+layout: quote
+color: sky-light
+quote: "This is a quote slide.  It has a frontmatter option of `quote` which is the text that appears in the quote box and `author` and options for the size of the text(`quotesize: text2xl` and `authorsize: text-l`).  I feel it is a little uninspired but might save you some time."
+author: "Todd Gureckis"
+---

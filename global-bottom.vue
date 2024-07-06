@@ -65,7 +65,12 @@ function checkvars() {
         fg.value = fg_default
         bg.value = bg_default
       }
-    } else if (frontmatter.value.layout == 'cover') {
+    } else if (
+      frontmatter.value.layout == 'cover' ||
+      frontmatter.value.layout == 'intro' ||
+      frontmatter.value.layout == 'default' ||
+      frontmatter.value.layout == 'section'
+    ) {
       process_colors()
     }
   }
@@ -95,6 +100,4 @@ onMounted(() => {
   </footer>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

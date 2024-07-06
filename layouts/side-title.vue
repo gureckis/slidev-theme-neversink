@@ -95,22 +95,22 @@ const colorscheme = computed(() => {
   <template v-else>
     <div v-if="props.side === 'left'" class="flex h-full w-full">
       <div class="slidecolor column-title" :class="colorscheme">
-        <div class="slidev-layout title w-full p-6" :class="alignment.l"><slot name="default" /></div>
+        <div class="slidev-layout sidetitle w-full p-6" :class="alignment.l"><slot name="default" /></div>
       </div>
       <div class="column-content">
-        <div class="slidev-layout sidecontent w-full" :class="alignment.r">
+        <div class="slidev-layout h-fit w-full" :class="alignment.r">
           <slot name="content" />
         </div>
       </div>
     </div>
     <div v-else class="flex h-full w-full">
       <div class="column-content">
-        <div class="slidev-layout sidecontent w-full" :class="alignment.l">
+        <div class="slidev-layout h-fit w-full" :class="alignment.l">
           <slot name="content" />
         </div>
       </div>
       <div class="slidecolor column-title" :class="colorscheme">
-        <div class="slidev-layout title w-full p-6" :class="alignment.r"><slot name="default" /></div>
+        <div class="slidev-layout sidetitle w-full p-6" :class="alignment.r"><slot name="default" /></div>
       </div>
     </div>
   </template>
