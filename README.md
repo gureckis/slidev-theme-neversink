@@ -69,6 +69,13 @@ theme: neversink
 - [x] new section (with color)
 - [ ] quote (better style)
 - [ ] sort out the global-top/slide-top thing (waiting for new slidev release)
+- [x] scrolling credits slide
+  - [x] create as a layout also
+  - [x] add links and icons
+  - [ ] auto adjust height
+  - [ ] if in export mode then don't start scrolled down
+  - [ ] add keyboard commands to pause speed up and step forward/backwards in scrolling
+  - [ ] center final page
 
 ### components
 
@@ -82,12 +89,6 @@ theme: neversink
   - [x] animations
 - [x] post-it note
   - [ ] prop to toggle if only visible in dev mode (waiting for new slidev release)
-- [x] scrolling credits slide
-  - [x] create as a layout also
-  - [x] add links and icons
-  - [ ] auto adjust height
-  - [ ] if in export mode then don't start scrolled down
-  - [ ] add keyboard commands to pause speed up and step forward/backwards in scrolling
 
 ### Future ideas
 

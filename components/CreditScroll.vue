@@ -8,7 +8,7 @@ const props = defineProps({
     default: 0.5,
   },
   loop: {
-    default: true,
+    default: false,
   },
 })
 

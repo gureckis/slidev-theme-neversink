@@ -69,7 +69,8 @@ function checkvars() {
       frontmatter.value.layout == 'cover' ||
       frontmatter.value.layout == 'intro' ||
       frontmatter.value.layout == 'default' ||
-      frontmatter.value.layout == 'section'
+      frontmatter.value.layout == 'section' ||
+      frontmatter.value.layout == 'credits'
     ) {
       process_colors()
     }

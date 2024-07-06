@@ -7,6 +7,12 @@ const props = defineProps({
   color: {
     default: 'light',
   },
+  speed: {
+    default: 1.0,
+  },
+  loop: {
+    default: false,
+  },
 })
 
 const colorscheme = computed(() => {
@@ -16,7 +22,7 @@ const colorscheme = computed(() => {
 <template>
   <div class="slidecolor slidev-layout full" :class="colorscheme">
     <div class="my-auto w-full h-full">
-      <CreditScroll :speed="1.0" loop="false">
+      <CreditScroll :speed="props.speed" :loop="props.loop">
         <slot name="default"></slot>
       </CreditScroll>
     </div>

@@ -273,30 +273,31 @@ The available layouts in **Neversink** currently are:
 - `default`
 - `section`
 - `quote`
-- `credits`
 - `full`
+- `credits`
 </div>
 
 <div class='w-1/3'>
 
 
-- `full`
 - `image-right`
 - `image-left`
-- `image-full`
+- `image`
 - `iframe-right`
 - `iframe-left`
-- `iframe-full`
+- `iframe`
 </div>
 
 <div class='w-1/3'>
 
-- `two-cols`
+
 - `two-cols-header`
 - `two-cols-footer`
+- `two-cols`
+- `side-title`
 - `top-title`
 - `top-title-two-cols`
-- `side-title`
+
 
 </div>
 </div>
@@ -557,3 +558,839 @@ color: sky-light
 quote: "This is a quote slide.  It has a frontmatter option of `quote` which is the text that appears in the quote box and `author` and options for the size of the text(`quotesize: text2xl` and `authorsize: text-l`).  I feel it is a little uninspired but might save you some time."
 author: "Todd Gureckis"
 ---
+
+
+---
+layout: full
+title: Full Layout
+---
+
+<div class='border-1px v-full h-full p-5'>
+
+This is `layout: full` which fills the whole screen for the most part.
+The grey box is just showing you the full addressable space.
+Full can be useful for arbitrary layouts such as on the next slide which uses
+the `v-drag` directive to position elements.
+
+</div>
+
+---
+layout: full
+title: Full with Arbitrary Layout
+---
+
+<div class='v-full h-full'>
+
+<SpeechBubble position="l" shape="round"  color='pink-light' v-drag="[555,342,274,58]">
+
+Hello, I'm an **ice cream**!
+</SpeechBubble>
+
+<SpeechBubble position="bl" shape="round"  color='emerald-light' v-drag="[445,258,274,57]">
+
+Hello, I'm **kawaii**.
+</SpeechBubble>
+
+<SpeechBubble position="r" shape="round" animation="float"  color='sky' v-drag="[143,391,274,84]">
+
+I'm v-dragged out and ==floating==.
+</SpeechBubble>
+
+<IceCream :size="150" mood="lovestruck" color="#FDA7DC" v-drag="[439,341,85,150]" />
+
+<div class="tight" v-drag="[143,33,277,214]">
+
+<span class="bg-red-100 text-red-600 p-2 border-l-6 border-2 border-red-200 rounded-lg pl-4 pr-4">Here's a list of somethings</span>
+
+- Novelty bonuses
+- Cumulative prediction error
+- Learning progress
+- Surprise
+- Suspense
+- Information gain
+
+</div>
+
+<div class="tight" v-drag="[461,63,293,148,17]">
+
+<span class="bg-emerald-100 text-emerald-500 p-2 border-l-6 border-2 border-emerald-200 rounded-lg pl-4 pr-4">Here's another list of things</span>
+
+- Structured behaviors
+- Compositional
+- Communicable
+
+</div>
+
+</div>
+
+
+---
+layout: full
+title: Full Layout - 2 Col Fig
+---
+
+This is an example of using unocss atomic classes to put two figures side by side.
+
+<div class="grid w-full h-fit grid-cols-2 grid-rows-2 mt-10 mb-auto">
+<div class="grid-item grid-col-span-1"><img src="/images/scatter1.svg" /></div>
+<div class="grid-item grid-col-span-1"><img src="/images/scatter1.svg" /></div>
+<div class="grid-item grid-col-span-2 text-center h-fit">
+
+**Figure show this**: this is a two column figure
+
+</div>
+</div>
+
+---
+layout: full
+title: Full Layout - 3 Col Fig
+---
+
+This is an example of using unocss atomic classes to put three figures side by side.
+
+<div class="grid w-full h-fit grid-cols-3 grid-rows-2 mt-20 mb-auto">
+<div class="grid-item grid-col-span-1"><img src="/images/scatter1.svg" /></div>
+<div class="grid-item grid-col-span-1"><img src="/images/scatter1.svg" /></div>
+<div class="grid-item grid-col-span-1"><img src="/images/scatter1.svg" /></div>
+<div class="grid-item grid-col-span-3 text-center h-fit">
+
+**Figure show this**: this is a three column figure
+
+</div>
+
+</div>
+
+
+---
+layout: credits
+color: light
+---
+
+<div class="grid text-size-4 grid-cols-3 w-3/4 gap-y-10 auto-rows-min ml-auto mr-auto">
+<div class="grid-item text-center mr-0- col-span-3">
+  
+  This is the `layout: credits` slide.  It's a movie-like scrolling credits!
+</div>
+<div class="grid-item text-center mr-0- col-span-3">
+  <strong>Cast</strong><br> 
+  <span class="font-size-3 mt-0">(In order of appearance)</span>
+</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Study 1</strong></div>
+<div class="grid-item col-span-2">Person 1 <i>as PhD student</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /><br/>Person 2 <i>as Co-PI</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /></div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Study 2</strong></div>
+<div class="grid-item col-span-2">Person 3 <i>as Postdoc</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /><br/>Person 4 <i>as Co-PI</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /></div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Experiments</strong></div>
+<div class="grid-item col-span-2">Smile 🫠</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Funding</strong></div>
+<div class="grid-item col-span-2">National Science Foundation<br/>
+National Institute of Health</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Slides</strong></div>
+<div class="grid-item col-span-2">
+Slidev<br/>
+Unocss<br/>
+Figma<br/>
+Vuejs<br/>
+Vite<br/>
+</div>
+<div class="grid-item col-span-3 text-center mt-180px mb-auto font-size-1.5rem"><strong>Questions?</strong></div>
+</div>
+
+
+---
+layout: credits
+color: navy
+speed: 4.0
+loop: true
+---
+
+<div class="grid text-size-4 grid-cols-3 w-3/4 gap-y-10 auto-rows-min ml-auto mr-auto">
+<div class="grid-item text-center mr-0- col-span-3">
+  
+  This one has `speed: 4.0` and `loop: true` in the front matter
+</div>
+<div class="grid-item text-center mr-0- col-span-3">
+  <strong>Cast</strong><br> 
+  <span class="font-size-3 mt-0">(In order of appearance)</span>
+</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Study 1</strong></div>
+<div class="grid-item col-span-2">Person 1 <i>as PhD student</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /><br/>Person 2 <i>as Co-PI</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /></div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Study 2</strong></div>
+<div class="grid-item col-span-2">Person 3 <i>as Postdoc</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /><br/>Person 4 <i>as Co-PI</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /></div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Experiments</strong></div>
+<div class="grid-item col-span-2">Smile 🫠</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Funding</strong></div>
+<div class="grid-item col-span-2">National Science Foundation<br/>
+National Institute of Health</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Slides</strong></div>
+<div class="grid-item col-span-2">
+Slidev<br/>
+Unocss<br/>
+Figma<br/>
+Vuejs<br/>
+Vite<br/>
+</div>
+<div class="grid-item col-span-3 text-center mt-180px mb-auto font-size-1.5rem"><strong>Questions?</strong></div>
+</div>
+
+
+---
+layout: image-left
+image: /images/photo.png
+class: mycoolclass
+---
+
+<br />
+
+# Image left
+
+This is the `layout: image-left` layout.
+
+---
+layout: image-right
+image: /images/photo2.png
+slide_info: false
+class: mycoolclass
+---
+
+# Image right
+
+This is the `layout: image-right` layout.
+
+---
+layout: image
+image: /images/photo.png
+title: Image Layout
+---
+
+---
+layout: iframe-left
+title: iframe Left Layout
+# the web page source
+url: https://gureckislab.org
+
+# a custom class name to the content
+class: my-cool-content-on-the-right
+---
+
+<br />
+
+# This is a website on the left
+
+This is useful for showing a website but loads live on the web so requires and internet connection.
+
+---
+layout: iframe-right
+title: iframe Right Layout
+# the web page source
+url: https://gureckislab.org
+
+# a custom class name to the content
+class: my-cool-content-on-the-right
+slide_info: false
+---
+
+# This is a website on the right
+
+This is useful for showing a website but loads live on the web so requires and internet connection.
+
+---
+layout: iframe
+title: iframe Layout
+# the web page source
+url: https://gureckislab.org
+slide_info: false
+---
+
+
+---
+layout: two-cols-header
+columns: is-6
+align: l-lt-lt
+title: Two Cols Header (Info)
+---
+
+:: header ::
+
+# `two-cols-header`
+
+:: left ::
+
+This is `layout: two-cols-header`. It is a custom layout that Todd made.
+It is different than the default `two-cols_header` layout.
+
+- There are three slots: `:: header ::`, `:: left ::`, and `:: right ::`.
+
+- It additionally provides two configuration options in the slide YAML front matter:
+  `columns` and `align`.
+
+:: right ::
+
+- `columns` is the relative spacing given to the left versus right column. The overall space is divided into 12 columns. Instructions like `is-5` will give 5 units to the left and 7 to the right.
+
+- The <code>align</code> parameter determines how the columns look. The notation is for example
+  <code>align: l-cm-cm</code>. The first part is for the header, the second for the left column, the third part is for the right column. The first letter is (<code>c</code> for center, <code>l</code> for left, <code>r</code> for right), the second letter
+  is vertical alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom). Only c/l/r works for the header.
+
+
+---
+layout: two-cols-header
+columns: is-2
+align: c-rb-lt
+title: Two Cols Header (Info)
+---
+
+:: header ::
+
+# `two-cols-header`
+
+:: left ::
+
+Just to show the range here.
+
+:: right ::
+
+This is 
+
+```md
+---
+layout: two-cols-header
+columns: is-2
+align: c-rb-lt
+---
+```
+
+which means, `two-cols-header` layout, 2 columns, and the alignment is center for the header (`:: header ::`), right-bottom (`:: right ::`) for the right column, left-top (`:: left ::`).
+
+
+---
+layout: two-cols-footer
+columns: is-6
+align: r-lt-lt
+title: Two Cols Header (Info)
+---
+
+:: footer ::
+
+# `two-cols-footer`
+
+:: left ::
+
+This is `layout: two-cols-footer`. It is a custom layout that Todd made.
+It is the same as the `two-cols-header` but the title now appears at the bottom.
+
+- There are three slots: `:: footer ::`, `:: left ::`, and `:: right ::`.
+
+- It additionally provides two configuration options in the slide YAML front matter:
+  `columns` and `align`.
+
+:: right ::
+
+- `columns` is the relative spacing given to the left versus right column. The overall space is divided into 12 columns. Instructions like `is-5` will give 5 columns to the left and 7 to the right.
+
+- The <code>align</code> parameter determines how the columns look. The notation is for example
+  <code>align: l-cm-cm</code>. The first part is for the header, the second for the left column, the third part is for the right column. The first letter is (<code>c</code> for center, <code>l</code> for left, <code>r</code> for right), the second letter
+  is vertical alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom). Only c/l/r works for the header.
+
+
+---
+layout: two-cols
+columns: is-2
+align: lt-lt
+title: Two Cols Header (Info)
+---
+
+:: left ::
+This is `layout: two-cols`. 
+
+:: right ::
+
+
+
+- There are two slots: `:: left ::`, and `:: right ::`.
+
+- It additionally provides two configuration options in the slide YAML front matter:
+  `columns` and `align`.
+
+- `columns` is the relative spacing given to the left versus right column. The overall space is divided into 12 columns. Instructions like `is-5` will give 5 columns to the left and 7 to the right.
+
+- The <code>align</code> parameter determines how the columns look. The notation is for example
+  <code>align: cm-cm</code>. The first part is the left column, the second part is for the right column. The first letter is (<code>c</code> for center, <code>l</code> for left, <code>r</code> for right), the second letter
+  is vertical alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom). 
+
+---
+layout: side-title
+side: left
+color: violet
+titlewidth: is-4
+align: rm-lm
+title: Side Title Layout (Another)
+---
+
+# `side-title`
+
+# <mdi-arrow-right />
+
+:: content ::
+
+This is `layout: side-title` with `side: right` in the front matter.
+
+```yaml
+side: left
+color: violet
+titlewidth: is-4
+align: rm-lm
+```
+
+
+
+---
+layout: side-title
+side: right
+color: pink-light
+titlewidth: is-6
+align: lm-lb
+title: Side Title Layout (Another)
+---
+
+# `side-title`
+
+# <mdi-arrow-right />
+
+:: content ::
+
+This is `layout: side-title` with `side: right` in the front matter.
+
+```yaml
+side: right
+color: pink-light
+titlewidth: is-6
+align: lm-lb
+```
+
+
+---
+layout: top-title
+color: violet
+align: lm
+title: Top Title (Another)
+---
+
+# `top-title`: A variation with different parameters
+
+:: content ::
+
+Todd has used this navy color on many projects in the past. This is a top title layout.
+
+I sort of like the `###` font style the best.
+
+```yaml
+layout: top-title
+color: violet
+titlewidth: is-2
+align: lm
+```
+
+---
+layout: top-title-two-cols
+color: navy
+columns: is-6
+align: lt
+title: Top Title (Another)
+---
+
+### `top-title-two-cols`: A variation with two columns
+
+:: left ::
+
+- This is the left column
+- This is a nice way to add color and distinction to a slide
+- Options are `columns` which is the size of the left column, `color` (default `light`), and `align` which is the alignment of the title and columns (e.g., `cm-lt-lt`)
+
+:: right ::
+
+- This is the right column
+- This is a nice way to add color and distinction to a slide
+
+
+---
+layout: default
+---
+
+# Extras
+
+In addition to these custom layouts, the **Neversink** theme includes a few custom components that can be used in your slides. These include sticky notes, speech bubbles, cute icons, QR codes, and more.  The next few slides walks through them:
+
+<div class="tight">
+
+- admonitions
+- sticky notes
+- speech bubbles
+- cute icons
+- QR codes
+</div>
+
+
+---
+layout: two-cols-header
+columns: is-6
+title: Admonitions
+dragPos:
+  admon: Left,Top,Width,Height,Rotate
+  "'admon'": 55,300,287,106
+---
+
+<Admonition title="V-draggable" color='teal-light' width="300px" v-drag="[93,303,300,145,-14]">
+If you want to `v-drag` an admonition, you should set the width to a fixed value.
+</Admonition>
+
+:: header ::
+
+# Admonitions
+
+:: left ::
+
+- Admonitions are boxes that you can use to call out things.
+
+<Admonition title="Custom title" color='amber-light'>
+This is my admon message
+</Admonition>
+
+:: right ::
+
+<AdmonitionType type='note' >
+This is note text
+</AdmonitionType>
+
+<!--
+> [!note]
+> This is note text
+-->
+
+<AdmonitionType type='important' >
+This is important text
+</AdmonitionType>
+
+<AdmonitionType type='tip' >
+This is a tip
+</AdmonitionType>
+
+<AdmonitionType type='warning' >
+This is a tip
+</AdmonitionType>
+
+<AdmonitionType type='caution' >
+This is warning text
+</AdmonitionType>
+
+---
+layout: two-cols-header
+columns: is-6
+title: Bubbles
+---
+
+<SpeechBubble position="l" color='sky' shape="round"  v-drag="[83,364,274,109]">
+
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
+
+:: header ::
+
+# Bubbles
+
+:: left ::
+
+- Bubbles are moveable elements that act as speech bubbles
+- They can be configured for where you want the arrow to point
+- The can be move around if you enable `v-drag` on the element
+
+:: right ::
+
+<SpeechBubble position="bl" color='amber-light' shape="round">
+
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
+
+---
+layout: default
+title: Sticky Notes
+---
+
+<StickyNote color="amber-light" textAlign="left" width="180px" title="Title" v-drag="[66,318,185,171]">
+
+Hello, I'm a **sticky note**.
+</StickyNote>
+
+<StickyNote color="sky-light" textAlign="left" width="180px" title="This is my title" v-drag="[375,306,180,180,-15]">
+
+Hello, I'm also a **sticky note** but am blue sky title.
+</StickyNote>
+
+<StickyNote color="pink-light" textAlign="left" width="180px"  v-drag="[667,299,185,171,8]">
+
+Hello, I'm also a **sticky note** but I lack a title.
+</StickyNote>
+
+# Sticky Notes
+
+- Sticky notes are moveable elements you can use for notes.
+- Syntax is
+
+```js
+<StickyNote color="amber-light" textAlign="left" width="180px" title="Title" v-drag>
+  Hello, I'm a **sticky note**.
+</StickyNote>
+```
+
+---
+layout: default
+title: Kawaii 1
+---
+
+# Kawaii
+
+- Kawaii is a Japanese term that means cute
+
+<IceCream :size="80" mood="sad" color="#FDA7DC" />
+<IceCream :size="80" mood="shocked" color="#FDA7DC" />
+<IceCream :size="80" mood="happy" color="#FDA7DC" />
+<IceCream :size="80" mood="blissful" color="#FDA7DC" />
+<IceCream :size="80" mood="lovestruck" color="#FDA7DC" />
+<IceCream :size="80" mood="excited" color="#FDA7DC" />
+<IceCream :size="80" mood="ko" color="#FDA7DC" /><br/>
+
+<BackPack :size="80" mood="sad" color="#FFD882" />
+<BackPack :size="80" mood="shocked" color="#FFD882" />
+<BackPack :size="80" mood="happy" color="#FFD882"/>
+<BackPack :size="80" mood="blissful" color="#FFD882" />
+<BackPack :size="80" mood="lovestruck" color="#FFD882" />
+<BackPack :size="80" mood="excited" color="#FFD882" />
+<BackPack :size="80" mood="ko" color="#FFD882" /><br/>
+
+<Cat :size="80" mood="sad" color="#FFD882" />
+<Cat :size="80" mood="shocked" color="#FFD882" />
+<Cat :size="80" mood="happy" color="#FFD882"/>
+<Cat :size="80" mood="blissful" color="#FFD882" />
+<Cat :size="80" mood="lovestruck" color="#FFD882" />
+<Cat :size="80" mood="excited" color="#FFD882" />
+<Cat :size="80" mood="ko" color="#FFD882" /><br/>
+
+<Browser :size="50" mood="lovestruck" color="#61DDBC" />
+<Mug :size="50" mood="lovestruck" color="#61DDBC" />
+<Planet :size="50" mood="lovestruck" color="#61DDBC" />
+<SpeechBubbleGuy :size="50" mood="lovestruck" color="#d3d3d3" />
+<Ghost :size="50" mood="blissful" color="#E0E4E8" />
+<CreditCard :size="50" mood="blissful" color="#E0E4E8" />
+
+---
+layout: default
+title: QR Codes
+---
+
+# In-line QR Codes
+
+- Send people to a url with a easy to configure QR code
+
+```vue
+<QRCode value="https://gureckislab.org" :size="200" render-as="svg" />
+```
+
+<br />
+Result:
+
+<QRCode value="https://gureckislab.org" :size="200" render-as='svg'/>
+
+
+---
+layout: side-title
+side: left
+color: violet
+titlewidth: is-4
+align: rm-lt
+title: Code Example
+---
+
+<SpeechBubble position="br" shape="round" borderWidth="0" animation="float" v-drag="[19,335,261,83]">
+
+Slidev is great at code formatting!
+</SpeechBubble>
+
+# <mdi-code-braces /> Code
+
+<IceCream :size="80" mood="excited" color="#FDA7DC" v-drag="[232,444,50,80]" />
+
+:: content ::
+
+Plain javascript:
+
+```js
+console.log('Hello, World!')
+```
+
+Highlight lines 2 and 3:
+
+```ts {2,3}
+function helloworld() {
+  console.log('Hello, World!')
+  console.log('Hello, World!')
+  console.log('Hello, World!')
+}
+```
+
+Crazy clicking through
+
+```ts {2,3|5|all}
+function helloworld() {
+  console.log('Hello, World!')
+  console.log('Hello, World!')
+  console.log('Hello, World!')
+  console.log('Hello, World!')
+  console.log('Hello, World!')
+  console.log('Hello, World!')
+}
+```
+
+---
+layout: side-title
+side: left
+color: violet
+titlewidth: is-4
+align: rm-lt
+title: Code Example
+---
+
+# <mdi-code-braces /> Code
+
+More cool code stuff
+
+:: content ::
+
+Scrollable with clicks 🤯
+
+```ts {2|3|7|12}{maxHeight:'100px'}
+function helloworld() {
+  console.log('Hello, World 1!')
+  console.log('Hello, World 2!')
+  console.log('Hello, World 3!')
+  console.log('Hello, World 4!')
+  console.log('Hello, World 5!')
+  console.log('Hello, World 6!')
+  console.log('Hello, World 7!')
+  console.log('Hello, World 8!')
+  console.log('Hello, World 9!')
+  console.log('Hello, World 10!')
+  console.log('Hello, World 11!')
+}
+```
+
+You can even edit the code in the browser
+
+```ts {monaco}
+console.log('HelloWorld')
+```
+
+You can even run the code in the browser
+
+```ts {monaco-run} {showOutputAt:'+1'}
+function distance(x: number, y: number) {
+  return Math.sqrt(x ** 2 + y ** 2)
+}
+console.log(distance(3, 4))
+```
+
+---
+layout: side-title
+side: left
+color: lime
+titlewidth: is-4
+align: rm-lt
+title: LaTeX Example
+---
+
+# <mdi-math-integral-box /> LaTeX Equations
+
+Yeah it does this fine
+
+<Mug :size="80" mood="excited" color="#FDA7DC" v-drag="[342,288,77,80]" />
+
+:: content ::
+
+Inline equations: $\sqrt{3x-1}+(1+x)^2$
+
+Block rendering:
+
+$$
+\begin{array}{c}
+
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+
+\nabla \cdot \vec{\mathbf{B}} & = 0
+
+\end{array}
+$$
+
+Line highlighting with clicks!
+
+$$
+{1|3|all}
+\begin{array}{c}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} & = 0
+\end{array}
+$$
+
+---
+layout: side-title
+side: left
+color: sky
+titlewidth: is-4
+align: rm-cm
+title: Mermaid Example
+---
+
+# Mermaid Diagrams
+
+Everyone is talking about this
+
+:: content ::
+
+```mermaid
+sequenceDiagram
+  Alice->John: Hello John, how are you?
+  Note over Alice,John: A typical interaction
+```
+
+---
+layout: side-title
+side: left
+color: sky
+titlewidth: is-4
+align: rm-cm
+title: Mermaid Example
+---
+
+# Mermaid Diagrams
+
+Everyone is talking about this
+
+:: content ::
+
+```mermaid {theme: 'neutral', scale: 0.8}
+graph TD
+B[Text] --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+```
+
+A mermaid diagram with two circles side by side horizontally with an arrow pointing from the left circle to the right circle
+
+```mermaid {theme: 'neutral', scale: 0.8}
+graph LR
+A([Circle 1]) --> B((Circle 2))
+```

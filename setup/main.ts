@@ -18,7 +18,7 @@ import Ghost from '../components/vue3-kawaii/components/ghost/Ghost.vue'
 import IceCream from '../components/vue3-kawaii/components/iceCream/IceCream.vue'
 import Mug from '../components/vue3-kawaii/components/mug/Mug.vue'
 import Planet from '../components/vue3-kawaii/components/planet/Planet.vue'
-import SpeechBubble from '../components/vue3-kawaii/components/speechBubble/SpeechBubble.vue'
+import SpeechBubbleGuy from '../components/vue3-kawaii/components/speechBubble/SpeechBubbleGuy.vue'
 
 // import { GeistSans } from 'geist/font/sans'
 // import { GeistMono } from 'geist/font/mono'
@@ -38,7 +38,7 @@ export default defineAppSetup(({ app, router }) => {
   app.component('IceCream', IceCream)
   app.component('Mug', Mug)
   app.component('Planet', Planet)
-  app.component('SpeechBubble', SpeechBubble)
+  app.component('SpeechBubbleGuy', SpeechBubbleGuy)
   // Vue App
   //   app.component('Cite', Cite)
   //   app.use(courseInfoPlugin)
