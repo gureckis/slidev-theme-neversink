@@ -23,6 +23,8 @@ color: amber
 align : rm-lm
 ---
 
+:: title ::
+
 # Slidev Neversink Theme
 
 :: content ::
@@ -177,12 +179,15 @@ align: rm-lm
 titlewidth: is-3
 ---
 
-# Color themes
-
 <StickyNote color="emerald-light" textAlign="left" width="180px"  v-drag="[719,291,180,180,16]">
 
 Don't worry if you don't understand all the details, yet we are still talking about **color schemes**.
 </StickyNote>
+
+
+:: title ::
+# Color schemes
+
 
 :: content ::
 
@@ -200,9 +205,10 @@ titlewidth: is-3
 ---
 layout: top-title
 color: amber
-align: lt
+align: l
 ---
 
+:: title ::
 # Layouts
 
 :: content ::
@@ -213,7 +219,7 @@ The theme includes many layouts. Layouts set the overall structure of the page. 
 ---
 layout: top-title
 color: amber
-align: lt
+align: l
 ---
 ```
 
@@ -232,8 +238,10 @@ titlewidth: is-3
 ---
 layout: top-title-two-cols
 color: amber-light
-align: lt
+align: l-lt-lt
 ---
+
+:: title ::
 
 # Two things about layouts
 
@@ -253,7 +261,7 @@ alignment, color, and spacing:
 ---
 layout: top-title
 color: sky
-align: lt
+align: l
 ---
 ```
 
@@ -271,6 +279,8 @@ layout: top-title
 color: amber-light
 align: lt
 ---
+
+:: title ::
 
 # Available Layouts
 
@@ -297,24 +307,24 @@ The available layouts in **Neversink** currently are:
 <div class='w-1/3'>
 
 
+- `two-cols-title`
+- `top-title`
+- `top-title-two-cols`
+- `side-title`
+
+</div>
+
+<div class='w-1/3'>
+
 - `image-right`
 - `image-left`
 - `image`
 - `iframe-right`
 - `iframe-left`
 - `iframe`
-</div>
-
-<div class='w-1/3'>
-
-
-- `two-cols-header`
-- `two-cols-footer`
-- `two-cols`
-- `side-title`
-- `top-title`
-- `top-title-two-cols`
-
+- `none`
+- `end`
+- `fact` 
 
 </div>
 </div>
@@ -820,7 +830,7 @@ slide_info: false
 
 
 ---
-layout: two-cols-header
+layout: two-cols-title
 columns: is-6
 align: l-lt-lt
 title: Two Cols Header (Info)
@@ -828,11 +838,11 @@ title: Two Cols Header (Info)
 
 :: title ::
 
-# `two-cols-header`
+# `two-cols-title`
 
 :: left ::
 
-This is `layout: two-cols-header`. 
+This is `layout: two-cols-title`. 
 
 - There are three slots: `:: title ::`, `:: left ::`, and `:: right ::` along with the default which is implicit before any named slots.
 
@@ -850,75 +860,17 @@ This is `layout: two-cols-header`.
   is vertical alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom). Only c/l/r works for the header.
 
 
+
 ---
-layout: two-cols-header
+layout: two-cols-title
 columns: is-2
-align: c-rm-lt
-title: Two Cols Header (Info)
----
-
-:: title ::
-
-# `two-cols-header`
-
-:: left ::
-
-Just to show the range here.
-
-:: right ::
-
-This is 
-
-```md
----
-layout: two-cols-header
-columns: is-2
-align: c-rb-lt
----
-```
-
-which means, `two-cols-header` layout, 2 columns, and the alignment is center for the header (`:: title ::`), right-bottom (`:: right ::`) for the right column, left-top (`:: left ::`).
-
-
----
-layout: two-cols-footer
-columns: is-6
-align: r-lt-lt
-title: Two Cols Header (Info)
----
-
-:: footer ::
-
-# `two-cols-footer`
-
-:: left ::
-
-This is `layout: two-cols-footer`. It is a custom layout that Todd made.
-It is the same as the `two-cols-header` but the title now appears at the bottom.
-
-- There are three slots: `:: footer ::`, `:: left ::`, and `:: right ::`.
-
-- It additionally provides two configuration options in the slide YAML front matter:
-  `columns` and `align`.
-
-:: right ::
-
-- `columns` is the relative spacing given to the left versus right column. The overall space is divided into 12 columns. Instructions like `is-5` will give 5 columns to the left and 7 to the right.
-
-- The <code>align</code> parameter determines how the columns look. The notation is for example
-  <code>align: l-cm-cm</code>. The first part is for the header, the second for the left column, the third part is for the right column. The first letter is (<code>c</code> for center, <code>l</code> for left, <code>r</code> for right), the second letter
-  is vertical alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom). Only c/l/r works for the header.
-
-
----
-layout: two-cols
-columns: is-2
-align: lt-lt
+align: l-lt-lt
 title: Two Cols Header (Info)
 ---
 
 :: left ::
-This is `layout: two-cols`. 
+
+# This is `layout: two-cols`. 
 
 :: right ::
 
@@ -937,12 +889,14 @@ This is `layout: two-cols`.
 
 ---
 layout: side-title
-side: left
+side: l
 color: violet
 titlewidth: is-4
 align: rm-lm
 title: Side Title Layout (Another)
 ---
+
+:: title ::
 
 # `side-title`
 
@@ -963,13 +917,15 @@ align: rm-lm
 
 ---
 layout: side-title
-side: right
+side: r
 color: pink-light
 titlewidth: is-6
 align: lm-lb
 title: Side Title Layout (Another)
 ---
 
+:: title ::
+ 
 # `side-title`
 
 # <mdi-arrow-right />
@@ -989,9 +945,11 @@ align: lm-lb
 ---
 layout: top-title
 color: violet
-align: lm
+align: l
 title: Top Title (Another)
 ---
+
+:: title ::
 
 # `top-title`: A variation with different parameters
 
@@ -1012,9 +970,12 @@ align: lm
 layout: top-title-two-cols
 color: navy
 columns: is-6
-align: lt
+align: l-lt-lt
 title: Top Title (Another)
 ---
+
+
+:: title ::
 
 ### `top-title-two-cols`: A variation with two columns
 
@@ -1022,7 +983,7 @@ title: Top Title (Another)
 
 - This is the left column
 - This is a nice way to add color and distinction to a slide
-- Options are `columns` which is the size of the left column, `color` (default `light`), and `align` which is the alignment of the title and columns (e.g., `cm-lt-lt`)
+- Options are `columns` which is the size of the left column, `color` (default `light`), and `align` which is the alignment of the title and columns (e.g., `l-lt-lt`)
 
 :: right ::
 
@@ -1049,7 +1010,7 @@ In addition to these custom layouts, the **Neversink** theme includes a few cust
 
 
 ---
-layout: two-cols-header
+layout: two-cols-title
 columns: is-6
 title: Admonitions
 dragPos:
@@ -1101,7 +1062,7 @@ This is warning text
 </AdmonitionType>
 
 ---
-layout: two-cols-header
+layout: two-cols-title
 columns: is-6
 title: Bubbles
 ---
@@ -1234,6 +1195,8 @@ title: Code Example
 Slidev is great at code formatting!
 </SpeechBubble>
 
+:: title ::
+
 # <mdi-code-braces /> Code
 
 <IceCream :size="80" mood="excited" color="#FDA7DC" v-drag="[232,444,50,80]" />
@@ -1277,6 +1240,9 @@ titlewidth: is-4
 align: rm-lt
 title: Code Example
 ---
+
+
+:: title ::
 
 # <mdi-code-braces /> Code
 
@@ -1326,6 +1292,8 @@ align: rm-lt
 title: LaTeX Example
 ---
 
+:: title ::
+
 # <mdi-math-integral-box /> LaTeX Equations
 
 Yeah it does this fine
@@ -1372,6 +1340,8 @@ align: rm-cm
 title: Mermaid Example
 ---
 
+:: title ::
+
 # Mermaid Diagrams
 
 Everyone is talking about this
@@ -1392,6 +1362,8 @@ titlewidth: is-4
 align: rm-cm
 title: Mermaid Example
 ---
+
+:: title ::
 
 # Mermaid Diagrams
 
