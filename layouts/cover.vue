@@ -1,17 +1,17 @@
 <script setup lang="js">
 import { computed } from 'vue'
-import { handleBackground } from '../layoutHelper'
+//import { handleBackground } from '../layoutHelper'
 
 const props = defineProps({
-  background: {
-    default: '',
-  },
+  // background: {
+  //   default: '',
+  // },
   color: {
     default: 'white',
   },
 })
 
-const style = computed(() => handleBackground(props.background, true))
+//const style = computed(() => handleBackground(props.background, true))
 
 const colorscheme = computed(() => {
   return `neversink-${props.color}-scheme`
@@ -19,20 +19,28 @@ const colorscheme = computed(() => {
 </script>
 
 <template>
-  <div class="h-full slidecolor" :class="colorscheme">
-    <div class="slidev-layout cover" :style="style">
-      <div class="my-auto w-full">
-        <slot />
-      </div>
-      <div class="absolute bottom-10">
-        <slot name="note" />
-      </div>
+  <div class="slidev-layout cover h-full slidecolor" :class="colorscheme">
+    <div class="my-auto w-full">
+      <slot />
+    </div>
+    <div class="absolute bottom-10">
+      <slot name="note" />
     </div>
   </div>
 </template>
 
 <style>
 /* cover slide type */
+
+.slidev-layout.cover {
+  font-family: var(--neversink-main-font);
+  font-weight: 300;
+}
+
+.slidev-layout.cover strong {
+  font-weight: 500;
+}
+
 .slidev-layout.cover h1 {
   font-family: var(--neversink-title-font);
   font-weight: 500;
@@ -57,15 +65,6 @@ const colorscheme = computed(() => {
   margin-bottom: 0.9rem;
 }
 
-.slidev-layout.cover {
-  font-family: var(--neversink-main-font);
-  font-weight: 300;
-}
-
-.slidev-layout.cover strong {
-  font-weight: 500;
-}
-
 .slidev-layout.cover h1 + p {
   padding: 0;
   margin: 0;
@@ -84,6 +83,7 @@ const colorscheme = computed(() => {
   opacity: 1;
 }
 
+/* this is specific to this instance */
 .slidev-layout.cover h1,
 .slidev-layout.cover h2,
 .slidev-layout.cover h3 {

@@ -5,40 +5,16 @@ import { compute_alignment, compute_column_size } from '../layoutHelper'
 const slots = useSlots()
 
 const props = defineProps({
-  layout: {
-    default: 'top-title',
-  },
   color: {
     default: 'light',
   },
   align: {
-    default: 'auto',
+    default: 'l',
   },
 })
 
 const alignment = computed(() => {
-  let aligncode = ''
-  if (props.align == 'auto') {
-    aligncode = 'l'
-  } else {
-    aligncode = props.align
-  }
-
-  if (
-    aligncode == 'lt' ||
-    aligncode == 'lm' ||
-    aligncode == 'lb' ||
-    aligncode == 'ct' ||
-    aligncode == 'cm' ||
-    aligncode == 'cb' ||
-    aligncode == 'rt' ||
-    aligncode == 'rm' ||
-    aligncode == 'rb'
-  ) {
-    return compute_alignment(aligncode)
-  } else {
-    return 'error'
-  }
+  return compute_alignment(props.align)
 })
 
 const colorscheme = computed(() => {
@@ -54,7 +30,9 @@ const colorscheme = computed(() => {
       <code>color: {{ props.color }}</code> and <code>align: {{ props.align }}</code
       >.
     </p>
-    <p>The "slots" of the page are default <code>:: content ::</code></p>
+    <p>
+      The "slots" of the page are <code>:: title ::</code>, <code>:: content ::</code>, and the implicit default slot
+    </p>
 
     <p>
       The <code>align</code> parameter determines how the title is aligned. The letter is (<code>c</code> for center,
@@ -65,63 +43,21 @@ const colorscheme = computed(() => {
   </div>
   <template v-else>
     <div class="flex flex-col h-full w-full">
-      <div class="slidecolor w-full h-fit pt-2 pb-2" :class="colorscheme">
-        <div class="slidev-layout w-full p-0 pt-0 ml-6 mt-auto mb-auto" :class="alignment">
-          <slot name="default" />
+      <div class="w-full h-fit min-h-14 pt-2 pb-2 slidecolor" :class="colorscheme">
+        <div class="slidev-layout toptitlebar p-0 pt-0 ml-6 mr-6 mt-auto mb-auto" :class="alignment">
+          <slot name="title" />
         </div>
       </div>
-      <div class="row-content">
-        <div class="slidev-layout toptitle h-fit w-full">
-          <slot name="content" />
-        </div>
+      <div class="slidev-layout toptitlecontent h-fit w-full">
+        <slot name="content" />
+      </div>
+      <div class="slidev-layout toptitlecontent h-fit w-full">
+        <slot name="default" />
       </div>
     </div>
   </template>
 </template>
 
-<style scoped>
-.warning {
-  color: red;
-}
-.error {
-  font-size: 0.9em;
-}
-
-.left {
-  justify-content: left; /* Left align the content */
-  text-align: left;
-  align-items: start;
-}
-
-.center {
-  justify-content: center; /* Horizontally center the content */
-  text-align: center;
-  align-items: center;
-}
-
-.right {
-  justify-content: right; /* Right align the content */
-  text-align: right;
-  align-items: end;
-}
-
-.top {
-  margin-top: 0;
-  margin-bottom: auto;
-}
-.middle {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.bottom {
-  margin-top: auto;
-  margin-bottom: 0;
-}
-
-.sidebar {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-top: 0;
-}
+<style>
+/* the style for this is coming from top-title-two-cols.vue*/
 </style>

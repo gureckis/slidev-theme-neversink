@@ -1,9 +1,6 @@
 <script setup>
 import { computed } from 'vue'
 const props = defineProps({
-  layout: {
-    default: 'quote',
-  },
   color: {
     default: 'light',
   },

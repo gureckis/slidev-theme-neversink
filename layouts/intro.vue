@@ -17,11 +17,23 @@ const colorscheme = computed(() => {
     <div class="my-auto">
       <slot />
     </div>
+    <div class="absolute bottom-10">
+      <slot name="note" />
+    </div>
   </div>
 </template>
 
 <style>
-/* cover slide type */
+/* intro slide type */
+
+.slidev-layout.intro {
+  font-family: var(--neversink-main-font);
+  font-weight: 300;
+}
+
+.slidev-layout.intro strong {
+  font-weight: 500;
+}
 .slidev-layout.intro h1 {
   font-family: var(--neversink-title-font);
   font-weight: 500;
@@ -41,15 +53,6 @@ const colorscheme = computed(() => {
   font-weight: 500;
   font-size: 1.9em;
   line-height: 5rem;
-}
-
-.slidev-layout.intro {
-  font-family: var(--neversink-main-font);
-  font-weight: 300;
-}
-
-.slidev-layout.intro strong {
-  font-weight: 500;
 }
 
 .slidev-layout.intro h1 + p {

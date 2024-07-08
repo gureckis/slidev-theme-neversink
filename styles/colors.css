@@ -1,0 +1,12 @@
+/* used just to bring the unocss colos styles forward.  probably can replace with var and @apply */
+.bg-navy-900 {
+  background: #2a373a;
+}
+
+.color-navy-900 {
+  color: #2a373a;
+}
+
+.text-navy-900 {
+  color: #2a373a;
+}

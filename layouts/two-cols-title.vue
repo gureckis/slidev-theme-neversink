@@ -5,9 +5,6 @@ import { compute_alignment, compute_column_size } from '../layoutHelper'
 const slots = useSlots()
 
 const props = defineProps({
-  layout: {
-    default: 'two-cols-header',
-  },
   columns: {
     default: 'is-one-half',
   },
@@ -17,11 +14,17 @@ const props = defineProps({
   color: {
     default: 'white',
   },
+  titlepos: {
+    default: 't',
+    validator: (value) => {
+      return ['t', 'b', 'n'].includes(value)
+    },
+  },
 })
 
 const alignment = computed(() => {
   const parts = props.align.split('-')
-  return { h: compute_alignment(parts[0]), l: compute_alignment(parts[1]), r: compute_alignment(parts[2]) }
+  return { t: compute_alignment(parts[0]), l: compute_alignment(parts[1]), r: compute_alignment(parts[2]) }
 })
 
 const colwidth = computed(() => compute_column_size(props.columns))
@@ -31,10 +34,16 @@ const colorscheme = computed(() => {
 })
 
 const flexclass = computed(() => {
-  if (slots.header != undefined) {
-    return 'slidev-layout default two-cols-header'
+  if (slots.title != undefined) {
+    if (props.titlepos == 't') {
+      return 'slidev-layout two-cols-header'
+    } else if (props.titlepos == 'b') {
+      return 'slidev-layout two-cols-footer'
+    } else {
+      return 'slidev-layout two-cols'
+    }
   } else {
-    return 'slidev-layout default two-cols'
+    return 'slidev-layout two-cols'
   }
 })
 </script>
@@ -42,15 +51,16 @@ const flexclass = computed(() => {
 <!-- default.vue -->
 <template>
   <div
-    v-if="colwidth == 'error' || alignment.h == 'error' || alignment.l == 'error' || alignment.r == 'error'"
+    v-if="colwidth == 'error' || alignment.t == 'error' || alignment.l == 'error' || alignment.r == 'error'"
     class="slidev-layout default error"
   >
     <span class="warning"><b>Error</b>: invalid layout params.</span>
     <hr />
     <p>
-      There are two parameters: <code>columns</code> and <code>align</code>. Currently:
-      <code>columns: {{ props.columns }}</code> and <code>align: {{ props.align }}</code
-      >.
+      There are four parameters: <code>columns</code>, <code>align</code>, <code>color</code>, and
+      <code>titlepos</code>. Currently: <code>columns: {{ props.columns }}</code
+      >, <code>align: {{ props.align }} </code>, <code>color: {{ props.color }} </code>, and
+      <code>titlepos: {{ props.titlepos }} </code>.
     </p>
     <p>
       Options for <code>columns</code> are divided into 12 column units. So with <code>columns: is-1-11</code> the left
@@ -67,20 +77,20 @@ const flexclass = computed(() => {
       </code>
     </p>
     <p>
-      In addition you can specify "slots" of the page with <code>:: header ::</code>, <code>:: left ::</code>, and
-      <code>:: right::</code>. Header is optional.
+      In addition you can specify "slots" of the page with <code>:: title ::</code>, <code>:: left ::</code>, and
+      <code>:: right::</code>. Title is optional.
     </p>
     <p>
       The <code>align</code> parameter determines how the columns look. The notation is for example
-      <code>align: c-cm-cm</code>. The first part is for the header, the second for the left column, and the third part
+      <code>align: c-cm-cm</code>. The first part is for the title, the second for the left column, and the third part
       is for the right column. The first letter is (<code>c</code> for center, <code>l</code> for left,
       <code>r</code> for right). This applies to all three second. For the columns the second letter is vertical
       alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom).
     </p>
   </div>
   <div v-else class="slidecolor" :class="flexclass + ' ' + colorscheme">
-    <div v-if="$slots.header" class="header" :class="alignment.h">
-      <slot name="header" />
+    <div v-if="$slots.title && props.titlepos != 'n'" class="title" :class="alignment.t">
+      <slot name="title" />
     </div>
     <div v-if="$slots.left" class="left-col" :class="alignment.l">
       <slot name="left" />
@@ -89,65 +99,69 @@ const flexclass = computed(() => {
     <div v-if="$slots.right" class="right-col" :class="alignment.r">
       <slot name="right" />
     </div>
-
-    <div v-if="$slots.default" class="footer">
+    <div v-if="$slots.default" class="end">
       <slot name="default" />
     </div>
   </div>
 </template>
 
 <style scoped>
-.warning {
-  color: red;
-}
-.error {
-  font-size: 0.9em;
-}
-
-.two-cols-header {
+.slidev-layout.two-cols-header,
+.slidev-layout.two-cols-footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12 columns */
-  grid-template-rows: auto 1fr; /* top header and content */
+  grid-template-rows: auto 1fr auto; /* top header and content */
 }
 
-.two-cols {
+.slidev-layout.two-cols {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12 columns */
-  grid-template-rows: 1fr; /* top header and content */
+  grid-template-rows: auto auto; /* top header and content */
 }
 
-.header {
+.slidev-layout.two-cols-header .title {
   grid-area: 1 / 1 / 2 / span 12; /* full width */
   margin-bottom: 1rem;
 }
 
-.two-cols-header .left-col {
+.slidev-layout.two-cols-footer .title {
+  grid-area: 3 / 1 / 4 / span 12; /* full width */
+  margin-bottom: 1rem;
+}
+
+.slidev-layout.two-cols .left-col,
+.slidev-layout.two-cols-header .left-col,
+.slidev-layout.two-cols-footer .left-col {
   margin-right: 2rem;
   display: flex;
   flex-direction: column;
 }
 
-.two-cols-header .right-col {
+.slidev-layout.two-cols .right-col,
+.slidev-layout.two-cols-header .right-col,
+.slidev-layout.two-cols-footer .right-col {
   display: flex;
   flex-direction: column;
 }
 
-.two-cols .left-col {
-  margin-right: 2rem;
-  display: flex;
-  flex-direction: column;
+.slidev-layout.two-cols-header .end,
+.slidev-layout.two-cols-footer .end {
+  grid-area: 4 / 1 / 5 / span 12; /* full width */
 }
 
-.two-cols .right-col {
-  display: flex;
-  flex-direction: column;
+.slidev-layout.two-cols .end {
+  grid-area: 3 / 1 / 4 / span 12; /* full width */
 }
+</style>
 
+<style scoped>
 /* 1-11 */
+.two-cols-footer .left-col,
 .two-cols-header .left-col {
   grid-area: 2 / 1 / 3 / span v-bind(colwidth.l);
 }
 
+.two-cols-footer .right-col,
 .two-cols-header .right-col {
   grid-area: 2 / v-bind(colwidth.l + 1) / 3 / span v-bind(colwidth.r);
 }
@@ -158,49 +172,5 @@ const flexclass = computed(() => {
 
 .two-cols .right-col {
   grid-area: 1 / v-bind(colwidth.l + 1) / 2 / span v-bind(colwidth.r);
-}
-
-.left {
-  justify-content: left; /* Left align the content */
-  text-align: left;
-  align-items: start;
-}
-
-.center {
-  justify-content: center; /* Horizontally center the content */
-  text-align: center;
-  align-items: center;
-}
-
-.right {
-  justify-content: right; /* Right align the content */
-  text-align: right;
-  align-items: end;
-}
-
-.top {
-  align-self: start; /* Vertically align the content to the top */
-}
-.middle {
-  align-self: center; /* Vertically center the content */
-}
-.bottom {
-  align-self: end; /* Vertically align the content to the bottom */
-}
-
-.footer {
-  font-size: 0.6em;
-}
-
-.footnotes-sep {
-  visibility: hidden;
-}
-
-html.dark {
-  /* dark mode css here */
-  img {
-    filter: invert(1);
-    opacity: 1;
-  }
 }
 </style>

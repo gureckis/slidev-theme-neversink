@@ -1,6 +1,5 @@
 <script setup lang="js">
 import { computed } from 'vue'
-import { handleBackground } from '../layoutHelper'
 
 const props = defineProps({
   color: {

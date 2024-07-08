@@ -56,7 +56,7 @@ function checkvars() {
       bg.value = `bg-neutral-800`
     } else if ($frontmatter.layout == 'side-title') {
       // if side title
-      if ($frontmatter.side && $frontmatter.side == 'right') {
+      if ($frontmatter.side && ($frontmatter.side == 'right' || $frontmatter.side == 'r')) {
         process_colors()
       } else {
         fg.value = fg_default

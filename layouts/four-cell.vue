@@ -4,9 +4,6 @@ import { computed, useSlots } from 'vue'
 const slots = useSlots()
 
 const props = defineProps({
-  layout: {
-    default: 'side-title',
-  },
   rowheight: {
     default: 'is-one-half',
   },

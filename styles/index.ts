@@ -4,6 +4,7 @@ import './layouts.css' // default theme layouts
 import './bubbles.css'
 import './stickynote.css'
 import './base.css'
+import './colors.css'
 
 // import './code.css'
 // import './layout.css'

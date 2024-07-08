@@ -79,19 +79,6 @@
   border-bottom: none !important;
 }
 
-/* used just to bring the unocss colos styles forward.  probably can replace with var and @apply */
-.bg-navy-900 {
-  background: #2a373a;
-}
-
-.color-navy-900 {
-  color: #2a373a;
-}
-
-.text-navy-900 {
-  color: #2a373a;
-}
-
 /* default layout */
 
 .my-auto p {
@@ -99,9 +86,35 @@
   padding: 0;
 }
 
+.slidev-layout {
+  margin-top: 0px;
+  padding-top: 1.8rem;
+}
+
+.slidev-layout p:first-child {
+  padding-top: 0;
+  margin-top: 0.5rem;
+}
+
 .slidev-layout h1 {
   font-weight: 600;
   font-size: 1.7em;
+  padding-bottom: 0;
+  font-family: var(--neversink-title-font);
+  margin-bottom: 0;
+}
+
+.slidev-layout h2 {
+  font-weight: 600;
+  font-size: 1.5em;
+  padding-bottom: 0;
+  font-family: var(--neversink-title-font);
+  margin-bottom: 0;
+}
+
+.slidev-layout h4 {
+  font-weight: 600;
+  font-size: 1.2em;
   padding-bottom: 0;
   font-family: var(--neversink-title-font);
   margin-bottom: 0;
@@ -120,26 +133,49 @@
   margin-top: 1.5em;
 }
 
-.col-header {
-  max-height: 20%;
+/* columns stuff */
+.warning {
+  color: red;
+}
+.error {
+  font-size: 0.9em;
 }
 
-.slidev-layout.toptitle {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-  padding-top: 1.2rem;
-  padding-bottom: 2.5rem;
-  font-size: 1.1rem;
+.left {
+  justify-content: left; /* Left align the content */
+  text-align: left;
+  align-items: start;
+}
+
+.center {
+  justify-content: center; /* Horizontally center the content */
+  text-align: center;
+  align-items: center;
+}
+
+.right {
+  justify-content: right; /* Right align the content */
+  text-align: right;
+  align-items: end;
+}
+
+.top {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+.middle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.bottom {
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 /* a new tight bullet list */
 /* .tight {
   margin-top: 1em;
 } */
-
-.two-cols-header {
-  grid-template-rows: 20% 80%;
-}
 
 .bwimg {
   filter: grayscale(100%) contrast(150%) brightness(120%);
@@ -148,55 +184,6 @@
 
 img {
   display: inline;
-}
-
-.toptitle {
-  font-size: 1em;
-  font-family: var(--neversink-title-font);
-  font-weight: 300;
-  padding-left: 16px;
-}
-.toptitle h1 {
-  font-size: 1.8em;
-  font-family: var(--neversink-title-font);
-  font-weight: 500;
-  padding-left: 25px;
-  letter-spacing: 0.07em;
-}
-
-.toptitle h2 {
-  font-size: 1.5em;
-  font-family: var(--neversink-title-font);
-  font-weight: 300;
-  padding-left: 25px;
-  letter-spacing: 0.07em;
-}
-
-.toptitle h3 {
-  font-size: 1.1em;
-  font-family: var(--neversink-title-font);
-  font-weight: 300;
-  padding-left: 25px;
-  letter-spacing: 0.07em;
-}
-
-.slidev-layout.sidetitle {
-  height: fit-content;
-}
-
-.slidev-layout.sidetitle hr {
-  border: 0;
-  border-top: 1px solid var(--neversink-border-color);
-  margin: 0;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.slidev-layout.sidetitle code {
-  background: none;
-}
-.slidev-layout.sidetitle h1 {
-  margin-bottom: 5;
 }
 
 /* customize the v-clicks */
@@ -245,4 +232,9 @@ html:not(.dark) {
 .fullpage {
   height: 100vh;
   display: flex;
+}
+
+/* markdown-it-footnotes */
+.footnotes-sep {
+  visibility: hidden;
 }

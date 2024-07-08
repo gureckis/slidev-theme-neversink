@@ -80,13 +80,6 @@ const colorscheme = computed(() => {
 </template>
 
 <style scoped>
-.warning {
-  color: red;
-}
-.error {
-  font-size: 0.9em;
-}
-
 .two-cols {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12 columns */
@@ -142,43 +135,7 @@ const colorscheme = computed(() => {
   grid-area: 1 / v-bind(colwidth.l + 1) / 2 / span v-bind(colwidth.r);
 }
 
-.left {
-  justify-content: left; /* Left align the content */
-  text-align: left;
-  align-items: start;
-}
-
-.center {
-  justify-content: center; /* Horizontally center the content */
-  text-align: center;
-  align-items: center;
-}
-
-.right {
-  justify-content: right; /* Right align the content */
-  text-align: right;
-  align-items: end;
-}
-
-.top {
-  align-self: start; /* Vertically align the content to the top */
-}
-.middle {
-  align-self: center; /* Vertically center the content */
-}
-.bottom {
-  align-self: end; /* Vertically align the content to the bottom */
-}
-
 .footnotes-sep {
   visibility: hidden;
-}
-
-html.dark {
-  /* dark mode css here */
-  img {
-    filter: invert(1);
-    opacity: 1;
-  }
 }
 </style>

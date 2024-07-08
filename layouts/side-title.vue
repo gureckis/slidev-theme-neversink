@@ -5,11 +5,8 @@ import { compute_alignment, compute_column_size } from '../layoutHelper'
 const slots = useSlots()
 
 const props = defineProps({
-  layout: {
-    default: 'side-title',
-  },
   side: {
-    default: 'left',
+    default: 'l',
   },
   color: {
     default: 'light',
@@ -20,31 +17,25 @@ const props = defineProps({
   align: {
     default: 'auto',
   },
-  frontmatter: {
-    default: '',
-  },
-  brand_tl: {
-    default: 'auto_false',
-  },
-  brand_tr: {
-    default: 'auto_true',
-  },
-  slide_info: {
-    default: true,
-  },
-  brand_tl_color: {
-    default: 'light',
-  },
 })
 
+const side = computed(() => {
+  if (props.side === 'left' || props.side === 'l') {
+    return 'left'
+  } else if (props.side === 'right' || props.side === 'r') {
+    return 'right'
+  } else {
+    return 'error'
+  }
+})
 const colwidth = computed(() => compute_column_size(props.titlewidth))
 
 const alignment = computed(() => {
   let aligncode = ''
-  if (props.align == 'auto' && props.side == 'left') {
-    aligncode = 'rt-lt'
-  } else if (props.align == 'auto' && props.side == 'right') {
-    aligncode = 'lt-lt'
+  if (props.align == 'auto' && (props.side === 'l' || props.side === 'left')) {
+    aligncode = 'rm-lt'
+  } else if (props.align == 'auto' && (props.side === 'r' || props.side === 'right')) {
+    aligncode = 'lt-lm'
   } else {
     aligncode = props.align
   }
@@ -58,7 +49,7 @@ const colorscheme = computed(() => {
 })
 </script>
 <template>
-  <div v-if="colwidth == 'error'" class="slidev-layout default error">
+  <div v-if="side == 'error' || colwidth == 'error'" class="slidev-layout default error">
     <span class="warning"><b>Error</b>: invalid layout params.</span>
     <hr />
     <p>
@@ -93,13 +84,14 @@ const colorscheme = computed(() => {
     <p>The <code>color</code> parameter determines color of the title.</p>
   </div>
   <template v-else>
-    <div v-if="props.side === 'left'" class="flex h-full w-full">
+    <div v-if="side === 'left'" class="flex h-full w-full">
       <div class="slidecolor column-title" :class="colorscheme">
-        <div class="slidev-layout sidetitle w-full p-6" :class="alignment.l"><slot name="default" /></div>
+        <div class="slidev-layout sidetitle w-full p-6" :class="alignment.l"><slot name="title" /></div>
       </div>
       <div class="column-content">
         <div class="slidev-layout h-fit w-full" :class="alignment.r">
           <slot name="content" />
+          <slot name="default" />
         </div>
       </div>
     </div>
@@ -107,15 +99,36 @@ const colorscheme = computed(() => {
       <div class="column-content">
         <div class="slidev-layout h-fit w-full" :class="alignment.l">
           <slot name="content" />
+          <slot name="default" />
         </div>
       </div>
       <div class="slidecolor column-title" :class="colorscheme">
-        <div class="slidev-layout sidetitle w-full p-6" :class="alignment.r"><slot name="default" /></div>
+        <div class="slidev-layout sidetitle w-full p-6" :class="alignment.r"><slot name="title" /></div>
       </div>
     </div>
   </template>
 </template>
 
+<style>
+.slidev-layout.sidetitle {
+  height: fit-content;
+}
+
+.slidev-layout.sidetitle hr {
+  border: 0;
+  border-top: 1px solid var(--neversink-border-color);
+  margin: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.slidev-layout.sidetitle code {
+  background: none;
+}
+.slidev-layout.sidetitle h1 {
+  margin-bottom: 5;
+}
+</style>
 <style scoped>
 .column-title {
   flex: v-bind(colwidth.l); /* although this is mapped to 'left' it is reversed when needed in the template*/
@@ -125,43 +138,5 @@ const colorscheme = computed(() => {
 .column-content {
   flex: v-bind(colwidth.r); /* although this is mapped to 'right' it is reversed when needed in the template*/
   display: flex;
-}
-
-.warning {
-  color: red;
-}
-.error {
-  font-size: 0.9em;
-}
-
-.left {
-  justify-content: left; /* Left align the content */
-  text-align: left;
-  align-items: start;
-}
-
-.center {
-  justify-content: center; /* Horizontally center the content */
-  text-align: center;
-  align-items: center;
-}
-
-.right {
-  justify-content: right; /* Right align the content */
-  text-align: right;
-  align-items: end;
-}
-
-.top {
-  margin-top: 0;
-  margin-bottom: auto;
-}
-.middle {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.bottom {
-  margin-top: auto;
-  margin-bottom: 0;
 }
 </style>
