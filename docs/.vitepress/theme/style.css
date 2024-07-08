@@ -1,8 +1,26 @@
 /**
  * Customize default theme styling by overriding CSS variables:
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+  @apply bg-amber-200;
+  @apply text-amber-600;
+
  */
 
+mark {
+  @apply bg-amber-200;
+  @apply text-amber-600;
+  font-weight: 300;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 0.4em;
+}
+
+.screenshot {
+  border: 0.2px solid;
+  @apply border-gray-700;
+}
 /**
  * Colors
  *

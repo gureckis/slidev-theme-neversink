@@ -2,6 +2,7 @@
 import { defineConfig } from 'unocss'
 import presetUno from '@unocss/preset-uno'
 import { colors } from '@unocss/preset-mini'
+import transformerDirectives from '@unocss/transformer-directives'
 
 // Tailwind CSS color palette
 const colornames = [
@@ -206,5 +207,7 @@ export default defineConfig({
     ...generate_text_sizes(),
     ...schemes.classes,
     ...['text-center', 'text-right', 'text-left', ':root'],
+    ...['grid', 'w-full', 'grid-cols-2', 'grid-item', 'grid-cols-1', 'grid-col-span-1'] /* for the docs */,
   ],
+  transformers: [transformerDirectives()],
 })

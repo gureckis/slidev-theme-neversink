@@ -42,6 +42,7 @@ theme: neversink
 - [ ] clean up css classes
 - [ ] dark mode support
 - [ ] publish as a theme
+  - [ ] automate workflow for publishing to npm
 - add docs
   - [x] vitepress setup published to github pages
   - [ ] slide types
@@ -66,9 +67,10 @@ theme: neversink
 - [x] two cols no header
 - [x] credits layout
 - [x] default (with color)
-- [x] new section (with color)
+- [x] sort out the global-top/slide-top thing (waiting for new slidev release)
+- [ ] new section (with color)
+- [ ] full (with color)
 - [ ] quote (better style)
-- [ ] sort out the global-top/slide-top thing (waiting for new slidev release)
 - [x] scrolling credits slide
   - [x] create as a layout also
   - [x] add links and icons
@@ -81,7 +83,6 @@ theme: neversink
 
 - [x] markdown admonitions
 - [x] draggable, custom admonition
-  - [ ] make admonition class be what the markdown processes uses
   - [ ] adminition colors for dark/navy/etc...
 - [x] speech bubble
   - [~x] corner tails (good enough)
@@ -95,10 +96,10 @@ theme: neversink
 - [ ] dynamic color themes
 - [ ] thought bubble/comic style
 - [ ] tooltip that appears on hover or with a click
-  - [ ] spoilers with clicks
+- [ ] spoilers with clicks
 - [ ] spring loaded word cloud
 - [ ] quiz live polls
-
+- [ ] make admonition class be what the markdown processes uses
 - [ ] animations/layouts
   - [ ] kawaii waving hands
   - [ ] kawaii raising hands

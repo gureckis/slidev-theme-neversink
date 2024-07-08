@@ -18,26 +18,37 @@ _New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><m
 
 
 ---
-layout: default
+layout: side-title
+color: amber
+align : rm-lm
 ---
 
 # Slidev Neversink Theme
 
+:: content ::
 
-Neversink is a theme for education and academic presentations.  It is designed to be flat, minimal, and easy to read.  It is based on the default Slidev theme but with some additional features and color schemes that have vauge reference to the [metropolis](https://github.com/matze/mtheme) Beamer theme.
+Neversink is theme for education and academic presentations.  It is designed to be bright, flat, minimal, and easy to read.  It is based on the default Slidev theme but with some additional features and color schemes that have reference in the [metropolis](https://github.com/matze/mtheme) Beamer theme among others.
 
-**Why use it?**
+It is named for the [Neversink River](https://en.wikipedia.org/wiki/Neversink_River) for absolutely no discernable reason.
 
-- It has a variety of ==color themes== and ==layouts== to choose from make your life easier.  
+---
+layout: default
+---
 
-- It also has some whimsical elements like movie-style scrolling credits, speech bubbles, and admonitions that make your presentations more memorable.
+# Why use it?
 
-- It's not to hard to customize things.
+
+- Neversink has several configurable ==layouts== that build upon the Slidev defaults and which make it easier to quickly throw together common slide layouts without having to write a lot of custom CSS/HTML.
+
+- It has a variety of ==color themes== to choose from that make your visual identity more coherent. 
+
+
+- It also has some whimsical elements like movie-style scrolling credits, animated speech bubbles, and admonitions that make your presentations more memorable.
 
 - It strives to be well documented and easy to use! 
 
 
-Ultimately, it was designed based on observations of common slide layouts used in my years as a academic researcher and educator. You can find the source code on [GitHub](http://github.com/gureckis/slidev-theme-neversink).
+ You can find the source code on [GitHub](http://github.com/gureckis/slidev-theme-neversink).
 
 ---
 layout: default
@@ -77,7 +88,7 @@ The project uses tailwind-like color schemes arranged in ==monochromatic pairs==
 **B&W**:
 
 <span class="text-white bg-black p-1 pl-3 pr-3 m-1 rounded font-size-3">black</span>
-<span class="text-black bg-white p1 pl-3 pr-3 m-1 rounded font-size-3">white</span>
+<span class="text-black bg-white border-1 border-solid border-black p1 pl-3 pr-3 m-1 rounded font-size-3">white</span>
 <span class="text-gray-100 bg-gray-800 p1 pl-3 pr-3 m-1 rounded font-size-3">dark</span>
 <span class="text-gray-800 bg-gray-100 p1 pl-3 pr-3 m-1 rounded font-size-3">light</span>
 
@@ -140,7 +151,7 @@ layout: default
 
 # Color schemes
 
-As a result in many places you can use the color schemes to help choose matching colors for your slides.  For example, we can make a slide with a sticky node using the `rose-light` color scheme, the `sky` color scheme, or the `amber-light` color scheme:
+In many parts of the theme you can use the color schemes to help choose matching colors for your slides.  For example, we can make a slide with a sticky note using the `rose-light` color scheme, the `sky` color scheme, or the `amber-light` color scheme:
 
 <StickyNote color="rose-light" textAlign="left" width="180px" v-drag="[122,253,180,180,-14]">
 
@@ -175,7 +186,7 @@ Don't worry if you don't understand all the details, yet we are still talking ab
 
 :: content ::
 
-Or we can use the `emerald-light` scheme in a slide layout to set the overall color and style of a slide:
+Or we can use the `emerald-light` scheme in a slide layout to set the overall color and style of a slide with a matching sticky note:
 
 ```md
 ---
@@ -196,7 +207,7 @@ align: lt
 
 :: content ::
 
-The theme includes many layouts. Layouts set the overall structure of the page.  For example this slide is using the `top-title` layout with the `amber` color scheme.  You can see the frontmatter for this slide below:
+The theme includes many layouts. Layouts set the overall structure of the page.  For example, this slide is using the `top-title` layout with the `amber` color scheme.  You can see the frontmatter for this slide below:
 
 ```md
 ---
@@ -224,11 +235,15 @@ color: amber-light
 align: lt
 ---
 
-# Two important things about layouts
+# Two things about layouts
+
+
 
 :: left ::
 
 There are two important parts of slides to know about.
+
+## Frontmatter 
 
 First is **frontmatter**, which are configuration options
 that appear at the start of each slide (see [Slidev docs](https://sli.dev/guide/syntax#frontmatter-layouts)).  These configure things like
@@ -243,6 +258,8 @@ align: lt
 ```
 
 :: right ::
+
+# Slots 
 
 The other aspect is **slots**.  Slots are a basic part of [Vue.js](https://vuejs.org/guide/components/slots.html).  In Slidev slots can be marked using `:: slotname ::` and then filled in with content.  For example, the `:: left ::` and `:: right ::` slots on this slide are filled with content.
 
@@ -412,7 +429,7 @@ _New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><m
 
 <div class="fw-200" >
 
-\* Here we set `color: pink` in the frontmatter.  Different choices convey a different vibe for the intro of your talk.  There's lots of choices available, but not so many you are overwhelmed by choice!
+\* Here we set `color: pink` in the frontmatter.  Different choices convey a different vibe for the intro of your talk.  There's lots of choices available.
 
 </div>
 
@@ -443,7 +460,7 @@ layout: default
 
 This is kind of the basic slide.  The main content is interpreted as markdown and rendered in the center of the slide.  
 
-Speaking of markdown, you can use markdown to make things **bold** or *italic* or even `code` like `this`.  In **neversink** you can also ==highlight things using the double equals signs like this==
+Speaking of markdown, you can use markdown to make things **bold** or *italic* or even `code` like `this`.  In **Neversink** you can also ==highlight things using the double equals signs like this==
 thanks to the `markdown-it-mark` plugin.
 
 Of course you can make bullet lists:
@@ -495,7 +512,7 @@ color: light
 ---
 ```
 
-And of course you don't have to change the colorscheme every slide! 
+And of course you don't have to change the color scheme every slide! 
 
 
 ---
@@ -544,6 +561,12 @@ You can use HTML and inline CSS to modify the look and feel.
 
 </div>
 
+---
+layout: quote
+color: sky-light
+quote: "This is a quote slide.  It has a frontmatter option of `quote` which is the text that appears in the quote box and `author` and options for the size of the text(`quotesize: text2xl` and `authorsize: text-l`).  I feel it is a little uninspired but might save you some time."
+author: "Todd Gureckis"
+---
 
 
 ---
@@ -552,12 +575,6 @@ color: amber-light
 ---
 
 
----
-layout: quote
-color: sky-light
-quote: "This is a quote slide.  It has a frontmatter option of `quote` which is the text that appears in the quote box and `author` and options for the size of the text(`quotesize: text2xl` and `authorsize: text-l`).  I feel it is a little uninspired but might save you some time."
-author: "Todd Gureckis"
----
 
 
 ---
@@ -809,21 +826,22 @@ align: l-lt-lt
 title: Two Cols Header (Info)
 ---
 
-:: header ::
+:: title ::
 
 # `two-cols-header`
 
 :: left ::
 
-This is `layout: two-cols-header`. It is a custom layout that Todd made.
-It is different than the default `two-cols_header` layout.
+This is `layout: two-cols-header`. 
 
-- There are three slots: `:: header ::`, `:: left ::`, and `:: right ::`.
+- There are three slots: `:: title ::`, `:: left ::`, and `:: right ::` along with the default which is implicit before any named slots.
 
-- It additionally provides two configuration options in the slide YAML front matter:
-  `columns` and `align`.
+- It additionally provides three configuration options in the slide YAML front matter:
+  `color`, `columns` and `align`.
 
 :: right ::
+
+- `color` is the color scheme.
 
 - `columns` is the relative spacing given to the left versus right column. The overall space is divided into 12 columns. Instructions like `is-5` will give 5 units to the left and 7 to the right.
 
@@ -835,11 +853,11 @@ It is different than the default `two-cols_header` layout.
 ---
 layout: two-cols-header
 columns: is-2
-align: c-rb-lt
+align: c-rm-lt
 title: Two Cols Header (Info)
 ---
 
-:: header ::
+:: title ::
 
 # `two-cols-header`
 
@@ -859,7 +877,7 @@ align: c-rb-lt
 ---
 ```
 
-which means, `two-cols-header` layout, 2 columns, and the alignment is center for the header (`:: header ::`), right-bottom (`:: right ::`) for the right column, left-top (`:: left ::`).
+which means, `two-cols-header` layout, 2 columns, and the alignment is center for the header (`:: title ::`), right-bottom (`:: right ::`) for the right column, left-top (`:: left ::`).
 
 
 ---
@@ -1043,7 +1061,7 @@ dragPos:
 If you want to `v-drag` an admonition, you should set the width to a fixed value.
 </Admonition>
 
-:: header ::
+:: title ::
 
 # Admonitions
 
@@ -1093,7 +1111,7 @@ title: Bubbles
 Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
 </SpeechBubble>
 
-:: header ::
+:: title ::
 
 # Bubbles
 
