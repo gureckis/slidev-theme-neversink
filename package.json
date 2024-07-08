@@ -13,9 +13,10 @@
   },
   "scripts": {
     "build": "slidev build example.md -o docs/public/example --base /slidev-theme-neversink/example/",
-    "dev": "slidev example.md --open",
+    "dev": "slidev example.md",
     "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png",
+    "screenshot": "slidev export screenshot.md --format png --output docs/public/screenshots/",
+    "screenshot:dev": "slidev screenshot.md",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"

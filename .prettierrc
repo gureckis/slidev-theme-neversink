@@ -5,7 +5,7 @@
   "printWidth": 120,
   "overrides": [
     {
-      "files": ["example.md"],
+      "files": ["example.md", "screenshot.md"],
       "options": {
         "parser": "slidev",
         "plugins": ["prettier-plugin-slidev"]
