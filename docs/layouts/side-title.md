@@ -75,7 +75,7 @@ This `side-title` slide has two named slots which are all optional:
 If the title is not provided the color space for it will still appear.
 If content is not provided the default slot will reclaim the space.
 
-A common use case for the default slot is to include things like [StickyNotes](/components/StickyNote) in this default section and then use Slidev's `v-drag` directive to move them into position on the slide. An example below make use of this technique.
+A common use case for the default slot is to include things like [StickyNotes](/components/stickynote) in this default section and then use Slidev's `v-drag` directive to move them into position on the slide. An example below make use of this technique.
 
 ## Examples
 

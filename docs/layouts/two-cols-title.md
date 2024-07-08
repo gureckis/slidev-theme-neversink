@@ -59,7 +59,7 @@ This `two-cols-title` slide has three name slots which are all optional:
 `:: title ::`, `:: left ::`, and `:: right ::`. In addition, the `:: default ::` slot exits for any content that appears before a named slot. It will appear at the bottom of the slide.
 If the title is not provided the space will be reallocated the columns. If the left or right is not provided the space for them will remain according to `columns:` frontmatter.
 
-A common use case for the default slot is to include things like [StickyNotes](/components/StickyNote) in this default section and then use Slidev's `v-drag` directive to move them into position on the slide. An example below make use of this technique.
+A common use case for the default slot is to include things like [StickyNotes](/components/stickynote) in this default section and then use Slidev's `v-drag` directive to move them into position on the slide. An example below make use of this technique.
 
 ## Examples
 
