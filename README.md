@@ -39,7 +39,7 @@ theme: neversink
 - [x] add variables to configure things
 - [x] make global-top be a feature of my talks not the theme
 - [x] add a configuration option to global-bottom/slide-bottom for the date or whatever field
-- [ ] clean up css classes
+- [x] clean up css classes
 - [ ] dark mode support
 - [ ] publish as a theme
   - [ ] automate workflow for publishing to npm
@@ -68,16 +68,22 @@ theme: neversink
 - [x] credits layout
 - [x] default (with color)
 - [x] sort out the global-top/slide-top thing (waiting for new slidev release)
-- [ ] new section (with color)
-- [ ] full (with color)
-- [ ] quote (better style)
+- [x] new section (with color)
+- [x] full (with color)
+- [x] quote (better style)
 - [x] scrolling credits slide
   - [x] create as a layout also
   - [x] add links and icons
   - [ ] auto adjust height
+  - [ ] looping is not working
+  - [ ] use a animation library instead of raw request frame
   - [ ] if in export mode then don't start scrolled down
   - [ ] add keyboard commands to pause speed up and step forward/backwards in scrolling
   - [ ] center final page
+
+<img src="/screenshots/credits-light.gif" alt="credits slide example" width="600" class="screenshot mb-10 mt-10"/>
+
+<img src="/screenshots/credits-dark.gif" alt="full slide example" width="600" class="screenshot"/>
 
 ### components
 
@@ -99,6 +105,7 @@ theme: neversink
 - [ ] spoilers with clicks
 - [ ] spring loaded word cloud
 - [ ] quiz live polls
+- [ ] map
 - [ ] make admonition class be what the markdown processes uses
 - [ ] animations/layouts
   - [ ] kawaii waving hands

@@ -65,6 +65,10 @@ In the following section, we detail specific layouts that are available in this 
 - [`layout: top-title`](layouts/top-title.md)
 - [`layout: top-title-two-cols`](layouts/top-title-two-cols.md)
 - [`layout: side-title`](layouts/side-title.md)
+- [`layout: quote`](layouts/quote.md)
+- [`layout: section`](layouts/section.md)
+- [`layout: full`](layouts/full.md)
+- [`layout: credits`](layouts/credits.md)
 
 In addition to these custom layouts, you can still access default Slidev layouts. For example, in cases where the layout name is not mentioned you can access the basic versions [described here](https://sli.dev/builtin/layouts).
 
@@ -80,7 +84,8 @@ For example,
 - [`layout: end`](https://sli.dev/builtin/layouts#end)
 - [`layout: fact`](https://sli.dev/builtin/layouts#fact)
 
-All act in the same ways as the default Slidev theme currently.
+All act in the same ways as the default Slidev theme currently. One limitation is that these layouts
+cannot be customized by the Neversink [color schemes](/colors). In future will make themed versions of these.
 
 ## Don't know what it is called? Pick your layout
 

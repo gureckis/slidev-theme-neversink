@@ -833,7 +833,7 @@ slide_info: false
 layout: two-cols-title
 columns: is-6
 align: l-lt-lt
-title: Two Cols Header (Info)
+title: Two Cols Title - Header (Info)
 ---
 
 :: title ::
@@ -861,31 +861,148 @@ This is `layout: two-cols-title`.
 
 
 
+
+
 ---
 layout: two-cols-title
 columns: is-2
 align: l-lt-lt
-title: Two Cols Header (Info)
+title: Two Cols Title - Header (is-2)
 ---
 
-:: left ::
+:: title ::
 
-# This is `layout: two-cols`. 
+<div class='w-full h-20 bg-indigo-100'>
+</div>
+
+
+:: left ::
+<div class='w-full h-100 bg-gray-300'></div>
 
 :: right ::
+<div class='w-full h-100 bg-pink-300'></div>
+
+
+---
+layout: two-cols-title
+columns: is-4
+align: l-lt-lt
+title: Two Cols Title - Header (is-4)
+---
+
+:: title ::
+
+<div class='w-full h-20 bg-indigo-100'>
+</div>
+
+
+:: left ::
+<div class='w-full h-100 bg-gray-300'></div>
+
+:: right ::
+<div class='w-full h-100 bg-pink-300'></div>
+
+---
+layout: two-cols-title
+columns: is-6
+align: l-lt-lt
+title: Two Cols Title - Header (is-6)
+---
+
+:: title ::
+
+<div class='w-full h-20 bg-indigo-100'>
+</div>
+
+
+:: left ::
+<div class='w-full h-100 bg-gray-300'></div>
+
+:: right ::
+<div class='w-full h-100 bg-pink-300'></div>
+
+
+---
+layout: two-cols-title
+columns: is-8
+align: l-lt-lt
+title: Two Cols Title - Header (is-8)
+---
+
+:: title ::
+
+<div class='w-full h-20 bg-indigo-100'>
+</div>
+
+
+:: left ::
+<div class='w-full h-100 bg-gray-300'></div>
+
+:: right ::
+<div class='w-full h-100 bg-pink-300'></div>
+
+
+---
+layout: two-cols-title
+columns: is-10
+align: l-lt-lt
+title: Two Cols Title - Header (is-10)
+---
+
+:: title ::
+
+<div class='w-full h-20 bg-indigo-100'>
+</div>
+
+
+:: left ::
+<div class='w-full h-100 bg-gray-300'></div>
+
+:: right ::
+<div class='w-full h-100 bg-pink-300'></div>
+
+
+---
+layout: two-cols-title
+columns: is-10
+align: l-lt-lt
+titlepos: b
+title: Two Cols Title - Footer (is-10)
+---
+
+:: title ::
+
+<div class='w-full h-20 bg-indigo-100'>
+</div>
+
+
+:: left ::
+<div class='w-full h-100 bg-gray-300'></div>
+
+:: right ::
+<div class='w-full h-100 bg-pink-300'></div>
+
+
+---
+layout: two-cols-title
+columns: is-4
+align: l-lt-lt
+titlepos: b
+title: Two Cols Title - no title (is-4)
+---
 
 
 
-- There are two slots: `:: left ::`, and `:: right ::`.
+:: left ::
+<div class='w-full h-120 bg-gray-300'></div>
 
-- It additionally provides two configuration options in the slide YAML front matter:
-  `columns` and `align`.
+:: right ::
+<div class='w-full h-120 bg-pink-300'></div>
 
-- `columns` is the relative spacing given to the left versus right column. The overall space is divided into 12 columns. Instructions like `is-5` will give 5 columns to the left and 7 to the right.
 
-- The <code>align</code> parameter determines how the columns look. The notation is for example
-  <code>align: cm-cm</code>. The first part is the left column, the second part is for the right column. The first letter is (<code>c</code> for center, <code>l</code> for left, <code>r</code> for right), the second letter
-  is vertical alignment (<code>t</code> for top, <code>m</code> for middle, <code>b</code> for bottom). 
+
+
+
 
 ---
 layout: side-title

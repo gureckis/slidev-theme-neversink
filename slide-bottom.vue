@@ -67,7 +67,8 @@ function checkvars() {
       $frontmatter.layout == 'intro' ||
       $frontmatter.layout == 'default' ||
       $frontmatter.layout == 'section' ||
-      $frontmatter.layout == 'credits'
+      $frontmatter.layout == 'credits' ||
+      $frontmatter.layout == 'full'
     ) {
       process_colors()
     }

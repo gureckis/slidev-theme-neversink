@@ -5,7 +5,7 @@ const props = defineProps({
     default: 'light',
   },
   speed: {
-    default: 1.0,
+    default: 0.5,
   },
   loop: {
     default: false,

@@ -4,12 +4,8 @@ const props = defineProps({
   color: {
     default: 'light',
   },
-  quote: {
-    default:
-      'The art of seeing things is not something that may be conveyed in rules and percepts; it is a matter vital in the eye and ear, yea, in the mind and sould, of which these are the organs.  I have as little hope of being able to tell the reader how to see things as I would have trying to tell him how to fall in love or to enjoy his dinner.',
-  },
   author: {
-    default: 'John Burroughs',
+    default: null,
   },
   quotesize: {
     default: 'text-2xl',
@@ -28,8 +24,8 @@ const colorscheme = computed(() => {
     <div class="my-auto">
       <div class="p-5 w-95% ml-auto mr-auto rounded-lg border-1px quotecolor" :class="colorscheme">
         <div class="leading-normal" :class="quotesize">
-          "{{ quote }}"<br />
-          <div class="quote_author" :class="authorsize">- {{ author }}</div>
+          <slot name="default" /><br />
+          <div v-if="author !== null" class="quote_author" :class="authorsize">- {{ author }}</div>
         </div>
       </div>
     </div>

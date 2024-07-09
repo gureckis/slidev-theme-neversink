@@ -504,3 +504,371 @@ align: auto
 :: content ::
 
 This slide doesn't have a title but still has a color block.
+
+
+---
+layout: quote
+color: sky-light
+quotesize: text-m
+authorsize: text-s
+author: 'Todd Gureckis'
+---
+
+"This is a quote slide.  It has a frontmatter options for the size of the text (`quotesize: text2xl` and `authorsize: text-l`).  I feel it is a little uninspired but might save you some time."
+
+
+---
+layout: section
+---
+
+# The `section` layout
+
+This is a section slide.  It can be use to make a noticable point or break between sections.
+
+
+
+---
+layout: section
+color: navy
+---
+
+<div class="w-1/2 ml-30">
+
+# The `section` layout
+<hr>
+
+<span class='text-amber-300'>
+You can use HTML and inline CSS to modify the look and feel.
+</span>
+
+</div>
+
+
+---
+layout: full
+title: Full Layout - 2 Col Fig
+---
+
+This is an example of using unocss atomic classes to put two figures side by side.
+
+<div class="grid w-full h-fit grid-cols-2 grid-rows-2 mt-10 mb-auto">
+<div class="grid-item grid-col-span-1"><img src="/images/scatter1.svg" /></div>
+<div class="grid-item grid-col-span-1"><img src="/images/scatter1.svg" /></div>
+<div class="grid-item grid-col-span-2 text-center h-fit">
+
+**Figure show this**: this is a two column figure
+
+</div>
+</div>
+
+
+---
+layout: full
+color: neutral
+title: Full Layout
+---
+
+<div class='border-1px v-full h-full p-5'>
+
+This is `layout: full` which fills the whole screen for the most part.
+The grey box is just showing you the full addressable space.
+Full can be useful for arbitrary layouts such as on the next slide which uses
+the `v-drag` directive to position elements.
+
+</div>
+
+
+---
+layout: full
+title: Full with Arbitrary Layout
+---
+
+<div class='v-full h-full'>
+
+<SpeechBubble position="l" shape="round"  color='pink-light' v-drag="[555,342,274,58]">
+
+Hello, I'm an **ice cream**!
+</SpeechBubble>
+
+<SpeechBubble position="bl" shape="round"  color='emerald-light' v-drag="[445,258,274,57]">
+
+Hello, I'm **kawaii**.
+</SpeechBubble>
+
+<SpeechBubble position="r" shape="round" animation="float"  color='sky' v-drag="[143,391,274,84]">
+
+I'm v-dragged out and ==floating==.
+</SpeechBubble>
+
+<IceCream :size="150" mood="lovestruck" color="#FDA7DC" v-drag="[439,341,85,150]" />
+
+<div class="tight" v-drag="[143,33,277,214]">
+
+<span class="bg-red-100 text-red-600 p-2 border-l-6 border-2 border-red-200 rounded-lg pl-4 pr-4">Here's a list of somethings</span>
+
+- Novelty bonuses
+- Cumulative prediction error
+- Learning progress
+- Surprise
+- Suspense
+- Information gain
+
+</div>
+
+<div class="tight" v-drag="[461,63,293,148,17]">
+
+<span class="bg-emerald-100 text-emerald-500 p-2 border-l-6 border-2 border-emerald-200 rounded-lg pl-4 pr-4">Here's another list of things</span>
+
+- Structured behaviors
+- Compositional
+- Communicable
+
+</div>
+
+</div>
+
+
+---
+layout: credits
+color: light
+---
+
+<div class="grid text-size-4 grid-cols-3 w-3/4 gap-y-10 auto-rows-min ml-auto mr-auto">
+<div class="grid-item text-center mr-0- col-span-3">
+  
+  This is the `layout: credits` slide.  It's a movie-like scrolling credits!
+</div>
+<div class="grid-item text-center mr-0- col-span-3">
+  <strong>Cast</strong><br> 
+  <span class="font-size-3 mt-0">(In order of appearance)</span>
+</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Study 1</strong></div>
+<div class="grid-item col-span-2">Person 1 <i>as PhD student</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /><br/>Person 2 <i>as Co-PI</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /></div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Study 2</strong></div>
+<div class="grid-item col-span-2">Person 3 <i>as Postdoc</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /><br/>Person 4 <i>as Co-PI</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /></div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Experiments</strong></div>
+<div class="grid-item col-span-2">Smile 🫠</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Funding</strong></div>
+<div class="grid-item col-span-2">National Science Foundation<br/>
+National Institute of Health</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Slides</strong></div>
+<div class="grid-item col-span-2">
+Slidev<br/>
+Unocss<br/>
+Figma<br/>
+Vuejs<br/>
+Vite<br/>
+</div>
+<div class="grid-item col-span-3 text-center mt-180px mb-auto font-size-1.5rem"><strong>Questions?</strong></div>
+</div>
+
+
+
+---
+layout: credits
+color: dark
+speed: 4.0
+loop: true
+---
+
+<div class="grid text-size-4 grid-cols-3 w-3/4 gap-y-10 auto-rows-min ml-auto mr-auto">
+<div class="grid-item text-center mr-0- col-span-3">
+  
+  This is the `layout: credits` slide.  It's a movie-like scrolling credits!
+</div>
+<div class="grid-item text-center mr-0- col-span-3">
+  <strong>Cast</strong><br> 
+  <span class="font-size-3 mt-0">(In order of appearance)</span>
+</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Study 1</strong></div>
+<div class="grid-item col-span-2">Person 1 <i>as PhD student</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /><br/>Person 2 <i>as Co-PI</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /></div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Study 2</strong></div>
+<div class="grid-item col-span-2">Person 3 <i>as Postdoc</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /><br/>Person 4 <i>as Co-PI</i>&nbsp;<mdi-open-in-new class="font-size-3 mb-0.5" /></div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Experiments</strong></div>
+<div class="grid-item col-span-2">Smile 🫠</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Funding</strong></div>
+<div class="grid-item col-span-2">National Science Foundation<br/>
+National Institute of Health</div>
+<div class="grid-item text-right mr-4 col-span-1"><strong>Slides</strong></div>
+<div class="grid-item col-span-2">
+Slidev<br/>
+Unocss<br/>
+Figma<br/>
+Vuejs<br/>
+Vite<br/>
+</div>
+<div class="grid-item col-span-3 text-center mt-180px mb-auto font-size-1.5rem"><strong>Questions?</strong></div>
+</div>
+
+
+---
+layout: two-cols-title
+columns: is-6
+title: Admonitions
+dragPos:
+  admon: Left,Top,Width,Height,Rotate
+  "'admon'": 55,300,287,106
+---
+
+<Admonition title="V-draggable" color='teal-light' width="300px" v-drag="[93,303,300,145,-14]">
+If you want to `v-drag` an admonition, you should set the width to a fixed value.
+</Admonition>
+
+:: title ::
+
+# Admonitions
+
+:: left ::
+
+- Admonitions are boxes that you can use to call out things.
+
+<Admonition title="Custom title" color='amber-light'>
+This is my admon message
+</Admonition>
+
+:: right ::
+
+<AdmonitionType type='note' >
+This is note text
+</AdmonitionType>
+
+<!--
+> [!note]
+> This is note text
+-->
+
+<AdmonitionType type='important' >
+This is important text
+</AdmonitionType>
+
+<AdmonitionType type='tip' >
+This is a tip
+</AdmonitionType>
+
+<AdmonitionType type='warning' >
+This is a tip
+</AdmonitionType>
+
+<AdmonitionType type='caution' >
+This is warning text
+</AdmonitionType>
+
+---
+layout: two-cols-title
+columns: is-6
+title: Bubbles
+---
+
+<SpeechBubble position="l" color='sky' shape="round"  v-drag="[83,364,274,109]">
+
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
+
+:: title ::
+
+# SpeechBubbles
+
+:: left ::
+
+- SpeechBubbles are moveable elements that act as speech bubbles
+- They can be configured for where you want the arrow to point
+- The can be move around if you enable `v-drag` on the element
+
+:: right ::
+
+<SpeechBubble position="bl" color='amber-light' shape="round">
+
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
+
+---
+layout: default
+title: Sticky Notes
+---
+
+<StickyNote color="amber-light" textAlign="left" width="180px" title="Title" v-drag="[66,318,185,171]">
+
+Hello, I'm a **sticky note**.
+</StickyNote>
+
+<StickyNote color="sky-light" textAlign="left" width="180px" title="This is my title" v-drag="[375,306,180,180,-15]">
+
+Hello, I'm also a **sticky note** but am blue sky title.
+</StickyNote>
+
+<StickyNote color="pink-light" textAlign="left" width="180px"  v-drag="[667,299,185,171,8]">
+
+Hello, I'm also a **sticky note** but I lack a title.
+</StickyNote>
+
+# Sticky Notes
+
+- Sticky notes are moveable elements you can use for notes.
+- Syntax is
+
+```js
+<StickyNote color="amber-light" textAlign="left" width="180px" title="Title" v-drag>
+  Hello, I'm a **sticky note**.
+</StickyNote>
+```
+
+---
+layout: default
+title: Kawaii 1
+---
+
+# Kawaii
+
+- Kawaii is a Japanese term that means cute
+
+<IceCream :size="80" mood="sad" color="#FDA7DC" />
+<IceCream :size="80" mood="shocked" color="#FDA7DC" />
+<IceCream :size="80" mood="happy" color="#FDA7DC" />
+<IceCream :size="80" mood="blissful" color="#FDA7DC" />
+<IceCream :size="80" mood="lovestruck" color="#FDA7DC" />
+<IceCream :size="80" mood="excited" color="#FDA7DC" />
+<IceCream :size="80" mood="ko" color="#FDA7DC" /><br/>
+
+<BackPack :size="80" mood="sad" color="#FFD882" />
+<BackPack :size="80" mood="shocked" color="#FFD882" />
+<BackPack :size="80" mood="happy" color="#FFD882"/>
+<BackPack :size="80" mood="blissful" color="#FFD882" />
+<BackPack :size="80" mood="lovestruck" color="#FFD882" />
+<BackPack :size="80" mood="excited" color="#FFD882" />
+<BackPack :size="80" mood="ko" color="#FFD882" /><br/>
+
+<Cat :size="80" mood="sad" color="#FFD882" />
+<Cat :size="80" mood="shocked" color="#FFD882" />
+<Cat :size="80" mood="happy" color="#FFD882"/>
+<Cat :size="80" mood="blissful" color="#FFD882" />
+<Cat :size="80" mood="lovestruck" color="#FFD882" />
+<Cat :size="80" mood="excited" color="#FFD882" />
+<Cat :size="80" mood="ko" color="#FFD882" /><br/>
+
+<Browser :size="50" mood="lovestruck" color="#61DDBC" />
+<Mug :size="50" mood="lovestruck" color="#61DDBC" />
+<Planet :size="50" mood="lovestruck" color="#61DDBC" />
+<SpeechBubbleGuy :size="50" mood="lovestruck" color="#d3d3d3" />
+<Ghost :size="50" mood="blissful" color="#E0E4E8" />
+<CreditCard :size="50" mood="blissful" color="#E0E4E8" />
+
+---
+layout: default
+title: QR Codes
+---
+
+# In-line QR Codes
+
+- Send people to a url with a easy to configure QR code
+
+```vue
+<QRCode value="https://gureckislab.org" :size="200" render-as="svg" />
+```
+
+<br />
+Result:
+
+<QRCode value="https://gureckislab.org" :size="200" render-as='svg'/>
+
