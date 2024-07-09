@@ -61,6 +61,8 @@ Drops the underline styling from icons.
 
 ## Tight bullets
 
+If you want to make bullets a little closer together to make spaceadd the `class='tight'`
+
 ```md
 <div class="tight">
 
@@ -72,4 +74,14 @@ Drops the underline styling from icons.
 
 ## V-click faders
 
-If you want to fade out a bullet.
+If you want to fade out a bullet as you step through, add the `class='fader'`
+
+```md
+<v-clicks at="+0" class="fader">
+
+- This one appears immediately on slide load
+- This is a second click
+- This is a third click
+
+</v-clicks>
+```
