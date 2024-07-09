@@ -43,7 +43,7 @@
   "bugs": {
     "url": "https://github.com/gureckis/slidev-theme-neversink/issues"
   },
-  "homepage": "https://github.com/gureckis/slidev-theme-neversink#readme",
+  "homepage": "https://gureckis.github.io/slidev-theme-neversink/",
   "slidev": {
     "colorSchema": "light",
     "highlighter": "all"
