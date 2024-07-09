@@ -12,7 +12,7 @@ import StickyNote from '../../../components/StickyNote.vue'
 import QrcodeVue from 'qrcode.vue'
 import SpeechBubble from '../../../components/SpeechBubble.vue'
 
-import Backpack from '../../../components/vue3-kawaii/components/backpack/Backpack.vue'
+import BackPack from '../../../components/vue3-kawaii/components/backpack/BackPack.vue'
 import Browser from '../../../components/vue3-kawaii/components/browser/Browser.vue'
 import Cat from '../../../components/vue3-kawaii/components/cat/Cat.vue'
 import CreditCard from '../../../components/vue3-kawaii/components/creditCard/CreditCard.vue'
@@ -37,7 +37,7 @@ export default {
     app.component('StickyNote', StickyNote)
     app.component('QRCode', QrcodeVue)
     app.component('SpeechBubble', SpeechBubble)
-    app.component('BackPack', Backpack)
+    app.component('BackPack', BackPack)
     app.component('Browser', Browser)
     app.component('Cat', Cat)
     app.component('CreditCard', CreditCard)
