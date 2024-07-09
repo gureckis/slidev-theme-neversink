@@ -76,7 +76,13 @@ function checkvars() {
 }
 
 function getlabel() {
-  label.value = $slidev.configs.neversink_string // this is the overall deck front matter
+  if ($frontmatter.neversink_slug) {
+    label.value = $frontmatter.neversink_slug
+  } else if ($slidev.configs.neversink_slug) {
+    label.value = $slidev.configs.neversink_slug
+  } else {
+    label.value = ''
+  }
 }
 //watch($slidev.nav, () => checkvars())
 

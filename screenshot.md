@@ -4,7 +4,7 @@ layout: cover
 routerMode: hash
 title: Screenshot Deck
 theme: ./
-neversink_string: 'Neversink Example Deck'
+neversink_slug: 'Neversink Example Deck'
 ---
 
 # Screenshot deck for the Neversink theme
