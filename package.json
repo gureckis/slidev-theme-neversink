@@ -33,7 +33,8 @@
     "@slidev/types": "^0.49.16",
     "markdown-it-mark": "^4.0.0",
     "playwright-chromium": "^1.45.0",
-    "qrcode.vue": "^3.4.1"
+    "qrcode.vue": "^3.4.1",
+    "@slidev/cli": "^0.49.16"
   },
   "repository": {
     "type": "git",
@@ -48,7 +49,6 @@
     "highlighter": "all"
   },
   "devDependencies": {
-    "@slidev/cli": "^0.49.15",
     "pnpm": "^9.4.0",
     "vitepress": "^1.2.3"
   },
