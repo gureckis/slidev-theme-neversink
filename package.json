@@ -19,7 +19,8 @@
     "screenshot:dev": "slidev screenshot.md",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "ci:publish": "pnpm publish --access public"
   },
   "dependencies": {
     "@iconify-json/logos": "^1.1.42",
