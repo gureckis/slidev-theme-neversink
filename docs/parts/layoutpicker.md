@@ -34,4 +34,40 @@
             <img src="/screenshots/22.png" alt="side-title slide example" width="300" class="screenshot mb-10 mt-10"/>
         </a>
     </div>
+    <div class="grid-item grid-col-span-1">
+        <a href="layouts/quote">
+            <img src="/screenshots/26.png" alt="quote slide example" width="300" class="screenshot mb-10 mt-10"/>
+        </a>
+    </div>
+    <div class="grid-item grid-col-span-1">
+        <a href="layouts/section">
+            <img src="/screenshots/27.png" alt="section slide example" width="300" class="screenshot mb-10 mt-10"/>
+        </a>
+    </div>
+    <div class="grid-item grid-col-span-1">
+        <a href="layouts/full">
+            <img src="/screenshots/29.png" alt="section slide example" width="300" class="screenshot mb-10 mt-10"/>
+        </a>
+    </div>
+    <div class="grid-item grid-col-span-1">
+        <a href="components/admonitions">
+            <img src="/screenshots/34.png" alt="admonition slide example" width="300" class="screenshot mb-10 mt-10"/>
+        </a>
+    </div>
+    <div class="grid-item grid-col-span-1">
+        <a href="components/stickynote">
+            <img src="/screenshots/36.png" alt="stickynote slide example" width="300" class="screenshot mb-10 mt-10"/>
+        </a>
+    </div>
+    <div class="grid-item grid-col-span-1">
+        <a href="components/qrcode">
+            <img src="/screenshots/38.png" alt="stickynote slide example" width="300" class="screenshot mb-10 mt-10"/>
+        </a>
+    </div>
+    <div class="grid-item grid-col-span-1">
+        <a href="components/speechbubble">
+            <img src="/screenshots/35.png" alt="speechbubble slide example" width="300" class="screenshot mb-10 mt-10"/>
+        </a>
+    </div>
+
 </div>

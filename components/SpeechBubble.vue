@@ -60,7 +60,11 @@ const bubbleStyles = computed(() => ({
   </div>
 </template>
 
-<style scoped>
+<style>
+.speech-bubble p:first-child {
+  margin-top: 0;
+}
+
 .speech-bubble {
   --arrow-w: 0.5em;
   --arrow-h: 1em;

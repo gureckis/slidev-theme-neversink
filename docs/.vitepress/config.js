@@ -56,6 +56,7 @@ export default defineConfig({
             ],
           },
           { text: 'Customizing', link: '/customizing' },
+          { text: 'Contributing', link: '/contributing' },
         ],
       },
     ],

@@ -6,6 +6,12 @@ import 'uno.css'
 import './style.css'
 import '../../../styles/colors.css'
 
+import Admonition from '../../../components/Admonition.vue'
+import AdmonitionType from '../../../components/AdmonitionType.vue'
+import StickyNote from '../../../components/StickyNote.vue'
+import QrcodeVue from 'qrcode.vue'
+import SpeechBubble from '../../../components/SpeechBubble.vue'
+
 /** @type {import('vitepress').Theme} */
 export default {
   extends: DefaultTheme,
@@ -16,5 +22,10 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
+    app.component('Admonition', Admonition)
+    app.component('AdmonitionType', AdmonitionType)
+    app.component('StickyNote', StickyNote)
+    app.component('QRCode', QrcodeVue)
+    app.component('SpeechBubble', SpeechBubble)
   },
 }
