@@ -69,7 +69,7 @@ const bubbleStyles = computed(() => ({
   --arrow-w: 0.5em;
   --arrow-h: 1em;
   --bubble-corners: 2px;
-  --w: 100%;
+  --w: v-bind(props.maxWidth);
   --border-size: v-bind(props.borderWidth);
   text-align: var(--text-align);
   height: fit-content;

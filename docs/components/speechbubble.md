@@ -6,49 +6,64 @@
 
 StickyNotes are a take on the classic computer metaphor of a sticknote. They are often used to provide notes or additional information to the viewer.
 
-## `StickyNote`
+## `SpeechBubble`
 
-The `StickyNote` component is used to create a colored box with an title and content. The StickyNote component has the following props:
+The `SpeechBubble` component is used to create a colored bubble with a speech bubble tail. The `SpeechBubble` has the following props:
 
-- `title` (optional). Default value is ''
-- `color` (optional) can be any of the [color scheme](/colors) options. If not provided, the default color is `amber-light`.
-- `width` (optional) the width of the admonition. Default is `180px`.
+- `position` (optional). Default value is `b`. Options are `t` (top), `b` (bottom), `l` (left), `r` (right), `tl` (top left), `tr` (top right), `bl` (bottom left), `br` (bottom right).
+- `shape` (optional). Default value is `''`. Options are `round` and `circle` which affect the corner radius of the bubble.
+- `animation` (optional). Default value is `''`. Options are `pop` and `float`
+- `color` (optional) can be any of the [color scheme](/colors) options. If not provided, the default color is `red-light`.
 - `textAlign` (optional) the text alignment of the content. Default is `left`.
+- `maxWidth` (optional) the maximum width of the speech bubble. Default is `100%`.
+- `borderWidth` (optional) the width of the border. Default is `1px`.
 
 Example:
 
 ```md
-<StickyNote color="amber-light" textAlign="left" width="180px" title="Title">
+<SpeechBubble position="r" color='sky' shape="round" maxWidth="300px">
 
-Hello, I'm a **sticky note**.
-</StickyNote>
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
 ```
 
 Renders as:
-<StickyNote color="amber-light" textAlign="left" width="180px" title="Title">
+<SpeechBubble position="r" color='sky' shape="round" maxWidth="300px">
 
-Hello, I'm a **sticky note**.
-</StickyNote>
-
-If you want to position it somewhere arbitrary on the slide add v-drag to the admonition and also set the width to something fixed (e.g., `300px`):
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
 
 ```md
-<StickyNote color="amber-light" textAlign="left" width="180px" title="Title" v-drag>
+<SpeechBubble position="b" color='sky' shape="round" maxWidth="300px">
 
-Hello, I'm a **sticky note**.
-</StickyNote>
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
 ```
 
-Another color:
+Renders as:
+<SpeechBubble position="b" color='sky' shape="round" maxWidth="300px">
+
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
 
 ```md
-<StickyNote color="pink-light" textAlign="left" width="180px" title="Title">
+<SpeechBubble position="t" color='amber' shape="round" maxWidth="300px">
 
-Hello, I'm a **sticky note**.
-</StickyNote>
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
 ```
 
-<StickyNote color="pink-light" textAlign="left" width="180px" title="Title">
+Renders as:
+<SpeechBubble position="t" color='amber' shape="round" maxWidth="300px">
 
-Hello, I'm a **sticky note**.
-</StickyNote>
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
+
+If you want to position it somewhere arbitrary on the slide add v-drag to the admonition and also set the maxWidth to something fixed (e.g., `300px`):
+
+```md
+<SpeechBubble position="t" color='sky' shape="round" maxWidth="300px" v-drag>
+
+Hello, I'm a **speech bubble**! I'm a longer speech bubble. I'm still going.
+</SpeechBubble>
+```
