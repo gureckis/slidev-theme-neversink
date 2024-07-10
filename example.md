@@ -574,16 +574,12 @@ You can use HTML and inline CSS to modify the look and feel.
 ---
 layout: quote
 color: sky-light
-quote: "This is a quote slide.  It has a frontmatter option of `quote` which is the text that appears in the quote box and `author` and options for the size of the text(`quotesize: text2xl` and `authorsize: text-l`).  I feel it is a little uninspired but might save you some time."
+quotesize: text-sm
+authorsize: text-sm
 author: "Todd Gureckis"
 ---
 
-
----
-layout: quote
-color: amber-light
----
-
+"This is a quote slide.  It has a frontmatter option of `quote` which is the text that appears in the quote box and `author` and options for the size of the text(`quotesize: text-2xl` and `authorsize: text-l`).  I feel it is a little uninspired but might save you some time."
 
 
 
