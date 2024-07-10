@@ -2,11 +2,12 @@ import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
 import { sub } from '@mdit/plugin-sub'
 import Mark from 'markdown-it-mark'
+import { version } from '../../package.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Slidev Theme Neversink',
-  description: 'An education/academia oriented Slidev theme with whimsical elements',
+  description: 'An education/academic oriented Slidev theme',
   base: '/slidev-theme-neversink/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -14,6 +15,10 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Getting started', link: '/getting-started' },
       { text: 'Example Deck', link: 'https://gureckis.github.io/slidev-theme-neversink/example/#1', target: '_self' },
+      {
+        text: `v${version}`,
+        items: [{ text: 'Release Notes', link: 'https://github.com/slidevjs/slidev/releases' }],
+      },
     ],
 
     sidebar: [
@@ -61,7 +66,7 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/gureckis/slidev-theme-neversink' }],
   },
   markdown: {
     config: (md) => {

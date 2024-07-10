@@ -3,7 +3,8 @@
 layout: home
 
 hero:
-  name: 'Neversink'
+  name: ''
+  text: 'Neversink'
   tagline: An education/academic Slidev theme
   actions:
     - theme: brand
