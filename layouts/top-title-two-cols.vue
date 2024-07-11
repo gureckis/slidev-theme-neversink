@@ -59,7 +59,7 @@ const colorscheme = computed(() => {
   </div>
   <template v-else>
     <div class="flex flex-col h-full w-full">
-      <div class="w-full h-fit min-h-14 pt-2 pb-2 slidecolor" :class="colorscheme">
+      <div class="w-full h-fit min-h-12 pt-2 pb-2 slidecolor" :class="colorscheme">
         <div class="slidev-layout toptitlebar p-0 ml-6 mr-6 mt-auto mb-auto" :class="alignment.t">
           <slot name="title" />
         </div>
