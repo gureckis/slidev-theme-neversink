@@ -54,6 +54,7 @@ export default defineConfig({
             items: [
               { text: 'Overview', link: '/components' },
               { text: 'Admonitions', link: '/components/admonitions' },
+              { text: 'Email', link: '/components/email' },
               { text: 'SpeechBubble', link: '/components/speechbubble' },
               { text: 'StickyNote', link: '/components/stickynote' },
               { text: 'CreditScroll', link: '/components/creditscroll' },
