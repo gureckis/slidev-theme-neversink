@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, useSlots } from 'vue'
 import { compute_alignment, compute_column_size } from '../layoutHelper'
+
+const slots = useSlots()
 
 const props = defineProps({
   columns: {
@@ -59,7 +61,7 @@ const colorscheme = computed(() => {
   </div>
   <template v-else>
     <div class="flex flex-col h-full w-full">
-      <div class="w-full h-fit min-h-12 pt-2 pb-2 slidecolor" :class="colorscheme">
+      <div class="w-full h-fit min-h-13 pt-2 pb-2 slidecolor" :class="colorscheme">
         <div class="slidev-layout toptitlebar p-0 ml-6 mr-6 mt-auto mb-auto" :class="alignment.t">
           <slot name="title" />
         </div>
@@ -74,7 +76,7 @@ const colorscheme = computed(() => {
           </div>
         </div>
       </div>
-      <div class="slidev-layout toptitlecontent h-fit w-full">
+      <div v-if="$slots.default" class="h-fit w-full">
         <slot name="default" />
       </div>
     </div>
@@ -84,6 +86,42 @@ const colorscheme = computed(() => {
 <style>
 .slidev-layout.toptitlecontent {
   padding-top: 1.3rem;
+}
+
+.slidev-layout.toptitlecontent h1 + ul {
+  margin-top: 0em;
+}
+.slidev-layout.toptitlecontent h2 + ul {
+  margin-top: 0em;
+}
+
+.slidev-layout.toptitlecontent h3 + ul {
+  margin-top: 0em;
+}
+
+li li {
+  margin-top: 0.5em; /* Adjust this value as needed */
+}
+
+.slidev-layout.toptitlecontent h1 {
+  font-size: 1.4em;
+  font-family: var(--neversink-title-font);
+  font-weight: 500;
+  margin-bottom: 0rem;
+}
+
+.slidev-layout.toptitlecontent h2 {
+  font-size: 1.4em;
+  font-family: var(--neversink-title-font);
+  font-weight: 500;
+  margin-bottom: 0rem;
+}
+
+.slidev-layout.toptitlecontent h3 {
+  font-size: 1.1em;
+  font-family: var(--neversink-title-font);
+  font-weight: 500;
+  margin-bottom: 0rem;
 }
 
 .toptitlebar {

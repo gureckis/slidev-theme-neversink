@@ -20,10 +20,10 @@ const colorscheme = computed(() => {
 
 <template>
   <div class="slidev-layout cover h-full slidecolor" :class="colorscheme">
-    <div class="my-auto w-full">
+    <div class="myauto w-full">
       <slot />
     </div>
-    <div class="absolute bottom-10">
+    <div class="note absolute bottom-3">
       <slot name="note" />
     </div>
   </div>
@@ -34,11 +34,27 @@ const colorscheme = computed(() => {
 
 .slidev-layout.cover {
   font-family: var(--neversink-main-font);
+
   font-weight: 300;
+}
+
+.slidev-layout.cover {
+  margin-bottom: 0px;
+}
+
+.slidev-layout.cover p {
+  letter-spacing: 0.05em;
+  font-size: 0.85em;
+  line-height: 1.4em;
 }
 
 .slidev-layout.cover strong {
   font-weight: 500;
+}
+
+.slidev-layout.cover .note {
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
 .slidev-layout.cover h1 {
@@ -47,6 +63,7 @@ const colorscheme = computed(() => {
   font-size: 3em;
   line-height: normal;
   margin-bottom: 0.9rem;
+  margin-top: 40px;
 }
 
 .slidev-layout.cover h2 {
@@ -55,6 +72,7 @@ const colorscheme = computed(() => {
   font-size: 2.5em;
   line-height: normal;
   margin-bottom: 0.9rem;
+  margin-top: 40px;
 }
 
 .slidev-layout.cover h3 {
@@ -63,6 +81,7 @@ const colorscheme = computed(() => {
   font-size: 1.9em;
   line-height: normal;
   margin-bottom: 0.9rem;
+  margin-top: 40px;
 }
 
 .slidev-layout.cover h1 + p {
