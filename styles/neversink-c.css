@@ -1,0 +1,103 @@
+/* neversink-c.css
+   provides custom helper classes for the Neversink theme 
+   the have the namespace ns-c- for 'neversink convenience' 
+   these provide simple styles for common elements
+   in talks
+
+   In addition to these there are shorthands for color schemes
+
+   ns-c-bk-scheme
+   ns-c-wh-scheme
+   ns-c-dk-scheme
+   ns-c-lt-scheme
+   ns-c-nv-scheme
+   ns-c-nv-lt-scheme
+   ns-c-red-scheme
+   ns-c-red-lt-scheme
+   and
+   ns-c-XX-scheme
+   ns-c-XX-lt-scheme
+   ...
+   where XX can be
+    slate, 
+    gray, 
+    zinc, 
+    neutral, 
+    stone, 
+    red, 
+    orange, 
+    amber, 
+    yellow, 
+    lime, 
+    green, 
+    emerald, 
+    teal, 
+    cyan, 
+    sky, 
+    blue, 
+    indigo, 
+    violet, 
+    purple, 
+    fuchsia, 
+    pink, 
+    rose, 
+    navy
+
+
+*/
+/* adds a modifier class which reduces the space between bullets */
+.ns-c-tight li {
+  line-height: normal;
+  margin-bottom: 0.4em;
+}
+
+.ns-c-verytight li {
+  line-height: normal;
+  margin-bottom: 0.1em;
+}
+
+.ns-c-supertight li {
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.ns-c-cite {
+  font-size: 0.75em;
+  font-style: italic;
+  @apply text-gray-400;
+}
+
+.ns-c-cite-bl {
+  text-align: left;
+  margin-bottom: 0.85em;
+  margin-left: 1.5em;
+  margin-top: auto;
+}
+
+.ns-c-quote {
+  font-family: var(--neversink-quote-font);
+  font-weight: 300;
+  @apply leading-relaxed;
+}
+
+.ns-c-border {
+  border-left: 0.25em solid var(--neversink-text-color);
+  background-color: var(--neversink-bg-color);
+  color: var(--neversink-text-color);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.ns-c-imgtile img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
+
+/* for links that are icons.  removes underlining which is default for links in markdown parser */
+.ns-c-iconlink a {
+  border-style: none !important;
+  border-bottom: none !important;
+}

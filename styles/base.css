@@ -5,8 +5,9 @@
 :root {
   --neversink-title-font: 'Inter', sans-serif;
   --neversink-main-font: 'Inter', sans-serif;
-  --neversink-mono-font: 'Inter', monospace;
-  --neversink-quote-font: 'Fire Code', monospace;
+  --neversink-mono-font: 'Fira Code', monospace;
+  --neversink-quote-font: 'Fira Code', monospace;
+  --font-mono: 'Courier New', Courier, monospace;
   @apply neversink-white-scheme; /* apply the default white scheme everywhere */
 }
 
@@ -16,7 +17,7 @@
 #page-root {
   font-family: var(--neversink-main-font);
   font-weight: 400;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.015rem;
 }
 
 /* binds variable to the color of a slide*/
@@ -25,16 +26,13 @@
   color: var(--neversink-text-color);
 }
 
+.slidev-layout p {
+  line-height: normal;
+}
 /* adjust default bullets */
 .slidev-layout li {
   margin-bottom: 1em;
   line-height: 1.5em;
-}
-
-/* adds a modifier class which reduces the space between bullets */
-.tight li {
-  line-height: 1em;
-  margin-bottom: 0.5em;
 }
 
 /* change the bold and strong fonts */
@@ -71,12 +69,6 @@
   padding-left: 0.375rem;
   padding-right: 0.375rem;
   font-weight: 300;
-}
-
-/* for links that are icons.  removes underlining which is default for links in markdown parser */
-.iconlink a {
-  border-style: none !important;
-  border-bottom: none !important;
 }
 
 /* default layout */
@@ -196,7 +188,7 @@ img {
   pointer-events: none;
 }
 
-.fader .slidev-vclick-prior {
+.ns-c-fader .slidev-vclick-prior {
   opacity: 0.3;
   pointer-events: none;
 }

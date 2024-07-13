@@ -53,124 +53,98 @@ const generate_color_schemes = (colors) => {
   const schemes = []
   const classes = []
 
-  schemes.push([
-    `neversink-black-scheme`,
-    {
-      '--neversink-bg-color': colors['black'],
-      '--neversink-bg-code-color': colors['gray'][600],
-      '--neversink-fg-code-color': colors['white'],
-      '--neversink-fg-color': colors['white'],
-      '--neversink-text-color': colors['white'],
-      '--neversink-border-color': colors['white'],
-      '--neversink-highlight-color': '#FFA500',
-    },
-  ])
-  classes.push('neversink-black-scheme')
+  const addScheme = (longName, shortName, styles) => {
+    schemes.push([longName, styles])
+    schemes.push([shortName, styles])
+    classes.push(longName, shortName)
+  }
 
-  schemes.push([
-    `neversink-white-scheme`,
-    {
-      '--neversink-bg-color': colors['white'],
-      '--neversink-bg-code-color': colors['gray'][100],
-      '--neversink-fg-code-color': colors['black'],
-      '--neversink-fg-color': colors['black'],
-      '--neversink-text-color': colors['black'],
-      '--neversink-border-color': colors['gray'][950],
-      '--neversink-highlight-color': '#FFA500',
-    },
-  ])
-  classes.push('neversink-white-scheme')
+  addScheme('neversink-black-scheme', 'ns-c-bk-scheme', {
+    '--neversink-bg-color': colors['black'],
+    '--neversink-bg-code-color': colors['gray'][600],
+    '--neversink-fg-code-color': colors['white'],
+    '--neversink-fg-color': colors['white'],
+    '--neversink-text-color': colors['white'],
+    '--neversink-border-color': colors['white'],
+    '--neversink-highlight-color': '#FFA500',
+  })
 
-  schemes.push([
-    `neversink-dark-scheme`,
-    {
-      '--neversink-bg-color': colors['gray'][800],
-      '--neversink-bg-code-color': colors['gray'][600],
-      '--neversink-fg-code-color': colors['white'],
-      '--neversink-fg-color': colors['gray'][100],
-      '--neversink-text-color': colors['gray'][100],
-      '--neversink-border-color': colors['gray'][100],
-      '--neversink-highlight-color': '#FFA500',
-    },
-  ])
-  classes.push('neversink-dark-scheme')
+  addScheme('neversink-white-scheme', 'ns-c-wh-scheme', {
+    '--neversink-bg-color': colors['white'],
+    '--neversink-bg-code-color': colors['gray'][100],
+    '--neversink-fg-code-color': colors['black'],
+    '--neversink-fg-color': colors['black'],
+    '--neversink-text-color': colors['black'],
+    '--neversink-border-color': colors['gray'][950],
+    '--neversink-highlight-color': '#FFA500',
+  })
 
-  schemes.push([
-    `neversink-light-scheme`,
-    {
-      '--neversink-bg-color': colors['gray'][100],
-      '--neversink-bg-code-color': colors['gray'][200],
-      '--neversink-fg-color': colors['gray'][800],
-      '--neversink-text-color': colors['gray'][800],
-      '--neversink-border-color': colors['gray'][800],
-      '--neversink-highlight-color': '#FFA500',
-    },
-  ])
-  classes.push('neversink-light-scheme')
+  addScheme('neversink-dark-scheme', 'ns-c-dk-scheme', {
+    '--neversink-bg-color': colors['gray'][800],
+    '--neversink-bg-code-color': colors['gray'][600],
+    '--neversink-fg-code-color': colors['white'],
+    '--neversink-fg-color': colors['gray'][100],
+    '--neversink-text-color': colors['gray'][100],
+    '--neversink-border-color': colors['gray'][100],
+    '--neversink-highlight-color': '#FFA500',
+  })
+
+  addScheme('neversink-light-scheme', 'ns-c-lt-scheme', {
+    '--neversink-bg-color': colors['gray'][100],
+    '--neversink-bg-code-color': colors['gray'][200],
+    '--neversink-fg-color': colors['gray'][800],
+    '--neversink-text-color': colors['gray'][800],
+    '--neversink-border-color': colors['gray'][800],
+    '--neversink-highlight-color': '#FFA500',
+  })
 
   for (const color of colornames) {
     if (color == 'navy') {
-      schemes.push([
-        `neversink-navy-scheme`,
-        {
-          '--neversink-bg-color': '#2a373a',
-          '--neversink-bg-code-color': colors['gray'][200],
-          '--neversink-fg-color': colors['gray'][300],
-          '--neversink-text-color': colors['gray'][300],
-          '--neversink-border-color': colors['gray'][300],
-          '--neversink-highlight-color': '#FFA500',
-        },
-      ])
-      classes.push('neversink-navy-scheme')
+      addScheme('neversink-navy-scheme', 'ns-c-nv-scheme', {
+        '--neversink-bg-color': '#2a373a',
+        '--neversink-bg-code-color': colors['gray'][200],
+        '--neversink-fg-color': colors['gray'][300],
+        '--neversink-text-color': colors['gray'][300],
+        '--neversink-border-color': colors['gray'][300],
+        '--neversink-highlight-color': '#FFA500',
+      })
 
-      schemes.push([
-        `neversink-navy-light-scheme`,
-        {
-          '--neversink-bg-color': colors['gray'][50],
-          '--neversink-bg-code-color': colors['gray'][400],
-          '--neversink-fg-color': '#2a373a',
-          '--neversink-text-color': '#2a373a',
-          '--neversink-border-color': '#2a373a',
-          '--neversink-highlight-color': '#FFA500',
-        },
-      ])
-      classes.push('neversink-navy-light-scheme')
+      addScheme('neversink-navy-light-scheme', 'ns-c-nv-lt-scheme', {
+        '--neversink-bg-color': colors['gray'][50],
+        '--neversink-bg-code-color': colors['gray'][400],
+        '--neversink-fg-color': '#2a373a',
+        '--neversink-text-color': '#2a373a',
+        '--neversink-border-color': '#2a373a',
+        '--neversink-highlight-color': '#FFA500',
+      })
     } else {
-      // push the normal theme
-      schemes.push([
-        `neversink-${color}-scheme`,
-        {
-          '--neversink-bg-color': colors[color][500],
-          '--neversink-bg-code-color': colors[color][600],
-          '--neversink-fg-code-color': colors[color][100],
-          '--neversink-fg-color': colors[color][100],
-          '--neversink-text-color': colors[color][100],
-          '--neversink-border-color': colors[color][100],
-          '--neversink-highlight-color': colors[color][100],
-          '--neversink-admon-bg-color': colors[color][500],
-          '--neversink-admon-border-color': colors[color][300],
-          '--neversink-admon-text-color': colors[color][100],
-        },
-      ])
-      classes.push(`neversink-${color}-scheme`)
+      const shortColor = color.slice(0, 2)
 
-      // push the light theme
-      schemes.push([
-        `neversink-${color}-light-scheme`,
-        {
-          '--neversink-bg-color': colors[color][100],
-          '--neversink-bg-code-color': colors[color][200],
-          '--neversink-fg-code-color': colors[color][500],
-          '--neversink-fg-color': colors[color][600],
-          '--neversink-text-color': colors[color][500],
-          '--neversink-border-color': colors[color][500],
-          '--neversink-highlight-color': colors[color][500],
-          '--neversink-admon-bg-color': colors[color][100],
-          '--neversink-admon-border-color': colors[color][300],
-          '--neversink-admon-text-color': colors[color][600],
-        },
-      ])
-      classes.push(`neversink-${color}-light-scheme`)
+      addScheme(`neversink-${color}-scheme`, `ns-c-${shortColor}-scheme`, {
+        '--neversink-bg-color': colors[color][500],
+        '--neversink-bg-code-color': colors[color][600],
+        '--neversink-fg-code-color': colors[color][100],
+        '--neversink-fg-color': colors[color][100],
+        '--neversink-text-color': colors[color][100],
+        '--neversink-border-color': colors[color][100],
+        '--neversink-highlight-color': colors[color][100],
+        '--neversink-admon-bg-color': colors[color][500],
+        '--neversink-admon-border-color': colors[color][300],
+        '--neversink-admon-text-color': colors[color][100],
+      })
+
+      addScheme(`neversink-${color}-light-scheme`, `ns-c-${shortColor}-lt-scheme`, {
+        '--neversink-bg-color': colors[color][100],
+        '--neversink-bg-code-color': colors[color][200],
+        '--neversink-fg-code-color': colors[color][500],
+        '--neversink-fg-color': colors[color][600],
+        '--neversink-text-color': colors[color][500],
+        '--neversink-border-color': colors[color][500],
+        '--neversink-highlight-color': colors[color][500],
+        '--neversink-admon-bg-color': colors[color][100],
+        '--neversink-admon-border-color': colors[color][300],
+        '--neversink-admon-text-color': colors[color][600],
+      })
     }
   }
   return { classes: classes, schemes: schemes }

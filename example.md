@@ -289,7 +289,7 @@ align: lt
 The available layouts in **Neversink** currently are:  
 
 
-<div class="tight">
+<div class="ns-c-tight">
 
 <div class='flex flex-wrap'>
 
@@ -478,9 +478,9 @@ Of course you can make bullet lists:
 - Hi
 - There
 
-Also there's a little helper class you can add to make the bullet spacing a bit tighter:
+Also there's a little helper class `ns-c-tight` you can add to make the bullet spacing a bit tighter:
 
-<div class="tight">
+<div class="ns-c-tight">
 
 - Hi
 - There
@@ -621,7 +621,7 @@ I'm v-dragged out and ==floating==.
 
 <IceCream :size="150" mood="lovestruck" color="#FDA7DC" v-drag="[439,341,85,150]" />
 
-<div class="tight" v-drag="[143,33,277,214]">
+<div class="ns-c-tight" v-drag="[143,33,277,214]">
 
 <span class="bg-red-100 text-red-600 p-2 border-l-6 border-2 border-red-200 rounded-lg pl-4 pr-4">Here's a list of somethings</span>
 
@@ -634,7 +634,7 @@ I'm v-dragged out and ==floating==.
 
 </div>
 
-<div class="tight" v-drag="[461,63,293,148,17]">
+<div class="ns-c-tight" v-drag="[461,63,293,148,17]">
 
 <span class="bg-emerald-100 text-emerald-500 p-2 border-l-6 border-2 border-emerald-200 rounded-lg pl-4 pr-4">Here's another list of things</span>
 
@@ -1112,7 +1112,7 @@ layout: default
 
 In addition to these custom layouts, the **Neversink** theme includes a few custom components that can be used in your slides. These include sticky notes, speech bubbles, cute icons, QR codes, and more.  The next few slides walks through them:
 
-<div class="tight">
+<div class="ns-c-tight">
 
 - admonitions
 - sticky notes

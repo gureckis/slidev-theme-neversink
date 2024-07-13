@@ -59,18 +59,7 @@ Drops the underline styling from icons.
 <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>
 ```
 
-## Tight bullets
-
-If you want to make bullets a little closer together to make spaceadd the `class='tight'`
-
-```md
-<div class="tight">
-
-- Hi
-- There
-- I need space
-</div>
-```
+````
 
 ## V-click faders
 
@@ -84,4 +73,4 @@ If you want to fade out a bullet as you step through, add the `class='fader'`
 - This is a third click
 
 </v-clicks>
-```
+````
