@@ -188,11 +188,6 @@ img {
   pointer-events: none;
 }
 
-.ns-c-fader .slidev-vclick-prior {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
 html.dark {
   /* dark mode css here */
   .lectureno {

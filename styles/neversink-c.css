@@ -101,3 +101,9 @@
   border-style: none !important;
   border-bottom: none !important;
 }
+
+/* fader for past bullets */
+.ns-c-fader .slidev-vclick-prior {
+  opacity: 0.3;
+  pointer-events: none;
+}
