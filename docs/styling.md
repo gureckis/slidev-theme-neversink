@@ -37,6 +37,20 @@ If you want to make bullets a little closer together to make spaceadd the `class
 
 Other options are `ns-c-tight` and `ns-c-supertight`.
 
+## V-click faders
+
+If you want to fade out a bullet as you step through, add the `class='ns-c-fader'`
+
+```md
+<v-clicks at="+0" class="ns-c-fader">
+
+- This one appears immediately on slide load
+- This is a second click
+- This is a third click
+
+</v-clicks>
+```
+
 ## References
 
 Including references often you want to include them but have them fade a bit relative to the main content of the tslide for this `ns-c-cite` is useful as it
@@ -86,9 +100,24 @@ If you write an icon in a link it includes the underline styleing. To remove tha
 }
 ```
 
-## For putting images in grids
+## Grids
 
+This is not a specific `ns-c-` class but a general unocss/tailwind utility for making grids.
+
+```html
+<div class="grid grid-cols-2 gap-4  w-full">
+  <div class="grid-item grid-span-1 center">Row 1, Col 1</div>
+  <div class="grid-item grid-span-1 center">Row 1, Col 2</div>
+  <div class="grid-item grid-span-1 center">Row 2, Col 1</div>
+  <div class="grid-item grid-span-1 center">Row 2, Col 2</div>
+</div>
 ```
+
+### For putting images in grids
+
+If you want to put images in a grid and have them fill the space you can use the `ns-c-imgtile` class.
+
+```css
 .ns-c-imgtile img {
   width: 100%;
   height: fit-content;
@@ -96,7 +125,44 @@ If you write an icon in a link it includes the underline styleing. To remove tha
 }
 ```
 
-## Border
+then you use it like this:
+
+```html
+<div class="grid grid-cols-2 gap-4  w-full">
+  <div class="grid-item grid-span-1 center"><img src="/images/img1.jpg" /></div>
+  <div class="grid-item grid-span-1 center"><img src="/images/img2.jpg" /></div>
+  <div class="grid-item grid-span-1 center"><img src="/images/img3.jpg" /></div>
+  <div class="grid-item grid-span-1 center"><img src="/images/img4.jpg" /></div>
+</div>
+```
+
+## Columns
+
+To make side by side columns use a flex box with `flex-wrap` and `w-1/X` where X is the proportion you want to give to each column.
+
+```html
+<div class="flex flex-wrap ">
+  <div class="w-1/5">Hit wall</div>
+  <div class="w-1/5">Hit wall and goes on floor</div>
+  <div class="w-1/5">Hit wall and goes in bucket</div>
+  <div class="w-1/5">Misses wall</div>
+  <div class="w-1/5">Hit bucket and then hits walls</div>
+</div>
+```
+
+To add a border
+
+```html
+<div class="flex flex-wrap ">
+  <div class="w-1/5 border-1 border-r-0">Hit wall</div>
+  <div class="w-1/5 border-1 border-r-0">Hit wall and goes on floor</div>
+  <div class="w-1/5 border-1 border-r-0">Hit wall and goes in bucket</div>
+  <div class="w-1/5 border-1 border-r-0">Misses wall</div>
+  <div class="w-1/5 border-1">Hit bucket and then hits walls</div>
+</div>
+```
+
+## Borders
 
 I forgot why i made this utility
 

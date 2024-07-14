@@ -50,27 +50,3 @@ This is my ==highlighted text==.
 ```
 
 Using the `==` syntax. Like ==this==.
-
-## Icon link
-
-Drops the underline styling from icons.
-
-```
-<a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>
-```
-
-````
-
-## V-click faders
-
-If you want to fade out a bullet as you step through, add the `class='fader'`
-
-```md
-<v-clicks at="+0" class="fader">
-
-- This one appears immediately on slide load
-- This is a second click
-- This is a third click
-
-</v-clicks>
-````
