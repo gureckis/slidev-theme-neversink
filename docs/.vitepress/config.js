@@ -17,7 +17,7 @@ export default defineConfig({
       { text: 'Example Deck', link: 'https://gureckis.github.io/slidev-theme-neversink/example/#1', target: '_self' },
       {
         text: `v${version}`,
-        items: [{ text: 'Release Notes', link: 'https://github.com/slidevjs/slidev/releases' }],
+        items: [{ text: 'Release Notes', link: 'https://github.com/gureckis/slidev-theme-neversink/releases' }],
       },
     ],
 
