@@ -35,6 +35,10 @@
   line-height: 1.5em;
 }
 
+.slidev-layout ul {
+  margin-top: 0.7em;
+}
+
 /* change the bold and strong fonts */
 .slidev-layout strong,
 .slidev-layout b {
