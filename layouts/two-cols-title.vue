@@ -105,7 +105,7 @@ const flexclass = computed(() => {
   </div>
 </template>
 
-<style scoped>
+<style>
 .slidev-layout.two-cols-header,
 .slidev-layout.two-cols-footer {
   display: grid;
@@ -127,6 +127,18 @@ const flexclass = computed(() => {
 .slidev-layout.two-cols-footer .title {
   grid-area: 3 / 1 / 4 / span 12; /* full width */
   margin-bottom: 1rem;
+}
+
+.slidev-layout.two-cols-header .title h1 + p,
+.slidev-layout.two-cols-footer .title h1 + p {
+  margin-top: 0.2em;
+  margin-bottom: 0;
+}
+
+.slidev-layout.two-cols-header .title p,
+.slidev-layout.two-cols-footer .title p {
+  margin-top: 0.2em;
+  margin-bottom: 0;
 }
 
 .slidev-layout.two-cols .left-col,
