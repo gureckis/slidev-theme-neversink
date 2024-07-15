@@ -3,6 +3,7 @@ import { defineConfig } from 'unocss'
 import presetUno from '@unocss/preset-uno'
 import { colors } from '@unocss/preset-mini'
 import transformerDirectives from '@unocss/transformer-directives'
+import { version } from './package.json'
 
 // Tailwind CSS color palette
 const colornames = [
@@ -169,7 +170,7 @@ const generateRows = (max) => {
 
 const schemes = generate_color_schemes(colors)
 
-console.log('Loading Neversink theme uno.config.ts...')
+console.log(`Loading Neversink ${version} theme uno.config.ts...`)
 export default defineConfig({
   // ...UnoCSS options
   presets: [presetUno()],
