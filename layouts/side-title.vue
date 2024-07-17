@@ -50,7 +50,7 @@ const colorscheme = computed(() => {
 </script>
 <template>
   <div v-if="side == 'error' || colwidth == 'error'" class="slidev-layout default error">
-    <span class="warning"><b>Error</b>: invalid layout params.</span>
+    <span class="ns-c-warning"><b>Error</b>: invalid layout params.</span>
     <hr />
     <p>
       There are three parameters: <code>color</code>, <code>columns</code> and <code>align</code>. Currently:

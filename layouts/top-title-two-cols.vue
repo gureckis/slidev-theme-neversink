@@ -32,7 +32,7 @@ const colorscheme = computed(() => {
     v-if="colwidth == 'error' || alignment.t == 'error' || alignment.l == 'error' || alignment.r == 'error'"
     class="slidev-layout default error"
   >
-    <span class="warning"><b>Error</b>: invalid layout params.</span>
+    <span class="ns-c-warning"><b>Error</b>: invalid layout params.</span>
     <hr />
     <p>
       There are three parameters: <code>columns</code>, <code>align</code>, and <code>color</code>. Currently:

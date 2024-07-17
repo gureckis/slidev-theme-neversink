@@ -34,29 +34,29 @@ export function handleBackground(background?: string, dim = false): CSSPropertie
 export function compute_alignment(val) {
   switch (val) {
     case 'ct':
-      return 'center top'
+      return 'ns-c-center ns-c-top'
     case 'cm':
-      return 'center middle'
+      return 'ns-c-center ns-c-middle'
     case 'cb':
-      return 'center bottom'
+      return 'ns-c-center ns-c-bottom'
     case 'lt':
-      return 'left top'
+      return 'ns-c-left ns-c-top'
     case 'lm':
-      return 'left middle'
+      return 'ns-c-left ns-c-middle'
     case 'lb':
-      return 'left bottom'
+      return 'ns-c-left ns-c-bottom'
     case 'rt':
-      return 'right top'
+      return 'ns-c-right ns-c-top'
     case 'rm':
-      return 'right middle'
+      return 'ns-c-right ns-c-middle'
     case 'rb':
-      return 'right bottom'
+      return 'ns-c-right ns-c-bottom'
     case 'c':
-      return 'center top'
+      return 'ns-c-center ns-c-top'
     case 'l':
-      return 'left top'
+      return 'ns-c-left ns-c-top'
     case 'r':
-      return 'right top'
+      return 'ns-c-right ns-c-top'
     default:
       return 'error'
   }

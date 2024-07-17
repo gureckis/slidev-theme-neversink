@@ -129,50 +129,6 @@
   margin-top: 1.5em;
 }
 
-/* columns stuff */
-.warning {
-  color: red;
-}
-.error {
-  font-size: 0.9em;
-}
-
-.left {
-  justify-content: left; /* Left align the content */
-  text-align: left;
-  align-items: start;
-}
-
-.center {
-  justify-content: center; /* Horizontally center the content */
-  text-align: center;
-  align-items: center;
-}
-
-.right {
-  justify-content: right; /* Right align the content */
-  text-align: right;
-  align-items: end;
-}
-
-.top {
-  margin-top: 0;
-  margin-bottom: auto;
-}
-.middle {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.bottom {
-  margin-top: auto;
-  margin-bottom: 0;
-}
-
-/* a new tight bullet list */
-/* .tight {
-  margin-top: 1em;
-} */
-
 .bwimg {
   filter: grayscale(100%) contrast(150%) brightness(120%);
   display: inline;

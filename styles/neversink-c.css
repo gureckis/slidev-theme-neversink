@@ -45,6 +45,46 @@
 
 
 */
+
+/* columns stuff */
+.ns-c-warning {
+  color: red;
+}
+.ns-c-error {
+  font-size: 0.9em;
+}
+
+.ns-c-left {
+  justify-content: left; /* Left align the content */
+  text-align: left;
+  align-items: start;
+}
+
+.ns-c-center {
+  justify-content: center; /* Horizontally center the content */
+  text-align: center;
+  align-items: center;
+}
+
+.ns-c-right {
+  justify-content: right; /* Right align the content */
+  text-align: right;
+  align-items: end;
+}
+
+.ns-c-top {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+.ns-c-middle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.ns-c-bottom {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
 /* adds a modifier class which reduces the space between bullets */
 .ns-c-tight li {
   line-height: normal;

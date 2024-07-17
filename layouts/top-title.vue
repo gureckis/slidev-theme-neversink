@@ -23,7 +23,7 @@ const colorscheme = computed(() => {
 </script>
 <template>
   <div v-if="alignment == 'error'" class="slidev-layout default error">
-    <span class="warning"><b>Error</b>: invalid layout params.</span>
+    <span class="ns-c-warning"><b>Error</b>: invalid layout params.</span>
     <hr />
     <p>
       There are two parameters: <code>color</code> <code>align</code>. Currently:
