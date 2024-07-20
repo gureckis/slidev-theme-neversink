@@ -130,8 +130,12 @@ const flexclass = computed(() => {
 }
 
 .slidev-layout.two-cols-header .title h1 + p,
-.slidev-layout.two-cols-footer .title h1 + p {
-  margin-top: 0.2em;
+.slidev-layout.two-cols-footer .title h1 + p,
+.slidev-layout.two-cols-header .title h2 + p,
+.slidev-layout.two-cols-footer .title h2 + p,
+.slidev-layout.two-cols-header .title h3 + p,
+.slidev-layout.two-cols-footer .title h3 + p {
+  margin-top: 0.1em;
   margin-bottom: 0;
 }
 
