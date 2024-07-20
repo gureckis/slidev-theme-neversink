@@ -62,11 +62,11 @@ const colorscheme = computed(() => {
   <template v-else>
     <div class="flex flex-col h-full w-full">
       <div class="w-full h-fit min-h-13 pt-2 pb-2 slidecolor" :class="colorscheme">
-        <div class="slidev-layout toptitlebar p-0 ml-6 mr-6 mt-auto mb-auto" :class="alignment.t">
+        <div class="slidev-layout toptitle title p-0 ml-6 mr-6 mt-auto mb-auto" :class="alignment.t">
           <slot name="title" />
         </div>
       </div>
-      <div class="slidev-layout toptitlecontent w-full">
+      <div class="slidev-layout toptitle content w-full">
         <div class="flex flex-row h-full w-full">
           <div class="col-left" :class="alignment.l">
             <slot name="left" />
@@ -84,14 +84,14 @@ const colorscheme = computed(() => {
 </template>
 
 <style>
-.slidev-layout.toptitlecontent {
+.slidev-layout.toptitle .content {
   padding-top: 1.3rem;
 }
 
-.slidev-layout.toptitlecontent h1 + ul {
+.slidev-layout.toptitle .content h1 + ul {
   margin-top: 0em;
 }
-.slidev-layout.toptitlecontent h2 + ul {
+.slidev-layout.toptitle .content h2 + ul {
   margin-top: 0em;
 }
 
@@ -110,59 +110,63 @@ li li {
   margin-bottom: 0rem;
 }
 
-.slidev-layout.toptitlecontent h2 {
+.slidev-layout.toptitle .content h2 {
   font-size: 1.4em;
   font-family: var(--neversink-title-font);
   font-weight: 500;
   margin-bottom: 0rem;
 }
 
-.slidev-layout.toptitlecontent h3 {
+.slidev-layout.toptitle .content h3 {
   font-size: 1.1em;
   font-family: var(--neversink-title-font);
   font-weight: 500;
   margin-bottom: 0rem;
 }
 
-.toptitlebar {
+.slidev-layout .toptitle .title {
   padding: 0;
   margin: 0;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.slidev-layout.toptitle h1 {
+.slidev-layout.toptitle.title h1 {
   font-size: 1.8em;
   font-family: var(--neversink-title-font);
   font-weight: 500;
-  padding-left: 25px;
   letter-spacing: 0.07em;
 }
 
-.slidev-layout.toptitle h2 {
+.slidev-layout.toptitle.title h2 {
   font-size: 1.5em;
   font-family: var(--neversink-title-font);
   font-weight: 300;
-  padding-left: 25px;
   letter-spacing: 0.07em;
 }
 
-.slidev-layout.toptitle h3 {
+.slidev-layout.toptitle.title h3 {
   font-size: 1.1em;
   font-family: var(--neversink-title-font);
   font-weight: 300;
-  padding-left: 25px;
   letter-spacing: 0.07em;
+}
+
+.slidev-layout.toptitle.title h1 + p,
+.slidev-layout.toptitle.title h2 + p,
+.slidev-layout.toptitle.title h3 + p {
+  margin-top: 0.85em;
+  margin-bottom: 0.3em;
 }
 </style>
 
 <style scoped>
-.slidev-layout.toptitlecontent .col-left {
+.slidev-layout.toptitle.content .col-left {
   flex: v-bind(colwidth.l); /* Makes each column take up equal space */
   margin-right: 15px;
 }
 
-.slidev-layout.toptitlecontent .col-right {
+.slidev-layout.toptitle.content .col-right {
   flex: v-bind(colwidth.r); /*Makes each column take up equal space */
   margin-left: 15px;
 }

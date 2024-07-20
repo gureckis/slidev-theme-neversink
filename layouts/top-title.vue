@@ -44,11 +44,11 @@ const colorscheme = computed(() => {
   <template v-else>
     <div class="flex flex-col h-full w-full">
       <div class="w-full h-fit min-h-13 pt-2 pb-2 slidecolor" :class="colorscheme">
-        <div class="slidev-layout toptitlebar p-0 pt-0 ml-6 mr-6 mt-auto mb-auto" :class="alignment">
+        <div class="slidev-layout toptitle title p-0 pt-0 ml-6 mr-6 mt-auto mb-auto" :class="alignment">
           <slot name="title" />
         </div>
       </div>
-      <div class="slidev-layout toptitlecontent h-fit w-full">
+      <div class="slidev-layout toptitle content h-fit w-full">
         <slot name="content" />
       </div>
       <div v-if="$slots.default" class="slidev-layout default h-fit w-full">
