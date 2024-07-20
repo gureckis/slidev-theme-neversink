@@ -37,7 +37,7 @@ If you want to make bullets a little closer together to make spaceadd the `class
 
 Other options are `ns-c-tight` and `ns-c-supertight`.
 
-## V-click faders
+## `v-clicks` faders
 
 If you want to fade out a bullet as you step through, add the `class='ns-c-fader'`
 
