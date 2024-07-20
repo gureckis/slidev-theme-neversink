@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="grid-item grid-col-span-1">
-        <a href="layouts/two-cols-header">
+        <a href="layouts/two-cols-title">
             <img src="/screenshots/8.png" alt="two-col-header slide example" width="300" class="screenshot mb-10 mt-10"/>
         </a>
     </div>
