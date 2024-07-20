@@ -138,7 +138,12 @@
 }
 
 /* for links that are icons.  removes underlining which is default for links in markdown parser */
-.ns-c-iconlink a {
+.ns-c-iconlink,
+.ns-c-iconlink a,
+.ns-c-plainlink,
+.ns-c-plainlink a,
+.ns-c-nounderline,
+.ns-c-nounderline a {
   border-style: none !important;
   border-bottom: none !important;
 }

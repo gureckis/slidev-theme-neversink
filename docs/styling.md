@@ -100,6 +100,8 @@ If you write an icon in a link it includes the underline styleing. To remove tha
 }
 ```
 
+Aliases include `ns-c-plainlink` and `ns-c-nounderline`.
+
 ## Grids
 
 This is not a specific `ns-c-` class but a general unocss/tailwind utility for making grids.

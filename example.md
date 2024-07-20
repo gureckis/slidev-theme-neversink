@@ -10,10 +10,7 @@ neversink_string: "Neversink Example Deck"
 # Neversink
 
 A [Slidev](https://sli.dev) theme designed by **Todd Gureckis**   
-<div class="iconlink">
-
-_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
-</div>
+_New York University_ <a href="https://todd.gureckislab.org" class="ns-c-iconlink"><mdi-open-in-new /></a>  
 
 
 
@@ -348,10 +345,7 @@ layout: cover
 # This is the `cover` layout
 
 **Todd Gureckis**   
-<div class="iconlink">
-
-_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
-</div>
+_New York University_ <a href="https://todd.gureckislab.org" class="ns-c-iconlink"><mdi-open-in-new /></a>  
 
 :: note ::
 
@@ -370,10 +364,7 @@ color: dark
 # This is the `cover` layout
 
 **Todd Gureckis**   
-<div class="iconlink">
-
-_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
-</div>
+_New York University_ <a href="https://todd.gureckislab.org" class="ns-c-iconlink"><mdi-open-in-new /></a>  
 
 :: note ::
 
@@ -392,14 +383,12 @@ color: amber
 # This is the `cover` layout
 
 **Todd Gureckis**   
-<div class="iconlink">
+_New York University_ <a href="https://todd.gureckislab.org" class="ns-c-iconlink"><mdi-open-in-new /></a>  
 
-_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
-</div>
 
 :: note ::
 
-<div class="fw-200" >
+<div class="fw-200">
 
 \* Here we set `color: amber` in the frontmatter.
 
@@ -414,10 +403,8 @@ color: amber-light
 # This is the `cover` layout
 
 **Todd Gureckis**   
-<div class="iconlink">
+_New York University_ <a href="https://todd.gureckislab.org" class="ns-c-iconlink"><mdi-open-in-new /></a>  
 
-_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
-</div>
 
 :: note ::
 
@@ -436,10 +423,8 @@ color: pink
 ### This is the `cover` layout with a longer title for your talk you just use more `#`s
 
 **Todd Gureckis**   
-<div class="iconlink">
+_New York University_ <a href="https://todd.gureckislab.org" class="ns-c-iconlink"><mdi-open-in-new /></a>  
 
-_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
-</div>
 
 :: note ::
 
@@ -458,10 +443,8 @@ color: emerald-light
 # This is the `intro` layout
 
 **Todd Gureckis**   
-<div class="iconlink">
+_New York University_ <a href="https://todd.gureckislab.org" class="ns-c-iconlink"><mdi-open-in-new /></a>  
 
-_New York University_ <a href="https://todd.gureckislab.org" class="iconlink"><mdi-open-in-new /></a>  
-</div>
 
 <br />
 
@@ -566,7 +549,7 @@ layout: section
 color: navy
 ---
 
-<div class="w-1/2 ml-30">
+<div class="w-2/3 ml-30">
 
 # The `section` layout
 <hr>
@@ -1071,6 +1054,7 @@ title: Top Title (Another)
 :: title ::
 
 # `top-title`: A variation with different parameters
+
 
 :: content ::
 
