@@ -38,7 +38,7 @@ const colorscheme = computed(() => {
 .slidev-layout.section h1 {
   font-family: var(--neversink-title-font);
   font-weight: 500;
-  font-size: 1.8em;
+  font-size: 2.8em;
   padding-bottom: 0.3rem;
   line-height: normal;
 }
