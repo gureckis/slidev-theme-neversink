@@ -17,7 +17,6 @@
 #page-root {
   font-family: var(--neversink-main-font);
   font-weight: 400;
-  letter-spacing: 0.015rem;
 }
 
 /* binds variable to the color of a slide*/
