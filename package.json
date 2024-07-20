@@ -20,7 +20,8 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "ci:publish": "pnpm publish --access public --no-git-checks"
+    "ci:publish": "pnpm publish --access public --no-git-checks",
+    "release": "bumpp package.json"
   },
   "dependencies": {
     "@iconify-json/logos": "^1.1.42",
@@ -50,7 +51,8 @@
     "pnpm": "^9.4.0",
     "vitepress": "^1.2.3",
     "@slidev/cli": "^0.49.16",
-    "playwright-chromium": "^1.45.0"
+    "playwright-chromium": "^1.45.0",
+    "bumpp": "^9.4.1"
   },
   "packageManager": "pnpm@9.4.0"
 }
