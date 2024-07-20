@@ -89,63 +89,69 @@ The project uses tailwind-like color schemes arranged in ==monochromatic pairs==
 
 **B&W**:
 
+<div class="leading-[1.5em]">
 <span class="text-white bg-black p-1 pl-3 pr-3 m-1 rounded font-size-3">black</span>
-<span class="text-black bg-white border-1 border-solid border-black p1 pl-3 pr-3 m-1 rounded font-size-3">white</span>
-<span class="text-gray-100 bg-gray-800 p1 pl-3 pr-3 m-1 rounded font-size-3">dark</span>
-<span class="text-gray-800 bg-gray-100 p1 pl-3 pr-3 m-1 rounded font-size-3">light</span>
+<span class="text-black bg-white border-1 border-solid border-black p-1 pl-3 pr-3 m-1 rounded font-size-3">white</span>
+<span class="text-gray-100 bg-gray-800 p-1 pl-3 pr-3 m-1 rounded font-size-3">dark</span>
+<span class="text-gray-800 bg-gray-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">light</span>
+
+</div>
 
 **Light**:
 
-<span class="bg-slate-100 text-slate-500 p1 pl-3 pr-3 m-1 rounded font-size-3">slate-light</span>
-<span class="bg-gray-100 text-gray-500 p1 pl-3 pr-3 m-1 rounded font-size-3">gray-light</span>
-<span class="bg-zinc-100 text-zinc-500 p1 pl-3 pr-3 m-1 rounded font-size-3">zinc-light</span>
-<span class="bg-neutral-100 text-neutral-500 p1 pl-3 pr-3 m-1 rounded font-size-3">neutral-light</span>
-<span class="bg-stone-100 text-stone-500 p1 pl-3 pr-3 m-1 rounded font-size-3">stone-light</span>
-<span class="bg-red-100 text-red-500 p1 pl-3 pr-3 m-1 rounded font-size-3">red-light</span>
-<span class="bg-orange-100 text-orange-500 p1 pl-3 pr-3 m-1 rounded font-size-3">orange-light</span>
-<span class="bg-amber-100 text-amber-500 p1 pl-3 pr-3 m-1 rounded font-size-3">amber-light</span>
-<span class="bg-yellow-100 text-yellow-500 p1 pl-3 pr-3 m-1 rounded font-size-3">yellow-light</span><br />
-<span class="bg-lime-100 text-lime-500 p1 pl-3 pr-3 m-1 rounded font-size-3">lime-light</span>
-<span class="bg-green-100 text-green-500 p1 pl-3 pr-3 m-1 rounded font-size-3">green-light</span>
-<span class="bg-emerald-100 text-emerald-500 p1 pl-3 pr-3 m-1 rounded font-size-3">emerald-light</span>
-<span class="bg-teal-100 text-teal-500 p1 pl-3 pr-3 m-1 rounded font-size-3">teal-light</span>
-<span class="bg-cyan-100 text-cyan-500 p1 pl-3 pr-3 m-1 rounded font-size-3">cyan-light</span>
-<span class="bg-sky-100 text-sky-500 p1 pl-3 pr-3 m-1 rounded font-size-3">sky-light</span>
-<span class="bg-blue-100 text-blue-500 p1 pl-3 pr-3 m-1 rounded font-size-3">blue-light</span>
-<span class="bg-indigo-100 text-indigo-500 p1 pl-3 pr-3 m-1 rounded font-size-3">indigo-light</span>
-<span class="bg-violet-100 text-violet-500 p1 pl-3 pr-3 m-1 rounded font-size-3">violet-light</span><br />
-<span class="bg-purple-100 text-purple-500 p1 pl-3 pr-3 m-1 rounded font-size-3">purple-light</span>
-<span class="bg-pink-100 text-pink-500 p1 pl-3 pr-3 m-1 rounded font-size-3">pink-light</span>
-<span class="bg-rose-100 text-rose-500 p1 pl-3 pr-3 m-1 rounded font-size-3">rose-light</span>
-<span class="bg-fuchsia-100 text-fuchsia-500 p1 pl-3 pr-3 m-1 rounded font-size-3">fuchsia-light</span>
-<span class="bg-gray-50 text-navy-900 p1 pl-3 pr-3 m-1 rounded font-size-3">navy-light</span>
+<div class="leading-[1.5em]">
+<span class="bg-slate-100 text-slate-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">slate-light</span>
+<span class="bg-gray-100 text-gray-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">gray-light</span>
+<span class="bg-zinc-100 text-zinc-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">zinc-light</span>
+<span class="bg-neutral-100 text-neutral-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">neutral-light</span>
+<span class="bg-stone-100 text-stone-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">stone-light</span>
+<span class="bg-red-100 text-red-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">red-light</span>
+<span class="bg-orange-100 text-orange-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">orange-light</span>
+<span class="bg-amber-100 text-amber-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">amber-light</span>
+<span class="bg-yellow-100 text-yellow-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">yellow-light</span><br />
+<span class="bg-lime-100 text-lime-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">lime-light</span>
+<span class="bg-green-100 text-green-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">green-light</span>
+<span class="bg-emerald-100 text-emerald-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">emerald-light</span>
+<span class="bg-teal-100 text-teal-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">teal-light</span>
+<span class="bg-cyan-100 text-cyan-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">cyan-light</span>
+<span class="bg-sky-100 text-sky-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">sky-light</span>
+<span class="bg-blue-100 text-blue-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">blue-light</span>
+<span class="bg-indigo-100 text-indigo-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">indigo-light</span>
+<span class="bg-violet-100 text-violet-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">violet-light</span><br />
+<span class="bg-purple-100 text-purple-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">purple-light</span>
+<span class="bg-pink-100 text-pink-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">pink-light</span>
+<span class="bg-rose-100 text-rose-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">rose-light</span>
+<span class="bg-fuchsia-100 text-fuchsia-500 p-1 pl-3 pr-3 m-1 rounded font-size-3">fuchsia-light</span>
+<span class="bg-gray-50 text-navy-900 p-1 pl-3 pr-3 m-1 rounded font-size-3">navy-light</span>
+</div>
 
 **Regular**:
 
-<span class="bg-slate-500 text-slate-100 p1 pl-3 pr-3 m-1 rounded font-size-3">slate</span>
-<span class="bg-gray-500 text-gray-100 p1 pl-3 pr-3 m-1 rounded font-size-3">gray</span>
-<span class="bg-zinc-500 text-zinc-100 p1 pl-3 pr-3 m-1 rounded font-size-3">zinc</span>
-<span class="bg-neutral-500 text-neutral-100 p1 pl-3 pr-3 m-1 rounded font-size-3">neutral</span>
-<span class="bg-stone-500 text-stone-100 p1 pl-3 pr-3 m-1 rounded font-size-3">stone</span>
-<span class="bg-red-500 text-red-100 p1 pl-3 pr-3 m-1 rounded font-size-3">red</span>
-<span class="bg-orange-500 text-orange-100 p1 pl-3 pr-3 m-1 rounded  font-size-3">orange</span>
-<span class="bg-amber-500 text-amber-100 p1 pl-3 pr-3 m-1 rounded font-size-3">amber</span>
-<span class="bg-yellow-500 text-yellow-100 p1 pl-3 pr-3 m-1 rounded font-size-3">yellow</span>
-<span class="bg-lime-500 text-lime-100 p1 pl-3 pr-3 m-1 rounded font-size-3">lime</span>
-<span class="bg-green-500 text-green-100 p1 pl-3 pr-3 m-1 rounded font-size-3">green</span>
-<span class="bg-emerald-500 text-emerald-100 p1 pl-3 pr-3 m-1 rounded font-size-3">emerald</span>
-<span class="bg-teal-500 text-teal-100 p1 pl-3 pr-3 m-1 rounded font-size-3">teal</span>
-<span class="bg-cyan-500 text-cyan-100 p1 pl-3 pr-3 m-1 rounded font-size-3">cyan</span><br/>
-<span class="text-gray-300 bg-navy-900 p1 pl-3 pr-3 m-1 rounded font-size-3">navy</span>
-<span class="bg-sky-500 text-sky-100 p1 pl-3 pr-3 m-1 rounded font-size-3">sky</span>
-<span class="bg-blue-500 text-blue-100 p1 pl-3 pr-3 m-1 rounded font-size-3">blue</span>
-<span class="bg-indigo-500 text-indigo-100 p1 pl-3 pr-3 m-1 rounded font-size-3">indigo</span>
-<span class="bg-violet-500 text-violet-100 p1 pl-3 pr-3 m-1 rounded font-size-3">violet</span>
-<span class="bg-purple-500 text-purple-100 p1 pl-3 pr-3 m-1 rounded font-size-3">purple</span>
-<span class="bg-pink-500 text-pink-100 p1 pl-3 pr-3 m-1 rounded font-size-3">pink</span>
-<span class="bg-rose-500 text-rose-100 p1 pl-3 pr-3 m-1 rounded font-size-3">rose</span>
-<span class="bg-fuchsia-500 text-fuchsia-100 p1 pl-3 pr-3 m-1 rounded font-size-3">fuchsia</span>
-
+<div class="leading-[1.5em]">
+<span class="bg-slate-500 text-slate-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">slate</span>
+<span class="bg-gray-500 text-gray-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">gray</span>
+<span class="bg-zinc-500 text-zinc-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">zinc</span>
+<span class="bg-neutral-500 text-neutral-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">neutral</span>
+<span class="bg-stone-500 text-stone-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">stone</span>
+<span class="bg-red-500 text-red-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">red</span>
+<span class="bg-orange-500 text-orange-100 p-1 pl-3 pr-3 m-1 rounded  font-size-3">orange</span>
+<span class="bg-amber-500 text-amber-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">amber</span>
+<span class="bg-yellow-500 text-yellow-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">yellow</span>
+<span class="bg-lime-500 text-lime-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">lime</span>
+<span class="bg-green-500 text-green-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">green</span>
+<span class="bg-emerald-500 text-emerald-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">emerald</span>
+<span class="bg-teal-500 text-teal-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">teal</span>
+<span class="bg-cyan-500 text-cyan-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">cyan</span><br/>
+<span class="text-gray-300 bg-navy-900 p-1 pl-3 pr-3 m-1 rounded font-size-3">navy</span>
+<span class="bg-sky-500 text-sky-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">sky</span>
+<span class="bg-blue-500 text-blue-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">blue</span>
+<span class="bg-indigo-500 text-indigo-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">indigo</span>
+<span class="bg-violet-500 text-violet-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">violet</span>
+<span class="bg-purple-500 text-purple-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">purple</span>
+<span class="bg-pink-500 text-pink-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">pink</span>
+<span class="bg-rose-500 text-rose-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">rose</span>
+<span class="bg-fuchsia-500 text-fuchsia-100 p-1 pl-3 pr-3 m-1 rounded font-size-3">fuchsia</span>
+</div>
 
 ---
 layout: default
