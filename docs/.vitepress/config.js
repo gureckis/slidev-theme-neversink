@@ -60,6 +60,7 @@ export default defineConfig({
               { text: 'CreditScroll', link: '/components/creditscroll' },
               { text: 'QRCode', link: '/components/qrcode' },
               { text: 'Kawaii', link: '/components/kawaii' },
+              { text: 'ArrowDraw', link: '/components/arrowdraw' },
               { text: 'ArrowHeads', link: '/components/arrowheads' },
             ],
           },

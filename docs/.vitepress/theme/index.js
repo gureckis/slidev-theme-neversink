@@ -12,6 +12,7 @@ import StickyNote from '../../../components/StickyNote.vue'
 import QrcodeVue from 'qrcode.vue'
 import SpeechBubble from '../../../components/SpeechBubble.vue'
 
+import ArrowDraw from '../../../components/ArrowDraw.vue'
 import BackPack from '../../../components/vue3-kawaii/components/backpack/BackPack.vue'
 import Browser from '../../../components/vue3-kawaii/components/browser/Browser.vue'
 import Cat from '../../../components/vue3-kawaii/components/cat/Cat.vue'
@@ -37,6 +38,7 @@ export default {
     app.component('StickyNote', StickyNote)
     app.component('QRCode', QrcodeVue)
     app.component('SpeechBubble', SpeechBubble)
+    app.component('ArrowDraw', ArrowDraw)
     app.component('BackPack', BackPack)
     app.component('Browser', Browser)
     app.component('Cat', Cat)
