@@ -10,11 +10,11 @@ In the conception of this design system, the entire slide is divided into 12 equ
 
 <img src="/layouts/side-title-12row.svg" alt="side-title slide example" width="600" />
 
-For example, if `columns: is-6` is specified in the frontmatter, the title will be allocated 6 units and the main content will be allocated 6 units like this:
+For example, if `titlewidth: is-6` is specified in the frontmatter, the title will be allocated 6 units and the main content will be allocated 6 units like this:
 
 <img src="/layouts/side-title-is-6.svg" alt="side-title slide example" width="600" />
 
-If `columns: is-3` is specified, the title will be allocated 3 units and the content will be allocated 9 units like this:
+If `titlewidth: is-3` is specified, the title will be allocated 3 units and the content will be allocated 9 units like this:
 
 <img src="/layouts/side-title-is-3.svg" alt="side-title slide example" width="600" />
 
