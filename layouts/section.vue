@@ -47,12 +47,14 @@ const colorscheme = computed(() => {
   font-family: var(--neversink-title-font);
   font-weight: 500;
   font-size: 2.5em;
+  line-height: normal;
 }
 
 .slidev-layout.section h3 {
   font-family: var(--neversink-title-font);
   font-weight: 500;
   font-size: 1.9em;
+  line-height: normal;
 }
 
 .slidev-layout.section {
