@@ -83,7 +83,7 @@ const colorscheme = computed(() => {
 
     <p>The <code>color</code> parameter determines color of the title.</p>
   </div>
-  <template v-else>
+  <div class="h-full" v-else>
     <div v-if="side === 'left'" class="flex h-full w-full">
       <div class="slidecolor column-title" :class="colorscheme">
         <div class="slidev-layout sidetitle w-full p-6" :class="alignment.l"><slot name="title" /></div>
@@ -106,7 +106,7 @@ const colorscheme = computed(() => {
         <div class="slidev-layout sidetitle w-full p-6" :class="alignment.r"><slot name="title" /></div>
       </div>
     </div>
-  </template>
+  </div>
 </template>
 
 <style>
