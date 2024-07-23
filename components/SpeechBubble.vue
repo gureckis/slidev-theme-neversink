@@ -1,8 +1,5 @@
 <script setup>
 import { computed } from 'vue'
-// import { colors } from '@unocss/preset-mini'
-
-// console.log(colors)
 
 const props = defineProps({
   position: {
