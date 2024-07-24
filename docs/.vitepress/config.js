@@ -64,6 +64,7 @@ export default defineConfig({
               { text: 'ArrowHeads', link: '/components/arrowheads' },
               { text: 'Thumb', link: '/components/thumb' },
               { text: 'Line', link: '/components/line' },
+              { text: 'VDragLine', link: '/components/vdragline' },
             ],
           },
           { text: 'Customizing', link: '/customizing' },
