@@ -36,12 +36,14 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: 'black', // color
+    default: 'black', // actually it is black
   },
 })
 
 const emit = defineEmits(['dblclick', 'clickOutside'])
-const colorStroke = computed(() => resolveColor(props.color))
+const colorscheme = computed(() => {
+  return `neversink-${props.color}-scheme`
+})
 
 const clickArea = ref()
 onClickOutside(clickArea, () => emit('clickOutside'))
@@ -49,15 +51,7 @@ onClickOutside(clickArea, () => emit('clickOutside'))
 
 <template>
   <svg class="absolute left-0 top-0" :width="Math.max(+x1, +x2) + 50" :height="Math.max(+y1, +y2) + 50">
-    <line
-      :x1
-      :y1
-      :x2
-      :y2
-      :stroke="colorStroke || 'currentColor'"
-      :stroke-width="width || 2"
-      @dblclick="emit('dblclick')"
-    />
+    <line :x1 :y1 :x2 :y2 class="cls-1" :class="colorscheme" :stroke-width="width || 2" @dblclick="emit('dblclick')" />
     <line
       ref="clickArea"
       :x1
@@ -71,3 +65,8 @@ onClickOutside(clickArea, () => emit('clickOutside'))
     />
   </svg>
 </template>
+<style scoped>
+.cls-1 {
+  stroke: var(--neversink-bg-color);
+}
+</style>
