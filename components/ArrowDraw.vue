@@ -1,10 +1,10 @@
 <script setup>
 import { computed } from 'vue'
-import { resolveColor } from '../layoutHelper'
+
 const props = defineProps({
   color: {
     type: String,
-    default: '#000000',
+    default: 'black',
   },
   width: {
     type: String,
@@ -12,7 +12,9 @@ const props = defineProps({
   },
 })
 
-const colorFill = computed(() => resolveColor(props.color))
+const colorscheme = computed(() => {
+  return `neversink-${props.color}-scheme`
+})
 </script>
 
 <template>
@@ -30,6 +32,7 @@ const colorFill = computed(() => resolveColor(props.color))
   >
     <path
       class="st0"
+      :class="colorscheme"
       d="M171.2,37.2c-12.8,0-25.6-0.9-38.3,0.2c-38.7,3.1-77.3,5.6-116.1,4.8c-2.5,0-5.1,0.4-7.5-0.1
 	c-1.7-0.4-3.2-1.9-4.8-2.9c1.6-1.3,3.1-3.6,4.8-3.7c7-0.4,14-0.2,21-0.2c14.6,0,29.2,0.4,43.9,0c13.1-0.4,26.2-1.5,39.3-2.4
 	c18.2-1.3,36.4-2.7,54.6-4c0.4,0,0.8-0.3,1.8-0.6c-5.6-5.8-12.3-8-19.5-9.4c-1.3-0.3-2.6-0.5-3.8-0.9c-3.5-1.1-5.7-3.4-4.5-7.1
@@ -41,6 +44,6 @@ const colorFill = computed(() => resolveColor(props.color))
 
 <style scoped>
 .st0 {
-  fill: v-bind(colorFill);
+  fill: var(--neversink-bg-color);
 }
 </style>

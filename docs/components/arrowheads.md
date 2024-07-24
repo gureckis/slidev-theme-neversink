@@ -8,16 +8,16 @@ Draws a set of hand drawn arrows that point to a central location. Useful to cal
 
 The ArrowHeads component has the following props:
 
-- `color` (optional) the color of the arrow stroke. Colors can be any of the tailwind colors like `red-400` in the theme or a hex code. Default is black.
+- `color` (optional) the color of the arrow stroke. Colors are from the themes. The background color is applied as the stroke so `red` is red, `black` is black. Default is 'black'.
 - width (optional) the initial width of the image. Default is 140px
 
 ```md
-<ArrowHeads color='pink-500' width="300px" v-drag />
+<ArrowHeads color='pink' width="300px" v-drag />
 ```
 
 Renders as:
 
-<ArrowHeads color='pink-500' width="300px"/>
+<ArrowHeads color='pink' width="300px"/>
 
 ```md
 <ArrowHeads  v-drag />
