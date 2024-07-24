@@ -14,6 +14,7 @@ import SpeechBubble from '../../../components/SpeechBubble.vue'
 
 import ArrowDraw from '../../../components/ArrowDraw.vue'
 import ArrowHeads from '../../../components/ArrowHeads.vue'
+import Thumb from '../../../components/Thumb.vue'
 import Line from '../../../components/Line.vue'
 import BackPack from '../../../components/vue3-kawaii/components/backpack/BackPack.vue'
 import Browser from '../../../components/vue3-kawaii/components/browser/Browser.vue'
@@ -42,6 +43,7 @@ export default {
     app.component('SpeechBubble', SpeechBubble)
     app.component('ArrowDraw', ArrowDraw)
     app.component('ArrowHeads', ArrowHeads)
+    app.component('Thumb', Thumb)
     app.component('Line', Line)
     app.component('BackPack', BackPack)
     app.component('Browser', Browser)

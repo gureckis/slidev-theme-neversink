@@ -62,6 +62,7 @@ export default defineConfig({
               { text: 'Kawaii', link: '/components/kawaii' },
               { text: 'ArrowDraw', link: '/components/arrowdraw' },
               { text: 'ArrowHeads', link: '/components/arrowheads' },
+              { text: 'Thumb', link: '/components/thumb' },
               { text: 'Line', link: '/components/line' },
             ],
           },
