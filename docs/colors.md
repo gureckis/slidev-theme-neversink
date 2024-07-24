@@ -2,7 +2,7 @@
 
 The project uses tailwind-like color schemes arranged in ==monochromatic pairs==.
 Color schemes can be applied to several elements, perhaps most importantly to
-slide [layouts](/layouts).
+slide [layouts](/layouts) and some [components](/components).
 
 These boxes show the options and names:
 

@@ -20,7 +20,7 @@ Make this **bold** using markdown.
 </div>
 ```
 
-With the new before the markdown text begins.
+with the new line before the markdown text begins.
 
 This is also true around [slots in layouts](/layouts#slots).
 
