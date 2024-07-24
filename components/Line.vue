@@ -11,7 +11,6 @@ Simple line
 <script setup>
 import { ref, computed } from 'vue'
 import { onClickOutside } from '@vueuse/core'
-import { resolveColor } from '../layoutHelper'
 
 const props = defineProps({
   x1: {
