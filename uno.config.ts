@@ -194,6 +194,8 @@ export default defineConfig({
       'm-10',
       'w-150px',
       'h-150px',
+      'z-0',
+      'z-100',
     ] /* for the docs */,
   ],
   transformers: [transformerDirectives()],

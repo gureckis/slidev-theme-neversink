@@ -4,7 +4,7 @@ import { resolveColor } from '../layoutHelper'
 const props = defineProps({
   shape: {
     type: String,
-    default: 's-s-2-0',
+    default: 's-s-2-100',
   },
   color: {
     type: String,
@@ -76,15 +76,11 @@ const style = computed(() => {
   // add custom class
   s += props.custom
 
-  // bg opacity
-  s += ` opacity-${parts[3]} `
-
-  console.log(s)
   return s
 })
 
 const trans = computed(() => {
-  const val = 100 - parseInt(props.shape.split('-')[3])
+  const val = parseInt(props.shape.split('-')[3])
   return `${val}%`
 })
 </script>
@@ -93,7 +89,7 @@ const trans = computed(() => {
 </template>
 <style scoped>
 .binder {
-  --new-color: color-mix(in srgb, var(--neversink-bg-color), transparent v-bind(trans));
+  --new-color: color-mix(in srgb, var(--neversink-bg-color), v-bind(trans) transparent);
   border-color: var(--neversink-border-color);
   background-color: var(--new-color);
   color: var(--neversink-text-color);
