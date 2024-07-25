@@ -9,7 +9,6 @@ const props = defineProps<{
   markdownSource?: DragElementMarkdownSource
   width?: number | string
   color?: string
-  twoWay?: boolean
 }>()
 
 const { dragId, mounted, unmounted, startDragging, stopDragging, x0, y0, width, height } = useDragElement(
@@ -37,7 +36,6 @@ const y2 = computed(() => y0.value + height.value / 2)
     :data-drag-id="dragId"
     :width="props.width"
     :color="props.color"
-    :two-way="props.twoWay"
     @dblclick="startDragging"
     @click-outside="stopDragging"
   />
