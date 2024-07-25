@@ -28,4 +28,6 @@ The current components are:
 
 - [VDragLine](/components/vdragline) - draws a straight line (no arrowheads), the v-drag version.
 
+- [Box](/components/box) - draws a box or rectangle shape
+
 Most component can just be included in-line in your markdown. However, in some cases it can make sense to position these components using the `v-drag` directive. For example, the `SpeechBubble` component can be positioned using the `v-drag` directive to place it in a specific location on the slide. This can be useful for creating custom layouts or animations. In that case, it makes sense to keep the component in the [default slot](/layouts#slots) of each layout.

@@ -65,6 +65,7 @@ export default defineConfig({
               { text: 'Thumb', link: '/components/thumb' },
               { text: 'Line', link: '/components/line' },
               { text: 'VDragLine', link: '/components/vdragline' },
+              { text: 'Box', link: '/components/box' },
             ],
           },
           { text: 'Customizing', link: '/customizing' },
