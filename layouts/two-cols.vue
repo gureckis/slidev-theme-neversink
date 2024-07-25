@@ -1,8 +1,6 @@
-<script setup lang="ts">
-import { computed, useSlots } from 'vue'
+<script setup lang="js">
+import { computed } from 'vue'
 import { compute_alignment, compute_column_size } from '../layoutHelper'
-
-const slots = useSlots()
 
 const props = defineProps({
   columns: {

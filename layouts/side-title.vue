@@ -1,8 +1,6 @@
-<script setup lang="ts">
-import { computed, useSlots } from 'vue'
+<script setup lang="js">
+import { computed } from 'vue'
 import { compute_alignment, compute_column_size } from '../layoutHelper'
-
-const slots = useSlots()
 
 const props = defineProps({
   side: {
@@ -55,15 +53,15 @@ const colorscheme = computed(() => {
     <p>
       There are three parameters: <code>color</code>, <code>columns</code> and <code>align</code>. Currently:
       <code>color: {{ props.color }}</code
-      >, <code>columns: {{ props.columns }}</code> and <code>align: {{ props.align }}</code
+      >, <code>columns: {{ props.titlewidth }}</code> and <code>align: {{ props.align }}</code
       >.
     </p>
     <p>The "slots" of the page are default and <code>:: content ::</code></p>
     <p>
-      Options for <code>columns</code> are divided into 12 column units. So with <code>columns: is-1-11</code> the left
-      column is 1/12 wide and the the right columns is 11/12 wide. The component admits a short had of only specifying
-      the left column (<code>columns: is-1</code> does the same thing). In addition there are short hands like
-      <code>columns: is-one-quarter</code> which resolves to <code>is-3-9</code>, etc...
+      Options for <code>titlewidth</code> are divided into 12 column units. So with <code>titlewidth: is-1-11</code> the
+      left column is 1/12 wide and the the right columns is 11/12 wide. The component admits a short had of only
+      specifying the left column (<code>titlewidth: is-1</code> does the same thing). In addition there are short hands
+      like <code>titlewidth: is-one-quarter</code> which resolves to <code>is-3-9</code>, etc...
     </p>
     <p>
       Here are a bunch of examples:

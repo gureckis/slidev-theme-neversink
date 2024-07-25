@@ -1,8 +1,6 @@
-<script setup lang="ts">
-import { computed, useSlots } from 'vue'
-import { compute_alignment, compute_column_size } from '../layoutHelper'
-
-const slots = useSlots()
+<script setup lang="js">
+import { computed } from 'vue'
+import { compute_alignment } from '../layoutHelper'
 
 const props = defineProps({
   color: {
@@ -41,7 +39,7 @@ const colorscheme = computed(() => {
 
     <p>The <code>color</code> parameter determines color of the title.</p>
   </div>
-  <template v-else>
+  <div v-else>
     <div class="flex flex-col h-full w-full">
       <div class="w-full h-fit min-h-13 pt-2 pb-2 slidecolor" :class="colorscheme">
         <div class="slidev-layout toptitle title p-0 pt-0 ml-6 mr-6 mt-auto mb-auto" :class="alignment">
@@ -55,7 +53,7 @@ const colorscheme = computed(() => {
         <slot name="default" />
       </div>
     </div>
-  </template>
+  </div>
 </template>
 
 <style>

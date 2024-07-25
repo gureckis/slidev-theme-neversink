@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { computed, useSlots } from 'vue'
 import { compute_alignment, compute_column_size } from '../layoutHelper'
 
