@@ -195,8 +195,9 @@ export default defineConfig({
       'w-150px',
       'h-150px',
       'z-0',
-      'z-100',
-    ] /* for the docs */,
+      'z-100' /* for the docs */,
+      'grid-cols-[1fr_max-content]' /* a fix for a uno bug */,
+    ],
   ],
   transformers: [transformerDirectives()],
 })
