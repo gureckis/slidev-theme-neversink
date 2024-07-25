@@ -26,7 +26,7 @@
 }
 
 .slidev-layout p {
-  line-height: relaxed;
+  line-height: 1.2;
 }
 /* adjust default bullets */
 .slidev-layout li {
