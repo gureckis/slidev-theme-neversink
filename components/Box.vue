@@ -1,10 +1,9 @@
 <script setup>
 import { computed } from 'vue'
-import { resolveColor } from '../layoutHelper'
 const props = defineProps({
   shape: {
     type: String,
-    default: 's-s-2-100',
+    default: 's-s-2-10',
   },
   color: {
     type: String,

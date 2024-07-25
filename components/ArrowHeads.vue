@@ -16,14 +16,7 @@ const colorscheme = computed(() => {
 })
 </script>
 <template>
-  <svg
-    id="Layer_1"
-    data-name="Layer 1"
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-    viewBox="0 0 356 204"
-    :width="width"
-  >
+  <svg viewBox="0 0 356 204" :width="width">
     <path
       class="cls-1"
       :class="colorscheme"
