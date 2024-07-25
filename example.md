@@ -1292,7 +1292,7 @@ title: Lines
 
 # Lines
 
-<Line :x1=0 :y1=0 :x2=200 :y2=200 :width=2 color='red-400' v-drag="[326,136,250,250]" />
+<Line :x1=0 :y1=0 :x2=200 :y2=200 :width=2 color='red' v-drag="[326,136,250,250]" />
 
 ---
 layout: side-title
