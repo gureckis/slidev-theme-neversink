@@ -153,3 +153,9 @@
   opacity: 0.3;
   pointer-events: none;
 }
+
+.ns-c-mixin {
+  background-color: var(--neversink-bg-color);
+  color: var(--neversink-text-color);
+  border-color: var(--neversink-border-color);
+}
