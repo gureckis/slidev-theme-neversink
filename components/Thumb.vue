@@ -1,6 +1,5 @@
 <script setup>
 import { computed } from 'vue'
-//import { resolveColor } from '../layoutHelper'
 const props = defineProps({
   color: {
     type: String,

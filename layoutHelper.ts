@@ -1,41 +1,41 @@
 import type { CSSProperties } from 'vue'
-import { colors } from '@unocss/preset-mini'
+// import { colors } from '@unocss/preset-mini'
 
-export function resolveColor(colorName: string, defaultColor: string = '#000000'): string {
-  // If the input is already a hex code, return it
-  if (/^#([0-9A-F]{3}){1,2}$/i.test(colorName)) {
-    return colorName
-  }
+// export function resolveColor(colorName: string, defaultColor: string = '#000000'): string {
+//   // If the input is already a hex code, return it
+//   if (/^#([0-9A-F]{3}){1,2}$/i.test(colorName)) {
+//     return colorName
+//   }
 
-  // Split the color name into base and shade
-  const [baseColor, shade] = colorName.toLowerCase().split('-')
+//   // Split the color name into base and shade
+//   const [baseColor, shade] = colorName.toLowerCase().split('-')
 
-  // Function to find the color in the colors object
-  function findColor(obj: any, base: string, shade?: string): string | null {
-    if (base in obj) {
-      if (shade && typeof obj[base] === 'object' && shade in obj[base]) {
-        return obj[base][shade]
-      } else if (!shade && typeof obj[base] === 'string') {
-        return obj[base]
-      }
-    }
+//   // Function to find the color in the colors object
+//   function findColor(obj: any, base: string, shade?: string): string | null {
+//     if (base in obj) {
+//       if (shade && typeof obj[base] === 'object' && shade in obj[base]) {
+//         return obj[base][shade]
+//       } else if (!shade && typeof obj[base] === 'string') {
+//         return obj[base]
+//       }
+//     }
 
-    for (const value of Object.values(obj)) {
-      if (typeof value === 'object' && value !== null) {
-        const result = findColor(value, base, shade)
-        if (result) return result
-      }
-    }
+//     for (const value of Object.values(obj)) {
+//       if (typeof value === 'object' && value !== null) {
+//         const result = findColor(value, base, shade)
+//         if (result) return result
+//       }
+//     }
 
-    return null
-  }
+//     return null
+//   }
 
-  // Search for the color in the UnoCSS colors object
-  const hexCode = findColor(colors, baseColor, shade)
+//   // Search for the color in the UnoCSS colors object
+//   const hexCode = findColor(colors, baseColor, shade)
 
-  // If a valid color is found, return its hex code; otherwise, return the default color
-  return hexCode || defaultColor
-}
+//   // If a valid color is found, return its hex code; otherwise, return the default color
+//   return hexCode || defaultColor
+// }
 
 /**
  * Resolve urls from frontmatter and append with the base url
