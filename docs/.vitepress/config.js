@@ -57,7 +57,7 @@ export default defineConfig({
               { text: 'Email', link: '/components/email' },
               { text: 'SpeechBubble', link: '/components/speechbubble' },
               { text: 'StickyNote', link: '/components/stickynote' },
-              { text: 'CreditScroll', link: '/components/creditscroll' },
+              // { text: 'CreditScroll', link: '/components/creditscroll' },
               { text: 'QRCode', link: '/components/qrcode' },
               { text: 'Kawaii', link: '/components/kawaii' },
               { text: 'ArrowDraw', link: '/components/arrowdraw' },
