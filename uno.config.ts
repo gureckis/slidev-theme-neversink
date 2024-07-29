@@ -68,6 +68,9 @@ const generate_color_schemes = (colors) => {
     '--neversink-text-color': colors['white'],
     '--neversink-border-color': colors['white'],
     '--neversink-highlight-color': '#FFA500',
+    '--neversink-admon-bg-color': colors['black'],
+    '--neversink-admon-border-color': colors['white'],
+    '--neversink-admon-text-color': colors['white'],
   })
 
   addScheme('neversink-white-scheme', 'ns-c-wh-scheme', {
@@ -78,6 +81,9 @@ const generate_color_schemes = (colors) => {
     '--neversink-text-color': colors['black'],
     '--neversink-border-color': colors['gray'][950],
     '--neversink-highlight-color': '#FFA500',
+    '--neversink-admon-bg-color': colors['white'],
+    '--neversink-admon-border-color': colors['gray'][950],
+    '--neversink-admon-text-color': colors['black'],
   })
 
   addScheme('neversink-dark-scheme', 'ns-c-dk-scheme', {
@@ -88,6 +94,9 @@ const generate_color_schemes = (colors) => {
     '--neversink-text-color': colors['gray'][100],
     '--neversink-border-color': colors['gray'][100],
     '--neversink-highlight-color': '#FFA500',
+    '--neversink-admon-bg-color': colors['gray'][800],
+    '--neversink-admon-border-color': colors['gray'][100],
+    '--neversink-admon-text-color': colors['gray'][100],
   })
 
   addScheme('neversink-light-scheme', 'ns-c-lt-scheme', {
@@ -97,6 +106,9 @@ const generate_color_schemes = (colors) => {
     '--neversink-text-color': colors['gray'][800],
     '--neversink-border-color': colors['gray'][800],
     '--neversink-highlight-color': '#FFA500',
+    '--neversink-admon-bg-color': colors['gray'][100],
+    '--neversink-admon-border-color': colors['gray'][800],
+    '--neversink-admon-text-color': colors['gray'][800],
   })
 
   for (const color of colornames) {
@@ -108,6 +120,9 @@ const generate_color_schemes = (colors) => {
         '--neversink-text-color': colors['gray'][300],
         '--neversink-border-color': colors['gray'][300],
         '--neversink-highlight-color': '#FFA500',
+        '--neversink-admon-bg-color': '#2a373a',
+        '--neversink-admon-border-color': colors['gray'][300],
+        '--neversink-admon-text-color': colors['gray'][300],
       })
 
       addScheme('neversink-navy-light-scheme', 'ns-c-nv-lt-scheme', {
@@ -117,6 +132,9 @@ const generate_color_schemes = (colors) => {
         '--neversink-text-color': '#2a373a',
         '--neversink-border-color': '#2a373a',
         '--neversink-highlight-color': '#FFA500',
+        '--neversink-admon-bg-color': colors['gray'][50],
+        '--neversink-admon-border-color': '#2a373a',
+        '--neversink-admon-text-color': '#2a373a',
       })
     } else {
       const shortColor = color.slice(0, 2)
