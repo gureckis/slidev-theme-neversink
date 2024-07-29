@@ -34,7 +34,6 @@ const colorscheme = computed(() => {
 
 .slidev-layout.cover {
   font-family: var(--neversink-main-font);
-
   font-weight: 300;
 }
 
@@ -55,6 +54,7 @@ const colorscheme = computed(() => {
 .slidev-layout.cover .note {
   font-weight: 300;
   font-size: 0.9rem;
+  margin-right: 200px;
 }
 
 .slidev-layout.cover h1 {
