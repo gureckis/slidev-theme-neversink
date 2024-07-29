@@ -22,15 +22,15 @@ In addition to the main color [schemes](/colors) there are some additional short
 
 where color is the **first two letters** of the [colors](/colors) in the project (e.g., `ns-c-pi-scheme` for `neversink-pink-scheme`).
 
-## Color mixin
+## Color bind
 
 When you want to apply a theme color to an element on a page you can use the
-`ns-c-mixin` class. This will apply the color to the text and the background.
+`ns-c-bind-scheme` class. This will apply the color to the text and the background.
 
 It has a definition like this:
 
 ```css
-.ns-c-mixin {
+.ns-c-bind-scheme {
   background-color: var(--neversink-bg-color);
   color: var(--neversink-text-color);
   border-color: var(--neversink-border-color);
@@ -40,7 +40,7 @@ It has a definition like this:
 so to bind the color to a `div` element you can do this:
 
 ```md
-<div class="ns-c-mixin ns-c-sk-scheme">
+<div class="ns-c-bind-scheme ns-c-sk-scheme">
   This is a with the `ns-c-sk-scheme` (i.e., `neversink-sky-scheme`) color applied.
 </div>
 ```

@@ -89,10 +89,10 @@ which contains values for these options which might go well together in a monoch
 
 To apply the theme to a element you simply add the `neversink-{name}-scheme` class to the element and then add another class which binds the CSS vars as you like.
 
-There is one built-in one called `.ns-c-mixin` which applies the color to the background, text, and border of the element. It's definition looks like this:
+There is one built-in one called `.ns-c-bind-scheme` which applies the color to the background, text, and border of the element. It's definition looks like this:
 
 ```css
-.ns-c-mixin {
+.ns-c-bind-scheme {
   background-color: var(--neversink-bg-color);
   color: var(--neversink-text-color);
   border-color: var(--neversink-border-color);
@@ -102,13 +102,13 @@ There is one built-in one called `.ns-c-mixin` which applies the color to the ba
 For example, to apply the `red` scheme from above to a `div` element you would add the following classes:
 
 ```html
-<div class="neversink-red-scheme ns-c-mixin">This is a red div</div>
+<div class="neversink-red-scheme ns-c-bind-scheme">This is a red div</div>
 ```
 
 You can also define you own custom binding classes if you want to map the colors from the theme in a different way. For example, you could define a class like this:
 
 ```css
-.mymixin {
+.my-bind-scheme {
   background-color: var(--neversink-text-color);
 }
 ```

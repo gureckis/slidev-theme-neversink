@@ -154,6 +154,7 @@
   pointer-events: none;
 }
 
+.ns-c-bind-scheme,
 .ns-c-mixin {
   background-color: var(--neversink-bg-color);
   color: var(--neversink-text-color);
