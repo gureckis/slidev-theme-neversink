@@ -133,10 +133,6 @@
   display: inline;
 }
 
-img {
-  display: inline;
-}
-
 /* customize the v-clicks */
 .slidev-vclick-target {
   transition: opacity 100ms ease;
