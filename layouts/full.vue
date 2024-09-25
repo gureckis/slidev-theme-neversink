@@ -17,6 +17,6 @@ const colorscheme = computed(() => {
 </script>
 <template>
   <div class="slidev-layout full w-full h-full slidecolor" :class="colorscheme">
-    <slot class="w-full h-full" />
+    <slot />
   </div>
 </template>
