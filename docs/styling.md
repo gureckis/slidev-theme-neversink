@@ -60,6 +60,18 @@ If you want to make bullets a little closer together to make spaceadd the `class
 
 Other options are `ns-c-tight` and `ns-c-supertight`.
 
+## Centering content
+
+If you have a div and want to to appear in the center of enclosing element:
+
+```md
+<div class="ns-c-center-item">
+  This is centered
+</div>
+```
+
+This sets the `margin-left` and `margin-right` to `auto` and the `width` to `fit-content`.
+
 ## `v-clicks` faders
 
 If you want to fade out a bullet as you step through, add the `class='ns-c-fader'`

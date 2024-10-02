@@ -60,6 +60,12 @@
   align-items: start;
 }
 
+.ns-c-center-item {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
 .ns-c-center {
   justify-content: center; /* Horizontally center the content */
   text-align: center;
